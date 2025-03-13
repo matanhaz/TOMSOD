@@ -1,3 +1,0 @@
-project,technique,precision,recall,wasted,bug id,original score percentage,f-score,expense,t-score,cost,exam-score,bug index,changed files,changed functions
-Io,BugLocator,0.12361196805383859,0.12361196805383859,0.0,274,0.2,0.12361196805383859,0.0,0.0,0.0,0.0,242,1,2
-Io,BugLocator,0.1611029909237748,0.1611029909237748,1.0,257,0.2,0.1611029909237748,20.0,20.0,0.2,20.0,250,1,1

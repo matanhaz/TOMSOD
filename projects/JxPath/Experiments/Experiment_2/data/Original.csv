@@ -1,8 +1,0 @@
-project,technique,precision,recall,wasted,bug id,original score percentage,f-score,expense,t-score,cost,exam-score,bug index,changed files,changed functions
-JxPath,original,0.0,0.0,5,100,1,0,100,100,1.0,100,15,1,1
-JxPath,original,0.0,0.0,5,89,1,0,100,100,1.0,100,5,1,1
-JxPath,original,0.0,0.0,5,94,1,0,100,100,1.0,100,6,1,1
-JxPath,original,0.0,0.0,6,115,1,0,100,100,1.0,100,18,1,1
-JxPath,original,0.0,0.0,5,93,1,0,100,100,1.0,100,10,1,1
-JxPath,original,0.0,0.0,5,151,1,0,100,100,1.0,100,21,2,2
-JxPath,original,0.0,0.0,5,97,1,0,100,100,1.0,100,12,2,2

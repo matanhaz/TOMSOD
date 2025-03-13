@@ -1,3 +1,0 @@
-project,technique,precision,recall,wasted,bug id,original score percentage,f-score,expense,t-score,cost,exam-score,bug index,changed files,changed functions
-Io,original,0.0,0.0,5,274,1,0,100,100,1.0,100,242,1,2
-Io,original,5.72245302001823e-07,5.72245302001823e-07,1.0,257,1,5.72245302001823e-07,20.0,20.0,0.2,20.0,250,1,1
