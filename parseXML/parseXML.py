@@ -269,15 +269,4 @@ def create_matrixes(base_project_path, project_matrixes_final_path):
                 f.write(final_matrix)
         except Exception as e:
             print("folder failed:", folder)
-
-
-if __name__ == '__main__':
-    path = r"C:\Users\matan\Downloads\newMatrixes"
-    matrixes_final_path = r"C:\Users\matan\Desktop\thesis_new\new matrixes"
-    if len(sys.argv) == 2:
-        path = str(sys.argv[1])
-    for project in ['Csv']:
-        project_matrixes_final_path = os.path.join(matrixes_final_path, project)
-        for _ in range(4):
-            create_matrixes(os.path.join(path, project), project_matrixes_final_path)
-        break
+            
