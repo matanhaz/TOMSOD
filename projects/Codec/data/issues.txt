@@ -1,0 +1,1877 @@
+{
+    "issues": [
+        {
+            "issue_id": "CODEC-320",
+            "project": "Commons Codec",
+            "title": "Wrong output of DoubleMetaphone in 1.16.1",
+            "type": "Bug",
+            "description": "It looks like there is a bug in DoubleMetaphone implementation in version 1.16.1. Older 1.16.0 is fine. In fact I'm not 100% sure it is a bug, but it behaves differently and the old output looks much more reasonable than the new one.\r\n\r\nOld code contains index+=2 -\r\nhttps://github.com/apache/commons-codec/blob/rel/commons-codec-1.16.0/src/main/java/org/apache/commons/codec/language/DoubleMetaphone.java#L462\r\nNew code does not contain that line -\r\nhttps://github.com/apache/commons-codec/blob/rel/commons-codec-1.16.1/src/main/java/org/apache/commons/codec/language/DoubleMetaphone.java#L619",
+            "resolved": "2024-04-18",
+            "versions": [],
+            "fixVersions": [
+                "1.17.0"
+            ]
+        },
+        {
+            "issue_id": "CODEC-315",
+            "project": "Commons Codec",
+            "title": "PhoneticEngine.encode throws StringArrayIndexOutOfBoundException and ArrayIndexOutOfBoundException",
+            "type": "Bug",
+            "description": "The encode() method takes in a random String and processes it. In some of the cases, it could result in an ArrayIndexOutOfBoundException or StringIndexOutOfBoundException.\r\n\r\nIf the preset NameType is SEPHARDIC. It will run the case branch in\u00a0[Line#410|https://github.com/apache/commons-codec/blob/master/src/main/java/org/apache/commons/codec/language/bm/PhoneticEngine.java#L410]. If the provided string only contains the \"'\" character, the split method call shown below will return an empty array because String.split(\"'\") is equal to String.split(\"'\", 0) and all trailing empty string in the result will be removed according to the\u00a0[JDK documentation|https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#split-java.lang.String-int-]. This empty array makes the next line throw an ArrayIndexOutOfBondException.\r\n\r\nfinal String[] parts = aWord.split(\"'\");\r\n\r\nwords2.add(parts[parts.length - 1]);\r\n\r\nA possible fix could add a -1 parameter should be added to the split method to ensure the return size of the split result is never 0.\r\n\r\nIn later\u00a0[Line#415|https://github.com/apache/commons-codec/blob/master/src/main/java/org/apache/commons/codec/language/bm/PhoneticEngine.java#L415]\u00a0and\u00a0[Line#419|https://github.com/apache/commons-codec/blob/master/src/main/java/org/apache/commons/codec/language/bm/PhoneticEngine.java#L419], the logic removes all words equal to the name prefix of the chosen NameType. If words2 only contains a prefix, the removeAll method call could make words2 empty. This makes\u00a0[Line#437|https://github.com/apache/commons-codec/blob/master/src/main/java/org/apache/commons/codec/language/bm/PhoneticEngine.java#L437]\u00a0never run and keeps the StringBuilder object result empty. If the result is empty, the substring method throws and StringIndexOutOfBoundException.\r\n\r\n\u00a0final StringBuilder result = new StringBuilder();\r\n\r\n\u00a0words2.forEach(word > result.append(\"\").append(encode(word)));\r\n\r\n\u00a0// return the result without the leading \"-\"\r\n\r\n\u00a0return result.substring(1);\r\n\r\nA possible fix could add a check to ensure word2 is not empty before processing it and doing the substring.\r\n\r\n\u00a0\r\n\r\nWe found this bug using fuzzing by way of OSS-Fuzz. It is reported at https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64376 and https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64395.",
+            "resolved": "2024-02-04",
+            "versions": [],
+            "fixVersions": [
+                "1.16.1"
+            ]
+        },
+        {
+            "issue_id": "CODEC-314",
+            "project": "Commons Codec",
+            "title": "PercentCodec.insertAlwaysEncodeChars throws IndexOutOfBoundException",
+            "type": "Bug",
+            "description": "The\u00a0{{insertAlwaysEncodeChars()}} method takes in a random byte array (through the constructor of PercentCodec class) and processes it byte by byte. Each byte is passed to {{insertAlwaysEncodeChar()}}\u00a0to set the corresponding bit in the BitSet object\u00a0{{alwaysEncodeChars}}\u00a0to true by calling the\u00a0{{set()}}\u00a0method of the BitSet object. As BitSet only accept positive index, if any byte is negative, it will cause IndexOutOfBoundsException when calling the\u00a0{{set()}}\u00a0method.\r\n\r\nPossible fix could add a conditional check to ensure only valid bytes (positive or zero) are processed.\r\n\r\nWe found this bug using fuzzing by way of OSS-Fuzz. It is reported at\u00a0[https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64362].",
+            "resolved": "2023-12-03",
+            "versions": [],
+            "fixVersions": [
+                "1.16.1"
+            ]
+        },
+        {
+            "issue_id": "CODEC-313",
+            "project": "Commons Codec",
+            "title": "QuotedPrintableCodec.encodeQuotedPrintable throws ArrayIndexOutOfBoundException",
+            "type": "Bug",
+            "description": "The\u00a0{{encodeQuotedPrintable()}}\u00a0method takes in a random byte array and processes it. If the provided\u00a0{{strict}}\u00a0boolean is true, it will go into the first branch. There is a for loop to loop through the byte array from the index 0 to the index byte.length - 3. The index is then used directly in\u00a0{{getUnsignedOctet}}\u00a0method If the length of the byte array is less than 3, it will result in a negative index and cause ArrayIndexOutOfBoundsException in\u00a0{{getUnsignedOctet()}}\u00a0method call.\r\n\r\nPossible fix could add a conditional check to ensure the index is never negative. It will simply return null if the byte array is too short (with a length less than 3) if {{strict}}\u00a0value is true.\r\n\r\nWe found this bug using fuzzing by way of OSS-Fuzz. It is reported at\u00a0[https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64358].",
+            "resolved": "2024-02-04",
+            "versions": [],
+            "fixVersions": [
+                "1.16.1"
+            ]
+        },
+        {
+            "issue_id": "CODEC-312",
+            "project": "Commons Codec",
+            "title": "MatchRatingApproachEncoder.encode throw StringIndexOutOfBound",
+            "type": "Bug",
+            "description": "The\u00a0{{encode(String)}}\u00a0method takes in a random String and checks if it is empty. It will go through a few rounds of processing if the given String is not empty. It does contain a check to ensure the String is not empty before processing. But it has some missing checks. Each of the 3 processing methods\u00a0{{cleanName(name)}}\u00a0/\u00a0{{removeVowels(name)}}\u00a0/\u00a0{{removeDoubleConsonants(name)}}\u00a0remove some characters from the String and could cause the string to become empty (length = 0). And that results in StringIndexOutOfBoundException when\u00a0{{substring()}}\u00a0method is called in the next processing method. For example, if the randomly provided string is\u00a0{{{}..{}}}, it gets past the first checking in the encode method and enters the\u00a0{{cleanName(name)}}\u00a0method. The\u00a0{{cleanName(name)}}\u00a0method removes the two dots and returns an empty string. Without the additional checking, it causes the StringIndexOutOfBoundException in the\u00a0{{substring()}}\u00a0method call in the next\u00a0{{removeVowels(name)}}\u00a0method call cause the length of the string is 0.\r\n\r\nPossible fix could add some conditional checking to ensure the string is not empty after each method call. If it is empty after any method call, it will simply return {{EMPTY}}\u00a0and avoid continuing processing onto the next processing method.\r\n\r\nWe found this bug using fuzzing by way of OSS-Fuzz. It is reported at\u00a0[https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64359].",
+            "resolved": "2024-02-04",
+            "versions": [],
+            "fixVersions": [
+                "1.16.1"
+            ]
+        },
+        {
+            "issue_id": "CODEC-311",
+            "project": "Commons Codec",
+            "title": "RefinedSoundex.getMappingCode throw ArrayIndexOutOfBoundException",
+            "type": "Bug",
+            "description": "The\u00a0{{getMappingCode(char)}} method takes in a random character retrieved from a string (through processing of {{encode(String)}} or {{soundex(String)}} method) and checks if it is a letter, then returns a mapping code from the {{soundexMapping}}\u00a0array if it is a letter. But the checking contains a bug. The\u00a0{{Character.isLetter()}}\u00a0method will return true not only for English characters. For example, a char with character code 1689 will also make\u00a0{{Character.isLetter()}}\u00a0returns true. Using a character with large character code that passed the\u00a0{{Character.isLetter()}}\u00a0check and a way smaller\u00a0{{soundexMapping}}\u00a0array will cause ArrayIndexOutOfBoundException.\r\n\r\nThis possible fixes could add a conditional checking to ensure the index is never out of bounds from the configured {{soundexMapping}}\u00a0array. If the calculated index goes out of bounds, it will simply return 0, just like the original logic when Character.isLetter() returns false.\r\n\r\nWe found this bug using fuzzing by way of OSS-Fuzz. It is reported at\u00a0[https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64353].",
+            "resolved": "2024-02-04",
+            "versions": [],
+            "fixVersions": [
+                "1.16.1"
+            ]
+        },
+        {
+            "issue_id": "CODEC-305",
+            "project": "Commons Codec",
+            "title": "Base16InputStream skips characters",
+            "type": "Bug",
+            "description": "If the read() method of the input stream which is wrapped by a Base16InputStream returns the following three arrays of data it will skip the last character of the second array:\r\n * array with an odd length (e.g. \"010\")\r\n * array with an even length (e.g \"2030\")\r\n * array with an odd length (e.g. \"405\")\r\n\r\nThe above data should result in the following bytes [1, 2, 3, 4, 5], however\r\n * in lenient mode it reads [1, 2, 3, 64]\r\n * in strict mode it throws an IllegalArgumentException\r\n\r\nI have encountered this issue when reading from an java 11 http input stream. In order to test this easier I have created the following class to reproduce the issue:\r\n{code:java}\r\npublic class TestInputStream extends InputStream {\r\n\r\n    public static void main(String[] args) throws IOException {\r\n        final Base16InputStream stream = new Base16InputStream(\r\n                new TestInputStream(),\r\n                false,\r\n                true,\r\n                CodecPolicy.STRICT\r\n        );\r\n        int value;\r\n        while ((value = stream.read()) != -1) {\r\n            System.out.println((byte) value);\r\n        }\r\n    }\r\n\r\n    private int readCount = 0;\r\n\r\n    @Override\r\n    public int read() {\r\n        return 0;\r\n    }\r\n\r\n    @Override\r\n    public int read(byte[] output) {\r\n        switch (readCount++) {\r\n            case 0: return writeBytes(output, \"010\");\r\n            case 1: return writeBytes(output, \"2030\");\r\n            case 2: return writeBytes(output, \"405\");\r\n            default: return -1;\r\n        }\r\n    }\r\n\r\n    private static int writeBytes(byte[] output, String str) {\r\n        final byte[] data = str.getBytes();\r\n        System.arraycopy(data, 0, output, 0, data.length);\r\n        return data.length;\r\n    }\r\n    \r\n} {code}",
+            "resolved": "2022-06-13",
+            "versions": [
+                "1.15"
+            ],
+            "fixVersions": [
+                "1.16"
+            ]
+        },
+        {
+            "issue_id": "CODEC-302",
+            "project": "Commons Codec",
+            "title": "MurmurHash2.hash32 can return negative",
+            "type": "Bug",
+            "description": "When running hash32, many values return a negative hash. Since the original implementation used unsigned values, this is unintended behavior and breaks compatibility with other implementations.",
+            "resolved": "2021-07-15",
+            "versions": [
+                "1.15"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-288",
+            "project": "Commons Codec",
+            "title": "during Base64 decode for 24 byte length string ,the function returns byte array which is less than 18 bytes",
+            "type": "Bug",
+            "description": "string of byte length 24 AQAAAAFxB7VyAgAAAAEPEMdg\r\n\r\nreturned byte array length :6 ideally it should be of length 18.\r\n\r\n\u00a0\r\n\r\npublic byte[] decode(String pArray) {\r\n return this.decode(StringUtils.getBytesUtf8(pArray));\r\n}",
+            "resolved": "2024-07-31",
+            "versions": [
+                "1.5"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-279",
+            "project": "Commons Codec",
+            "title": "Base64.decode fails on Java11 for certain valid base 64 encoded String",
+            "type": "Bug",
+            "description": "The following lines will fail for a specific String:\r\n{code:java}\r\nString sharedSecret = \"cannot_share_the_affected_string_because_it_is_a_secret\";\r\nbyte[] bytes = org.apache.commons.codec.binary.Base64.decodeBase64(sharedSecret); {code}\r\nThe exception I get is\r\n{code:java}\r\njava.lang.IllegalArgumentException: Last encoded character (before the paddings if any) is a valid base 64 alphabet but not a possible value\tat org.apache.commons.codec.binary.Base64.validateCharacter(Base64.java:798)\r\n\tat org.apache.commons.codec.binary.Base64.decode(Base64.java:472)\r\n\tat org.apache.commons.codec.binary.BaseNCodec.decode(BaseNCodec.java:412)\r\n\tat org.apache.commons.codec.binary.BaseNCodec.decode(BaseNCodec.java:395)\r\n\tat org.apache.commons.codec.binary.Base64.decodeBase64(Base64.java:694)\r\n\tat com.rbmhtechnology.oidc.provider.spi.grants.jwt.thirdparty.rest.FooTest.foo(FooTest.java:17)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)\r\n\tat org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)\r\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)\r\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)\r\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)\r\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)\r\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)\r\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)\r\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)\r\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)\r\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)\r\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)\r\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)\r\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)\r\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)\r\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\r\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)\r\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)\r\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)\r\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)\r\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)\r\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1540)\r\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)\r\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)\r\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)\r\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1540)\r\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)\r\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)\r\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)\r\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)\r\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)\r\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)\r\n\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)\r\n\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)\r\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)\r\n\tat org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)\r\n\tat org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)\r\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)\r\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)\r\n\tat com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)Process finished with exit code 255\r\n {code}\r\nUsing Java 11 (AdoptOpenJDK 13.0.1.hs-adpt). The same code will pass with Java 8 (AdoptOpenJDK 8.0.232.hs-adpt) and return the expected bytes.\r\n\r\nUnfortunately I was not able to construct another String which will make these lines throw an exception other than the String I have and that is a secret I cannot share. {{java.util.Base64.getDecoder().decode(String)}} is able to decode the affected String though.",
+            "resolved": "2020-01-26",
+            "versions": [
+                "1.13",
+                "1.14"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-271",
+            "project": "Commons Codec",
+            "title": "Base32 encoder may return empty string at high TPS",
+            "type": "Bug",
+            "description": "I am using a static instance of *org.apache.commons.codec.binary.Base32* class in my application. For each request, there is a call made to the\u00a0*encodeAsString*\u00a0method. I ran a load test that called this method at >100 requests per second, and noticed that at random times, the output of the method was an empty string. The test simply encoded the same input string into a Base32 encoded string.\r\n\r\n\r\nI never found the reason why this happened, but I tried a few things to try to resolve the issue. The only thing that worked for me was to instantiate a new object of the *Base32* class before each call made to\u00a0the\u00a0*encodeAsString*\u00a0method.\r\n\r\n\u00a0\r\n\r\nDo you have any thoughts/ideas why this could happen? Or whether anyone has noticed the same behavior?\r\n\r\n\u00a0\r\n\r\nThanks",
+            "resolved": "2022-02-17",
+            "versions": [
+                "1.9"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-270",
+            "project": "Commons Codec",
+            "title": "Base32 and Base64 still allow decoding some invalid trailing characters",
+            "type": "Bug",
+            "description": "Both Base32 and Base64 check that the final bits from the trailing digit that will be discarded are zero.\r\n\r\nThe test for the trailing bits in the final digits in Base64 is:\r\n{code:java}\r\nprivate long validateCharacter(final int numBitsToDrop, final Context context) {\r\n    if ((context.ibitWorkArea & numBitsToDrop) != 0) {\r\n{code}\r\n\r\nIt should be:\r\n{code:java}\r\nprivate long validateCharacter(final int numBitsToDrop, final Context context) {\r\n    int mask = (1 << numBitsToDrop) - 1;\r\n    if ((context.ibitWorkArea & mask) != 0) {\r\n{code}\r\n\r\nLikewise in Base32.\r\n\r\nThe following base64 is illegal but is still decoded:\r\n\r\n{noformat}\r\nAB==\r\n\r\nA : 000000\r\nB : 000001\r\n\r\nbyte = 00000000 + 0001 discarded \r\n{noformat}\r\n\r\nHere the check for the 4 trailing bits to drop in this case checks only bit 3 and ignores bit 1 which is set.\r\n\r\nSame for Base32, this is illegal:\r\n\r\n{noformat}\r\nAB======\r\n\r\nA : 00000\r\nB : 00001\r\n\r\nbyte = 00000000 + 01 discarded\r\n{noformat}\r\n\r\nBut the check for the 2 trailing bits to drop in this case checks bit 2 and ignores bit 1 which is set.\r\n\r\nNote: The test cases using \"AC\" has bit 2 set and so is flagged as invalid.\r\n\r\n",
+            "resolved": "2019-11-28",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": [
+                "1.14"
+            ]
+        },
+        {
+            "issue_id": "CODEC-269",
+            "project": "Commons Codec",
+            "title": "Allow repeat calls to IncrementalHash32.end() to generate the same value.",
+            "type": "Bug",
+            "description": "The\u00a0MurmurHash3.IncrementalHash32 end() method alters the current state of the running hash. Thus if called twice it returns different numbers.\r\n\r\nThis can be fixed using:\r\n{code:java}\r\npublic final int end() {\r\n    // Allow calling end() again after adding no data to return the same result.\r\n    int result = hash;\r\n    // ************\r\n    // Note: This fails to apply masking using 0xff to the 3 remaining bytes.\r\n    // ************\r\n    int k1 = 0;\r\n    switch (unprocessedLength) {\r\n    case 3:\r\n        k1 ^= unprocessed[2] << 16;\r\n    case 2:\r\n        k1 ^= unprocessed[1] << 8;\r\n    case 1:\r\n        k1 ^= unprocessed[0];\r\n\r\n        // mix functions\r\n        k1 *= C1_32;\r\n        k1 = Integer.rotateLeft(k1, R1_32);\r\n        k1 *= C2_32;\r\n        result ^= k1;\r\n    }\r\n\r\n    // finalization\r\n    result ^= totalLen;\r\n    return fmix32(result);\r\n}\r\n{code}",
+            "resolved": "2019-11-21",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": [
+                "1.14"
+            ]
+        },
+        {
+            "issue_id": "CODEC-267",
+            "project": "Commons Codec",
+            "title": "MurmurHash3.hash32() does not process trailing bytes as unsigned",
+            "type": "Bug",
+            "description": "The hash32() algorithm processes blocks of 4 bytes. Trailing bytes of 1, 2 or 3 that are negative are not masked to unsigned leading to an error.\r\n\r\nThis test passes using data generated from the Python mmh3 library which calls the MurmurHash3 c++ code (modified for Python):\r\n{code:java}\r\n/**\r\n * Test to demonstrate the errors in\r\n * {@link MurmurHash3#hash32(byte[], int, int, int)}\r\n * if the final 1, 2, or 3 bytes are negative.\r\n */\r\n@Test\r\npublic void testHash32With1TrailingSignedByteIsInvalid() {\r\n    // Generate test data:\r\n    // import mmh3\r\n    // import numpy as np\r\n    // mmh3.hash(np.uint8([-1]))\r\n    // mmh3.hash(np.uint8([0, -1]))\r\n    // mmh3.hash(np.uint8([0, 0, -1]))\r\n    // mmh3.hash(np.uint8([-1, 0]))\r\n    // mmh3.hash(np.uint8([-1, 0, 0]))\r\n    // mmh3.hash(np.uint8([0, -1, 0]))\r\n    Assert.assertNotEquals(-43192051, MurmurHash3.hash32(new byte[] {-1}, 0, 1, 0));\r\n    Assert.assertNotEquals(-582037868, MurmurHash3.hash32(new byte[] {0, -1}, 0, 1, 0));\r\n    Assert.assertNotEquals(922088087, MurmurHash3.hash32(new byte[] {0, 0, -1}, 0, 1, 0));\r\n    Assert.assertNotEquals(-1309567588, MurmurHash3.hash32(new byte[] {-1, 0}, 0, 1, 0));\r\n    Assert.assertNotEquals(-363779670, MurmurHash3.hash32(new byte[] {-1, 0, 0}, 0, 1, 0));\r\n    Assert.assertNotEquals(-225068062, MurmurHash3.hash32(new byte[] {0, -1, 0}, 0, 1, 0));\r\n}\r\n{code}\r\nThis test passes with {{assertEquals}}\u00a0when the code is fixed to apply masking to the final 3 bytes:\r\n{code:java}\r\n        case 3:\r\n            k1 ^= (data[index + 2] & 0xff) << 16;\r\n        case 2:\r\n            k1 ^= (data[index + 1] & 0xff) << 8;\r\n        case 1:\r\n            k1 ^= (data[index] & 0xff);\r\n{code}\r\nFixing this error will be a behavioural change.\r\n\r\nIt is recommended to leave this method alone and implement a new hash32x86 method that should match the {{MurmurHash3_x86_32}} method from the c++ source code.\r\n\r\n\u00a0",
+            "resolved": "2019-11-24",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": [
+                "1.14"
+            ]
+        },
+        {
+            "issue_id": "CODEC-265",
+            "project": "Commons Codec",
+            "title": "  java.lang.NegativeArraySizeException",
+            "type": "Bug",
+            "description": "Hi,\r\n\r\ntrying to encode a file that is 1GB of size.\r\n\r\n( linux :\r\n{code:java}\r\nfallocate -l 1GB 1gb.zip{code}\r\n)\r\n\r\nI want to post that file to a RESTful-service, package in JSON.\r\n\r\n*here is the code* \r\n\r\n\u00a0\r\n\r\n\u00a0\r\n{code:java}\r\nString filePath = \"/tmp/1gb.zip\";\r\nSystem.out.println(\"\\t Post to\u00a0 : \".concat(URL));\r\n System.out.println(\"\\t file : \".concat(filePath));\r\nPath path = Paths.get(filePath);\r\n byte[] bArray = Files.readAllBytes(path);\r\n// testing commons codec 1.16 (2019-11-05)\r\n byte[] encodeBase64 = Base64.encodeBase64(bArray);\r\nfinal String contentToBeSaved = new String(encodeBase64);\r\nHttpClient client = HttpClientBuilder.create().build();\r\n HttpResponse response = null;\r\nJSONObject metadata = new JSONObject();\r\n metadata.put(\"owner\", \"Ingo\");\r\n metadata.put(\"access\", \"public\");\r\n metadata.put(\"licenseType\", \"CC BY\");\r\n metadata.put(\"fileName\", \"fileName\");\r\n metadata.put(\"fileDataBase64\", contentToBeSaved);\r\nString metadataFormatted = StringEscapeUtils.unescapeJavaScript(metadata.toString());\r\nStringEntity entity = new StringEntity(metadataFormatted, ContentType.APPLICATION_JSON);\r\nHttpPost post = new HttpPost(URL);\r\n post.setEntity(entity);\r\n response = client.execute(post);\r\n HttpEntity responseEntity = response.getEntity();\r\nString responseFromMediaserver = EntityUtils.toString(responseEntity, \"UTF-8\");\r\n System.out.println(\"\\n****\");\r\n System.out.println(\"Response is : \" + responseFromMediaserver);\r\nJSONObject json = new JSONObject(responseFromMediaserver);\r\n String uuid = json.getString(\"uuid\");\r\n System.out.println(\"UUID is \" + uuid);\r\n{code}\r\n\u00a0\r\n\r\n\u00a0\r\n # mvn clean package\r\n # \u00a0 java -Xms512m -Xmx20480m -jar target/mediaClient.jar\u00a0\r\n\r\nThe crasch is in\r\n\r\n\u00a0\r\n{code:java}\r\nbyte[] encodeBase64 = Base64.encodeBase64(bArray);{code}\r\n\u00a0\r\n\r\nthe stacktrace is :\r\n{code:java}\r\n\u00a0\r\nStarting NewClientEncodePost\r\n Post to : http://127.0.0.1:8080/MediaServerResteasy/media\r\n file : /tmp/1gb.zip\r\nException in thread \"main\" java.lang.NegativeArraySizeException\r\n at org.apache.commons.codec.binary.BaseNCodec.resizeBuffer(BaseNCodec.java:253)\r\n at org.apache.commons.codec.binary.BaseNCodec.ensureBufferSize(BaseNCodec.java:269)\r\n at org.apache.commons.codec.binary.Base64.encode(Base64.java:380)\r\n at org.apache.commons.codec.binary.BaseNCodec.encode(BaseNCodec.java:451)\r\n at org.apache.commons.codec.binary.BaseNCodec.encode(BaseNCodec.java:430)\r\n at org.apache.commons.codec.binary.Base64.encodeBase64(Base64.java:679)\r\n at org.apache.commons.codec.binary.Base64.encodeBase64(Base64.java:642)\r\n at org.apache.commons.codec.binary.Base64.encodeBase64(Base64.java:623)\r\n at org.apache.commons.codec.binary.Base64.encodeBase64(Base64.java:556)\r\n at se.nrm.bio.mediaserver.testing.base64.NewClientEncodePost.posting(NewClientEncodePost.java:55)\r\n at se.nrm.bio.mediaserver.testing.base64.NewClientEncodePost.main(NewClientEncodePost.java:38)\r\n\u00a0\r\n{code}\r\n\u00a0\r\n\r\n\u00a0",
+            "resolved": "2019-12-05",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": [
+                "1.14"
+            ]
+        },
+        {
+            "issue_id": "CODEC-264",
+            "project": "Commons Codec",
+            "title": "murmur3.hash128() does not account for unsigned seed argument",
+            "type": "Bug",
+            "description": "The original murmur3_x64_128 code used unsigned int for seed arguments.  Using the equivalent bit patterns in the commons codec version does not yield the same results.\r\n\r\nI believe this is because the commons version does not account for sign extension etc.\r\n\r\nYonic Seeley [~yonik] has explains the issue in his implementation https://github.com/yonik/java_util/blob/master/src/util/hash/MurmurHash3.java\r\n\r\nHe provides a test case to show that his code returns the same answers as the original C/C++ code.  I modified that test to call the codec version to show the error.\r\n\r\nI have attached that test case.\r\n\r\nGiven that the original code is in the wild I am uncertain how to fix this issue.\r\n",
+            "resolved": "2019-11-24",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": [
+                "1.14"
+            ]
+        },
+        {
+            "issue_id": "CODEC-263",
+            "project": "Commons Codec",
+            "title": "Base64.decodeBase64 throw exception",
+            "type": "Bug",
+            "description": "Codec upgrade to\u00a01.13, code\u00a0 throw exception as follows\uff1a\r\n\r\n{code:java}\r\n  @Test\r\n  public  void test(){\r\n    Base64.decodeBase64(\"publishMessage\");\r\n  }\r\n{code}\r\n\r\nexception like\uff1a\r\n\r\n{code:java}\r\njava.lang.IllegalArgumentException: Last encoded character (before the paddings if any) is a valid base 64 alphabet but not a possible value\r\n\r\n\tat org.apache.commons.codec.binary.Base64.validateCharacter(Base64.java:798)\r\n\tat org.apache.commons.codec.binary.Base64.decode(Base64.java:472)\r\n\tat org.apache.commons.codec.binary.BaseNCodec.decode(BaseNCodec.java:412)\r\n\tat org.apache.commons.codec.binary.BaseNCodec.decode(BaseNCodec.java:395)\r\n\tat org.apache.commons.codec.binary.Base64.decodeBase64(Base64.java:694)\r\n{code}\r\n\r\n",
+            "resolved": "2024-02-05",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": [
+                "1.16"
+            ]
+        },
+        {
+            "issue_id": "CODEC-262",
+            "project": "Commons Codec",
+            "title": "Update jackson dependency to current",
+            "type": "Bug",
+            "description": "commons-codec installs jackson 1.9.13, which is a six year old version and no longer maintained.\u00a0 Please update to jackson 2.x",
+            "resolved": "2019-09-03",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-261",
+            "project": "Commons Codec",
+            "title": "Unable to encode read-only ByteBuffer",
+            "type": "Bug",
+            "description": "A read-only array-backed {{ByteBuffer}} fails to encode, because the backing array is not accessible.\r\n\r\n{code:java}\r\nHex.encodeHex(ByteBuffer.wrap(new byte[]{1}).asReadOnlyBuffer())\r\n{code}\r\n{noformat}\r\njava.nio.ReadOnlyBufferException\r\n    at java.nio.ByteBuffer.array(ByteBuffer.java:996)\r\n    at org.apache.commons.codec.binary.Hex.encodeHex(Hex.java:213)\r\n    at org.apache.commons.codec.binary.Hex.encodeHex(Hex.java:172)\r\n    at org.apache.commons.codec.binary.Hex.encodeHex(Hex.java:140)\r\n{noformat}",
+            "resolved": "2019-12-05",
+            "versions": [
+                "1.13"
+            ],
+            "fixVersions": [
+                "1.14"
+            ]
+        },
+        {
+            "issue_id": "CODEC-259",
+            "project": "Commons Codec",
+            "title": "Broken direct java.nio.ByteBuffer support in org.apache.commons.codec.binary.Hex",
+            "type": "Bug",
+            "description": "java.nio.ByteBuffer support in org.apache.commons.codec.binary.Hex does not work properly for direct ByteBuffer created by ByteBuffer.allocateDirect\u00a0method and for heap ByteBuffers which arrayOffset() or byteBuffer.position() greater than zero or byteBuffer.remaining() is not equal byteBuffer.array().{color:#660e7a}length{color}:\r\n\r\nThis test will produce java.lang.UnsupportedOperationException\r\n{code:java}\r\n@Test\r\npublic void testEncodeHexByteBufferEmpty() {\r\n    assertTrue(Arrays.equals(new char[0], Hex.encodeHex(ByteBuffer.allocateDirect(0))));\r\n}\r\n{code}\r\nThis one will fail\r\n{code:java}\r\n@Test\r\npublic void testEncodeHexByteBufferHelloWorldLowerCaseHex() {\r\n    final ByteBuffer b = ByteBuffer.wrap(StringUtils.getBytesUtf8(\"[Hello World]\"), 1, 11);\r\n    final String expected = \"48656c6c6f20576f726c64\";\r\n    char[] actual;\r\n    actual = Hex.encodeHex(b);\r\n    assertEquals(expected, new String(actual));\r\n    actual = Hex.encodeHex(b, true);\r\n    assertEquals(expected, new String(actual));\r\n    actual = Hex.encodeHex(b, false);\r\n    assertFalse(expected.equals(new String(actual)));\r\n}\r\n{code}",
+            "resolved": "2019-12-05",
+            "versions": [
+                "1.11",
+                "1.12"
+            ],
+            "fixVersions": [
+                "1.14"
+            ]
+        },
+        {
+            "issue_id": "CODEC-256",
+            "project": "Commons Codec",
+            "title": "ColognePhonetic.encode() calculates wrong code",
+            "type": "Bug",
+            "description": "Example String: \"ARTMANN\". Code of M is 6, Code of A is Zero (and therefore is left out), Code of N is 6 and should be left out because 6 is previous, but Code assumes wrongly 0 as previous (which was left out). So the result is 07266, but has to be 0726 (see Description of algorithm in class).\r\n\r\nSolution: In method colognePhonetic() move the last two LOC into if-block above, see attached version of class.",
+            "resolved": "2019-06-17",
+            "versions": [
+                "1.12"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-255",
+            "project": "Commons Codec",
+            "title": "ColognePhonetic handles x incorrectly",
+            "type": "Bug",
+            "description": "In the ColognePhonetic the letter x is coded as 48. This is solved in the implementation in adding a 's' in the string.\r\n\r\nWith this a string 'xch' ist coded as 48 instead of the correct 484.\r\n\r\nA solution is to store the added 'S' in the next loop not in the lastChar.",
+            "resolved": "2019-06-18",
+            "versions": [
+                "1.12"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-254",
+            "project": "Commons Codec",
+            "title": "ColognePhonetic does not treat the letter H correctly",
+            "type": "Bug",
+            "description": "With the fix in CODEC-250 the letter H is not treaten correct any more.\r\n\r\nA String 'shch' is coded as 8 and not as 84. (This string is sometimes in foreign surnames)\r\n\r\nThe reasen is the letter h is ignored completely and not stored in the lastChar anymore.",
+            "resolved": "2019-06-17",
+            "versions": [
+                "1.12"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-250",
+            "project": "Commons Codec",
+            "title": "Wrong value calculated by Cologne Phonetic if a special character is placed between equal letters",
+            "type": "Bug",
+            "description": "The algorith for cologne phonetic is (simpilied):\r\n # Encode letter by letter from left to right according to the conversion table.\r\n # Remove all digits occurring more than once next to each other.\r\n # Remove all code \"0\" except at the beginning.\r\n\r\nCharacters which are not specified in conversion table (such as hyphens) are ignored. See https://en.wikipedia.org/wiki/Cologne_phonetics\r\n\r\nIf the input is \"test-test\" the step results will be:\r\n # 20822082\r\n # 2082082\r\n # 28282\r\n\r\nThe expected result for \"test-test\" is therefor 28282.\r\n\r\nThe actual result for \"test-test\" is 282{color:#FF0000}2{color}82.\r\n\r\nThis bug is caused by the fix from\r\n\r\n[https://github.com/apache/commons-codec/commit/72c8759a22c6552a2dfcdf61b29729f981752879]\r\n\r\nand is present since 1.5",
+            "resolved": "2019-02-23",
+            "versions": [
+                "1.5",
+                "1.11"
+            ],
+            "fixVersions": [
+                "1.12"
+            ]
+        },
+        {
+            "issue_id": "CODEC-243",
+            "project": "Commons Codec",
+            "title": "Release 1.11 documentation polishing",
+            "type": "Bug",
+            "description": "These are actually trivial, but I called this minor because the effect is to make the release look not-quite-finished.\r\n\r\n1. The Release Notes (http://www.apache.org/dist/commons/codec/RELEASE-NOTES.txt) proclaim: \"The Apache Commons Codec team is pleased to announce the commons-codec-1.11-SNAPSHOT release!\"\r\n\r\nThe \"-SNAPSHOT\", of course, should be removed.\r\n\r\n2. The changes report (https://commons.apache.org/proper/commons-codec/changes-report.html) has this index entry for 1.11:\r\n\r\n||Version||Date||Description||\r\n|1.11|2017-MM-DD|Feature and fix release.|\r\n\r\nI wholeheartedly approve of the date format, but feel that more specificity of the date is required. \r\n\r\nSame applies to the corresponding heading, *Release 1.11 \u2013 2017-MM-DD*.\r\n",
+            "resolved": "2017-10-23",
+            "versions": [
+                "1.11"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-232",
+            "project": "Commons Codec",
+            "title": "URLCodec is neither immutable nor threadsafe",
+            "type": "Bug",
+            "description": "URLCodec Javadoc says the class is immutable and threadsafe.\n\nHowever it is not immutable, because of the fields:\n\nprotected static final BitSet WWW_FORM_URL;\nprotected String charset;\n\nNor is it threadsafe, because external code can change the charset field; changes to the field are not safely published across threads.\n\n(The WWW_FORM_URL field is no longer used internally).\n\nThe class could be made effectively immutable (and threadsafe) by also saving the initial charset name in a private final field and only using the private field.\n\nOr the charset field could be made volatile.\nThis would preserve the behaviour for subclasses that rely on changing the charset field.",
+            "resolved": "2017-03-28",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-231",
+            "project": "Commons Codec",
+            "title": "StringUtils.equals(CharSequence cs1, CharSequence cs2) can fail with String Index OBE",
+            "type": "Bug",
+            "description": "StringUtils.equals(CharSequence cs1, CharSequence cs2) fails with String Index OBE if the two sequences are different lengths.",
+            "resolved": "2017-03-26",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-230",
+            "project": "Commons Codec",
+            "title": "URLCodec.WWW_FORM_URL should be private",
+            "type": "Bug",
+            "description": "URLCodec.WWW_FORM_URL is mutable and should be made private.\nOtherwise subclasses can change the array accidentally or deliberately.\n\nHowever this would change the API for sub-classes.\n\nA work-round would be to create a parallel private field and keep WWW_FORM_URL as a copy, but marked deprecated.",
+            "resolved": "2017-03-26",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-229",
+            "project": "Commons Codec",
+            "title": "StringUtils.newStringxxx(null) should return null, not NPE",
+            "type": "Bug",
+            "description": "Method calls such as StringUtils.newStringIso8859_1(null) should return null, not NPE.\n\nIt looks like this capability was lost with the fix for CODEC-136, i.e.\nhttp://svn.apache.org/viewvc?rev=1306366&view=rev\n\nSeveral methods were changed from\n\n{code}\nreturn StringUtils.newString(bytes, CharEncoding.xxx);\nto\nreturn new String(bytes, Charsets.xxx);\n{code}\n\nThe new code should have been:\n\n{code}\nreturn newString(bytes, Charsets.xxx);\n{code}\n\nThe newString method handles null input.\n\nThere were no tests for null input so the change in behaviour was missed.\n",
+            "resolved": "2017-03-26",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-225",
+            "project": "Commons Codec",
+            "title": "InputStream not closed",
+            "type": "Bug",
+            "description": "After running static code analysis on common codecs we discovered that it leaks file descriptors. The relevant locations are:\n\n* DaitchMokotoffSoundex -> the static initializer on line 229 \n* Rule -> the static initializer on line 212 and the parseRules() method on line 438.\n\npatch provided via github pull request.\n\nThis issue is relevant for web app deployments on OSes (like windows) that lock the files if ther eare open streams to them, and will prevent application undeployment.",
+            "resolved": "2016-09-14",
+            "versions": [
+                "1.10",
+                "1.11"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-221",
+            "project": "Commons Codec",
+            "title": "HmacUtils.updateHmac calls reset() unnecessarily",
+            "type": "Bug",
+            "description": "The HmacUtils.updateHmac() methods call reset().\nThis means that it's not possible to build up a digest using multiple such calls.\n\nThe only useful operation that can be performed afterwards is to call one of the Mac.doFinal() methods.\n\nUnfortunately it's probably too late to change this.\nHowever it should at least be documented.",
+            "resolved": "2016-05-19",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-219",
+            "project": "Commons Codec",
+            "title": "Don't deprecate Charsets Charset constants in favor of Java 7's java.nio.charset.StandardCharsets",
+            "type": "Bug",
+            "description": "Don't deprecate Charsets Charset constants in favor of Java 7's java.nio.charset.StandardCharsets. \n\nSince we still require Java 6, we should not deprecate.\n\nOffer better comments.",
+            "resolved": "2016-05-16",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-217",
+            "project": "Commons Codec",
+            "title": "Add HmacAlgorithms.HMAC_SHA_224 (Java 8 only)",
+            "type": "Bug",
+            "description": "Add HmacAlgorithms.HMAC_SHA_224 (Java 8 only).",
+            "resolved": "2016-05-19",
+            "versions": [],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-209",
+            "project": "Commons Codec",
+            "title": "Javadoc for SHA-224 DigestUtils methods should mention Java 1.8.0 restriction instead of 1.4.0",
+            "type": "Bug",
+            "description": "Javadoc for SHA-224 DigestUtils should mention Java 1.8.0 restriction instead of 1.4.0.",
+            "resolved": "2016-05-14",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-207",
+            "project": "Commons Codec",
+            "title": "Charsets Javadoc breaks build when using Java 8",
+            "type": "Bug",
+            "description": "Some Javadocs in {{Charsets}} use a period instead of a hash to separate class and field in {{@link}} references.\n\nSpecifically:\n\n{noformat}\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time: 40.598 s\n[INFO] Finished at: 2016-05-13T13:33:29-07:00\n[INFO] Final Memory: 67M/658M\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-site-plugin:3.4:site (default-site) on project commons-codec: Error generating maven-javadoc-plugin:2.10.3:javadoc:\n[ERROR] Exit code: 1 - E:\\vcs\\svn\\apache\\commons\\trunks-proper\\codec\\src\\main\\java\\org\\apache\\commons\\codec\\Charsets.java:96: error: reference not found\n[ERROR] * @deprecated Use Java 7's {@link java.nio.charset.StandardCharsets.ISO_8859_1} instead\n[ERROR] ^\n[ERROR] E:\\vcs\\svn\\apache\\commons\\trunks-proper\\codec\\src\\main\\java\\org\\apache\\commons\\codec\\Charsets.java:107: error: reference not found\n[ERROR] * @deprecated Use Java 7's {@link java.nio.charset.StandardCharsets.US_ASCII} instead\n[ERROR] ^\n[ERROR] E:\\vcs\\svn\\apache\\commons\\trunks-proper\\codec\\src\\main\\java\\org\\apache\\commons\\codec\\Charsets.java:119: error: reference not found\n[ERROR] * @deprecated Use Java 7's {@link java.nio.charset.StandardCharsets.UTF_16} instead\n[ERROR] ^\n[ERROR] E:\\vcs\\svn\\apache\\commons\\trunks-proper\\codec\\src\\main\\java\\org\\apache\\commons\\codec\\Charsets.java:130: error: reference not found\n[ERROR] * @deprecated Use Java 7's {@link java.nio.charset.StandardCharsets.UTF_16BE} instead\n[ERROR] ^\n[ERROR] E:\\vcs\\svn\\apache\\commons\\trunks-proper\\codec\\src\\main\\java\\org\\apache\\commons\\codec\\Charsets.java:141: error: reference not found\n[ERROR] * @deprecated Use Java 7's {@link java.nio.charset.StandardCharsets.UTF_16LE} instead\n[ERROR] ^\n[ERROR] E:\\vcs\\svn\\apache\\commons\\trunks-proper\\codec\\src\\main\\java\\org\\apache\\commons\\codec\\Charsets.java:152: error: reference not found\n[ERROR] * @deprecated Use Java 7's {@link java.nio.charset.StandardCharsets.UTF_8}\n[ERROR] ^\n[ERROR]\n[ERROR] Command line was: \"C:\\Program Files\\Java\\jdk1.8.0_91\\jre\\..\\bin\\javadoc.exe\" @options @packages\n[ERROR]\n[ERROR] Refer to the generated Javadoc files in 'E:\\vcs\\svn\\apache\\commons\\trunks-proper\\codec\\target\\site\\apidocs' dir.\n[ERROR] -> [Help 1]\n[ERROR]\n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR]\n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException\n{noformat}",
+            "resolved": "2016-05-13",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-201",
+            "project": "Commons Codec",
+            "title": "Base32.HEX_DECODE_TABLE contains the wrong value 32",
+            "type": "Bug",
+            "description": "At line 99:\n\n            25, 26, 27, 28, 29, 30, 31, 32,                                 // 50-57 O-V\n\nthe value 32 should not be included. That disallows to use 'W' as padding with hex table.",
+            "resolved": "2015-05-28",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-200",
+            "project": "Commons Codec",
+            "title": "Base32.HEX_DECODE_TABLE contains the wrong value 32",
+            "type": "Bug",
+            "description": "At line 99:\n\n            25, 26, 27, 28, 29, 30, 31, 32,                                 // 50-57 O-V\n\nthe value 32 should not be included. That disallows to use 'W' as padding with hex table.",
+            "resolved": "2015-06-04",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-199",
+            "project": "Commons Codec",
+            "title": "Bug in HW rule in Soundex",
+            "type": "Bug",
+            "description": "The Soundex algorithm says that if two characters that map to the same code are separated by H or W, the second one is not encoded.\nHowever, in the implementation (in Soundex.getMappingCode() line 191), a character that is preceded by two characters that are either H or W, is not encoded, regardless of what the last consonant was.\nSource: http://en.wikipedia.org/wiki/Soundex#American_Soundex\n",
+            "resolved": "2017-03-31",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-198",
+            "project": "Commons Codec",
+            "title": "Base64 API doc is wrong about thread safety",
+            "type": "Bug",
+            "description": "Going to Binary64 API doc here: http://commons.apache.org/proper/commons-codec/archives/1.10/apidocs/index.html\n\nit states \"This class is thread-safe\"\nNonetheless, encode() was made not thread-safe in release 1.7 here: http://commons.apache.org/proper/commons-codec/changes-report.html\n\n\"Base64 encode() method is no longer thread-safe, breaking clients using it as a shared BinaryEncoder\"\n\nDocumentation need to be changed to reflect that, as users of the library might use it considering it's thread-safe\n",
+            "resolved": "2015-01-30",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-197",
+            "project": "Commons Codec",
+            "title": "Internal Server Error in Download area",
+            "type": "Bug",
+            "description": "This link bellow return Internal Server Error:\n\nhttp://commons.apache.org/proper/commons-codec/download_codec.cgi\n\nThe error is:\n\n\"Internal Server Error\n\nThe server encountered an internal error or misconfiguration and was unable to complete your request.\n\nPlease contact the server administrator at [no address given] to inform them of the time this error occurred, and the actions you performed just before this error.\n\nMore information about this error may be available in the server error log.\"",
+            "resolved": "2014-11-24",
+            "versions": [
+                "1.10"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-191",
+            "project": "Commons Codec",
+            "title": "Encoding data using Base64OutputStream omits part of the input in some cases",
+            "type": "Bug",
+            "description": "In case Base64OutputStream is used for encoding byte array produced from some strings, an incomplete result (that is inconsistent with both other Base64 implementations and Base64InputStream implementation) is produced. It appears that \"s\" character is getting omitted if it's in the end of the string to be encoded; there may be other cases as well.\n\nHere is the test that allows to reproduce the problem: http://kiberion.net/kibertoad/temp/codec-base64-error.zip",
+            "resolved": "2014-11-01",
+            "versions": [
+                "1.9"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-190",
+            "project": "Commons Codec",
+            "title": "Update from commons-parent 34 to 35.",
+            "type": "Bug",
+            "description": "Update from commons-parent 34 to 35.",
+            "resolved": "2014-10-27",
+            "versions": [
+                "1.9"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-189",
+            "project": "Commons Codec",
+            "title": "Fix Java 8 build Javadoc errors",
+            "type": "Bug",
+            "description": "Fix Java 8 build Javadoc errors.",
+            "resolved": "2014-10-27",
+            "versions": [
+                "1.9"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-187",
+            "project": "Commons Codec",
+            "title": "Beider Morse Phonetic Matching producing incorrect tokens",
+            "type": "Bug",
+            "description": "I believe the Beider Morse Phonetic Matching algorithm was added in Commons Codec 1.6\n\nThe BMPM algorithm is an EVOLVING algorithm that is currently on version 3.02 though it had been static since version 3.01 dated 19 Dec 2011 (it was first available as opensource as version 1.00 on 6 May 2009).\n\nI can see nothing in the Commons Codec Docs to say which version of BMPM was implemented so I am not sure if the problem with the algorithm as coded in the Codec is simply an old version or whether there are more basic problems with the implementation.\n\nHow do I determine the version of the algorithm that was implemented in the Commons Codec?\n\nHow do we ensure that the algorithm is updated if/when the BMPM algorithm changes?\n\nHow do we ensure that the algorithm as coded in the Commons Codec is accurate and working as expected?",
+            "resolved": "2014-11-01",
+            "versions": [
+                "1.9"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-186",
+            "project": "Commons Codec",
+            "title": "attributes are missing in MANIFEST.MF",
+            "type": "Bug",
+            "description": "We are encountering an issue using commons-codec-1.5.jar inside an applet.\nSince the 7U45 of java, the MANIFEST of a jar used inside an applet must be complete.\n3 attributes are missing in the MANIFEST\nTrusted-Library : true\nApplication-Name : <<as you want>>\nPermissions : all-permissions (or less if you want to be precise)\nCodebase : *\nsee : http://docs.oracle.com/javase/7/docs/technotes/guides/jweb/security/manifest.html\nWithout these attributes, the JRE refuse to execute an applet containing commons-codec-1.5.jar.\nCould you please fix that in order to make this jar usable inside an applet?\n\nThanks",
+            "resolved": "2014-06-07",
+            "versions": [
+                "1.5",
+                "1.9"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-185",
+            "project": "Commons Codec",
+            "title": "Base64 user-facing docs should say that decode can handle URL Safe encoding",
+            "type": "Bug",
+            "description": "Base64 has static methods specific to doing URLSafe encoding, but has no corresponding URLSafe decoding method.\n\nThis is be cause the decoding table transparently handles both URLSafe and standard alphabets. Unfortunately this is only documented as a javadoc on a private member.\n\nThere should be a mention of it\n\n* In the class javadocs\n* on the static decode methods\n* on the static URLSafe encode methods",
+            "resolved": "2014-11-01",
+            "versions": [
+                "1.4",
+                "1.5",
+                "1.6",
+                "1.7",
+                "1.8",
+                "1.9"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-184",
+            "project": "Commons Codec",
+            "title": "NullPointerException in DoubleMetaPhone.isDoubleMetaphoneEqual when using empty strings",
+            "type": "Bug",
+            "description": "{{isDoubleMetaphoneEqual}} does not work with empty strings: The following test throws a {{NullPointerException}}:\n\n{code:java}\n  public void test1() throws Throwable {\n    org.apache.commons.codec.language.DoubleMetaphone var0 = new org.apache.commons.codec.language.DoubleMetaphone();\n    boolean var3 = var0.isDoubleMetaphoneEqual(\"\", \"\", false);\n  }\n{code}",
+            "resolved": "2014-04-10",
+            "versions": [
+                "1.9"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-183",
+            "project": "Commons Codec",
+            "title": "BaseNCodecOutputStream only supports writing EOF on close()",
+            "type": "Bug",
+            "description": "The only way to add the EOF marker when encoding or decoding with the BaseNCodecOutputStream is via the close() function.  The flush() function does not perform this logic, and it is questionable whether or not it should.\n\nThe problem is that I want to write to a Base64OutputStream in the middle of writing to another stream.  That is, I will write some content to a stream, then wrap that stream with a Base64OutputStream to write some more (encoded) content, and then finish writing directly to the original stream (and so not encoded).  Calling flush() on the Base64OutputStream will not write the EOF marker, which means bytes can be lost.  I do not want to call close() on the Base64OutputStream as that will propagate to my original stream, which I need to leave open.\n\nIdeas for resolving this include the following:\n* Adding a separate function for writing the final (EOF) bytes without an explicit close (hacky solution).\n* Changing the visibility of various functions and members so that I can write my own descendant that provides the functionality I want.  Note that the encode() and decode() functions on BaseNCodec used in the close() routine are package-private, and so I cannot call them within a descendant.",
+            "resolved": "2014-11-16",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-180",
+            "project": "Commons Codec",
+            "title": "[PATCH] Fix Javadoc 1.8.0 errors",
+            "type": "Bug",
+            "description": null,
+            "resolved": "2014-01-31",
+            "versions": [],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-177",
+            "project": "Commons Codec",
+            "title": "Several broken links on website",
+            "type": "Bug",
+            "description": "The link \"Current Release\" doesn't work on this page:\nhttp://commons.apache.org/proper/commons-codec/\n\nThe link \"Current Release\", \"Codec 1.8\", \"Codec 1.7\", and \"Download\" doesn't work from this page:\nhttp://commons.apache.org/proper/commons-codec/archives/1.9/index.html",
+            "resolved": "2014-01-02",
+            "versions": [
+                "1.9"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-175",
+            "project": "Commons Codec",
+            "title": "Beider Morse does not close Scanners used to read config files.",
+            "type": "Bug",
+            "description": "Beider Morse does not close Scanners used to read config files in classes:\n- org.apache.commons.codec.language.bm.Lang\n- org.apache.commons.codec.language.bm.Languages",
+            "resolved": "2013-11-07",
+            "versions": [
+                "1.8"
+            ],
+            "fixVersions": [
+                "1.9"
+            ]
+        },
+        {
+            "issue_id": "CODEC-172",
+            "project": "Commons Codec",
+            "title": "Base32 decode table has spurious value",
+            "type": "Bug",
+            "description": "The Base32.DECODE_TABLE array contains the value 63 at pos 41:\n...\n-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 63, // 20-2f\n...\n\nI think this is a mistake because this value is not found in RFC-4648? It looks like a copy-paste error from Base64.",
+            "resolved": "2013-06-01",
+            "versions": [
+                "1.8"
+            ],
+            "fixVersions": [
+                "1.9"
+            ]
+        },
+        {
+            "issue_id": "CODEC-170",
+            "project": "Commons Codec",
+            "title": "Link broken in Metaphone Javadoc ",
+            "type": "Bug",
+            "description": "\n\n---------- Forwarded message ----------\nFrom: Henri Yandell <flamefew@gmail.com>\nDate: Tue, Apr 30, 2013 at 3:33 AM\nSubject: Re: Bad link in the javadocs\nTo: Commons Developers List <dev@commons.apache.org>\n\n\nI'm not sure if metacpan is fine, but it has a working link for the package:\n\nhttps://metacpan.org/source/MSCHWERN/Text-Metaphone-1.96/\n\nHen\n\nOn Mon, Apr 29, 2013 at 3:42 AM, Gary Gregory <garydgregory@gmail.com>wrote:\n\n> Hi Ron,\n>\n> Thank you for the report. Can you create a JIRA for this please? Do\n> you have a fix perchance?\n>\n> Gary\n>\n> On Apr 29, 2013, at 1:53, Ron Wheeler <rwheeler@artifact-software.com>\n> wrote:\n>\n> >\n> http://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/language/Metaphone.html\n> >\n> > \"Note, that this does not match the algorithm that ships with PHP, or\n> the algorithm found in the Perl Text:Metaphone-1.96 <\n> http://search.cpan.org/%7Emschwern/Text-Metaphone-1.96/Metaphone.pm>. \"\n> > references a missing page -\n> http://search.cpan.org/~mschwern/Text-Metaphone-1.96/Metaphone.pm\n> >\n> > Ron\n> >\n> > --\n> > Ron Wheeler\n> > President\n> > Artifact Software Inc\n> > email: rwheeler@artifact-software.com\n> > skype: ronaldmwheeler\n> > phone: 866-970-2435, ext 102\n> >\n>\n> ---------------------------------------------------------------------\n> To unsubscribe, e-mail: dev-unsubscribe@commons.apache.org\n> For additional commands, e-mail: dev-help@commons.apache.org\n>\n>\n\n\n\n-- \nE-Mail: garydgregory@gmail.com | ggregory@apache.org\nJava Persistence with Hibernate, Second Edition\nJUnit in Action, Second Edition\nSpring Batch in Action\nBlog: http://garygregory.wordpress.com\nHome: http://garygregory.com/\nTweet! http://twitter.com/GaryGregory\n",
+            "resolved": "2013-04-30",
+            "versions": [
+                "1.8"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-164",
+            "project": "Commons Codec",
+            "title": "Issue in populating junk characters",
+            "type": "Bug",
+            "description": "While decompressing the compressed String (which contains special characters like \" \u00e7 or \u00f5 or \u00e3 \" )with API \u201corg.apache.commons.codec.binary.Base64\u201d it is showing garbage values.\nWhile using Base64 API, we have used default encoding type as \u201cUTF-8\u201d.\nI have tried this issue with commons-codec-v1.3.jar and commons-codec-v1.7.jar also. ",
+            "resolved": "2013-01-06",
+            "versions": [
+                "1.7"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-160",
+            "project": "Commons Codec",
+            "title": "Base64.encodeBase64URLSafeString doesn't add padding characters at the end.",
+            "type": "Bug",
+            "description": "If the url safe method is used the padding characters are missing, resulting in a too short string as output.",
+            "resolved": "2012-10-09",
+            "versions": [],
+            "fixVersions": [
+                "1.8"
+            ]
+        },
+        {
+            "issue_id": "CODEC-157",
+            "project": "Commons Codec",
+            "title": "DigestUtils: Add MD2 APIs",
+            "type": "Bug",
+            "description": "Add MD2 support. It is a standard algorithm per http://docs.oracle.com/javase/6/docs/technotes/guides/security/StandardNames.html",
+            "resolved": "2012-09-04",
+            "versions": [],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-156",
+            "project": "Commons Codec",
+            "title": "DigestUtils: add APIs named after standard alg name SHA-1",
+            "type": "Bug",
+            "description": "DigestUtils already has SHA APIs but they use the \"SHA\" algorithm name which is not on the standard name list here: http://docs.oracle.com/javase/6/docs/technotes/guides/security/StandardNames.html. \n\nSHA-1 is on the list though, so use that for SHA-1 APIs.",
+            "resolved": "2012-09-02",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-155",
+            "project": "Commons Codec",
+            "title": "DigestUtils.getDigest(String) should throw IllegalArgumentException instead of RuntimeException",
+            "type": "Bug",
+            "description": "DigestUtils.getDigest(String) should throw IllegalArgumentException instead of RuntimeException",
+            "resolved": "2012-09-02",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-153",
+            "project": "Commons Codec",
+            "title": "Create a class MessageDigestAlgorithms to define standard algorithm names",
+            "type": "Bug",
+            "description": "Create a class MessageDigestAlgorithms to define string constants for the standard algorithm names from the _Java Cryptography Architecture Standard Algorithm Name Documentation_.",
+            "resolved": "2012-09-01",
+            "versions": [],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-152",
+            "project": "Commons Codec",
+            "title": "DigestUtils.getDigest(String) looses the orginal exception",
+            "type": "Bug",
+            "description": "DigestUtils.getDigest(String) looses the orginal exception. It should pass the checked exception it catches into the constructor of the new unchecked exception.",
+            "resolved": "2012-09-01",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-147",
+            "project": "Commons Codec",
+            "title": "BeiderMorse phonetic filter give uncertain results ",
+            "type": "Bug",
+            "description": "Hi,\n\nI use the new Beider-Morse encoder and I came across the following issue:\nConsecutive encodings with the identical parameters returns different results.\n\nI don't know if I am doing something wrong.\n\nHere is a small application to reproduce the issue:\n\n\tpublic static void main(String[] args) {\n\t\tPhoneticEngine encoder = new PhoneticEngine(NameType.GENERIC,\n\t\t\t\tRuleType.APPROX, true);\n\t\tfor (int i = 0; i < 10; i++)\n\t\t\tSystem.out.println(encoder.encode(\"test\"));\n\t}\n\nHere are the results:\n\nti|tis|tist|tit\nti|tis|tist|tit\ntist\nti|tis|tist|tit\nti|tis|tist|tit\ntist\nti|tis|tist|tit\ntist\nti|tis|tist|tit\ntist\n\nThank you for your help.",
+            "resolved": "2012-08-20",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-145",
+            "project": "Commons Codec",
+            "title": "Base64.encodeBase64String could better use newStringUsAscii",
+            "type": "Bug",
+            "description": "{{org.apache.commons.codec.binary.Base64.encodeBase64String}} currently uses {{StringUtils.newStringUtf8}}. But the text should be in fact be in ASCII, so {{newStringUsAscii}} would be clearer and perhaps faster.",
+            "resolved": "2017-03-28",
+            "versions": [],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-144",
+            "project": "Commons Codec",
+            "title": "BaseNCodec: encodeToString and encodeAsString methods are identical",
+            "type": "Bug",
+            "description": "The BaseNCodec: encodeToString and encodeAsString methods are identical.\n\nNot quite sure how that happened (possibly as part of the refactoring of the subclasses).\n\nOptions are:\n* document and ignore (i.e. keep both)\n* deprecate one method for removal in 2.0",
+            "resolved": "2017-03-28",
+            "versions": [
+                "1.5",
+                "1.10"
+            ],
+            "fixVersions": [
+                "1.11"
+            ]
+        },
+        {
+            "issue_id": "CODEC-140",
+            "project": "Commons Codec",
+            "title": "isBase64 returns true for any UTF8 string",
+            "type": "Bug",
+            "description": "I just called Base64.isBase64(\"Hello\") for instance and it returns true. I thought it would return true only if it is valid base64 encoded string.",
+            "resolved": "2012-04-25",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-137",
+            "project": "Commons Codec",
+            "title": "Main documentation page links wrong javadocs",
+            "type": "Bug",
+            "description": "http://commons.apache.org/codec/ prominently says it links 1.5 javadocs, but in fact links 1.4 javadocs. Thus, some prominent new features are not properly documented.",
+            "resolved": "2014-11-03",
+            "versions": [
+                "1.5"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-135",
+            "project": "Commons Codec",
+            "title": "Null Pointer Exception",
+            "type": "Bug",
+            "description": "I am trying to parse a certificate(.pfx).But I am getting following exception while parsing the certificate.\n\nCertificateException:org.apache.harmony.security.asn1.ASN1Exception: DER:\nonly definite length encoding MUST be user.\n\n{code}\npackage com.ams;\n\nimport java.io.BufferedInputStream;\nimport java.io.FileInputStream;\nimport java.security.KeyStore;\nimport java.security.KeyStoreException;\nimport java.security.cert.CertificateFactory;\nimport java.security.cert.X509Certificate;\nimport java.util.Enumeration;\n\nimport javax.security.cert.Certificate;\n\nimport android.content.Context;\nimport android.util.Log;\nimport android.view.View;\nimport android.view.View.OnClickListener;\nimport android.widget.Button;\nimport android.widget.Toast;\n\npublic class CertificateComponent   {\n\tprivate static final String TAG = \"CertificateParser\";\n\tpublic static final String PFX = \"sdcard/AC350.pfx\";\n\tpublic static final String CER = \"sdcard/test.cer\";\n\tX509Certificate cert;\n\tFileInputStream in;\n\tContext ctx; \n\tprivate Button Pkcs12Button;\n\tprivate Button CertButton;\n\n\tpublic void click(View v) {\n\t\ttry {\n\t\t\tif (v.getId() == R.id.pkcs12_button) {\n\t\t\t\tString password = \"TZ96dtbx\";\n\t\t\t\tKeyStore ks = KeyStore.getInstance(\"PKCS12\");\n\n\t\t\t\t in= new FileInputStream(PFX);\n\t\t\t\t// byte[] p12 = readFile(PFX);\n\t\t\t\t in.close();\n\t\t\t\tks.load(in, password.toCharArray());\n\t\t\t\tEnumeration<String> aliasesEnum = ks.aliases();\n\t\t\t\t// Log.i(TAG, \"certificate details:\" + aliasesEnum);\n\t\t\t\t\n\t\t\t\tString alias = (String) aliasesEnum.nextElement();\n\t\t\t\t// System.out.println(\"Alias: \" + alias);\n\n\t\t\t\tcert = (X509Certificate) ks.getCertificate(alias);\n\t\t\t\t\n\t\t\t\twhile (aliasesEnum.hasMoreElements()) {\n\t\t\t\t\t\n\t\t\t\t\tLog.i(TAG, \"Type:\" + cert.getType());\n\t\t\t\t\tLog.i(TAG, \"Key Algorithm:\"\n\t\t\t\t\t\t\t+ cert.getPublicKey().getAlgorithm());\n\t\t\t\t\tLog.i(TAG, \"Version:\" + cert.getVersion());\n\t\t\t\t\tLog.i(TAG, \"Issuer DN:\" + cert.getIssuerDN());\n\t\t\t\t\tLog.i(TAG, \"Subject:\" + cert.getSubjectDN());\n\t\t\t\t\tLog.i(TAG, \"Valid From:\" + cert.getNotBefore());\n\t\t\t\t\tLog.i(TAG, \"Valid Till:\" + cert.getNotAfter());\n\t\t\t\t\tLog.i(TAG, \"Public Key:\" + cert.getPublicKey());\n\t\t\t\t\tLog.i(TAG, \"Serial Number:\" + cert.getSerialNumber());\n\t\t\t\t\tLog.i(TAG, \"Signature:\" + cert.getSignature());\n\t\t\t\t\t\n\t\t\t\t\tString message = \"Check Logcat For Certificate Details\";\n\t\t\t\t\tToast.makeText(ctx, message, Toast.LENGTH_SHORT).show();\n\t\t\t\t}\n\t\t\t} else if (v.getId() == R.id.cert_button) {\n\n\t\t\t\t// String filename = \"sdcard/test_b64.cer\";\n\n\t\t\t\tin = new FileInputStream(CER);\n\t\t\t\tBufferedInputStream bf = new BufferedInputStream(in);\n\n\t\t\t\tCertificateFactory cf = CertificateFactory.getInstance(\"X.509\");\n\t\t\t\t\n\t\t\t\tcert = (X509Certificate) cf.generateCertificate(bf);\n\t\t\t\t\n\t\t\t\twhile (bf.available() > 0) {\n\t\t\t\t\t\n\t\t\t\t\tLog.i(TAG, \"Type:\" + cert.getType());\n\t\t\t\t\tLog.i(TAG, \"Key Algorithm:\"\n\t\t\t\t\t\t\t+ cert.getPublicKey().getAlgorithm());\n\t\t\t\t\tLog.i(TAG, \"Version:\" + cert.getVersion());\n\t\t\t\t\tLog.i(TAG, \"Issuer DN:\" + cert.getIssuerDN());\n\t\t\t\t\tLog.i(TAG, \"Subject:\" + cert.getSubjectDN());\n\t\t\t\t\tLog.i(TAG, \"Valid From:\" + cert.getNotBefore());\n\t\t\t\t\tLog.i(TAG, \"Valid Till:\" + cert.getNotAfter());\n\t\t\t\t\tLog.i(TAG, \"Public Key:\" + cert.getPublicKey());\n\t\t\t\t\tLog.i(TAG, \"Serial Number:\" + cert.getSerialNumber());\n\t\t\t\t\tLog.i(TAG, \"Signature:\" + cert.getSignature());\n\t\t\t\t\t// Log.i(TAG, \"certificate details:\" + cert);\n\n\t\t\t\t}\n\t\t\t\tin.close();\n\t\t\t\tString message = \"Check Logcat For Certificate Details\";\n\t\t\t\tToast.makeText(ctx, message, Toast.LENGTH_SHORT).show();\n\t\t\t}\n\n\t\t} catch (KeyStoreException e) {\n\t\t\tLog.i(TAG, \" KeyStoreException \" + e.getMessage());\n\t\t} catch (Exception e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\tLog.i(TAG, \" Exception: \" + e.getMessage());\n\t\t}\n\t\t\n\t\t \n\t\t\n\t}\n}\n{code}\n",
+            "resolved": "2012-03-22",
+            "versions": [
+                "1.5"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-134",
+            "project": "Commons Codec",
+            "title": "Base32 would decode some invalid Base32 encoded string into arbitrary value",
+            "type": "Bug",
+            "description": "Example, there is no byte array value that can be encoded into the string \"C5CYMIHWQUUZMKUGZHGEOSJSQDE4L===\", but the existing Base32 implementation would not reject it but decode it into an arbitrary value which if re-encoded again using the same implementation would result in the string \"C5CYMIHWQUUZMKUGZHGEOSJSQDE4K===\".\n\nInstead of blindly decoding the invalid string, the Base32 codec should reject it (eg by throwing IlleglArgumentException) to avoid security exploitation (such as tunneling additional information via seemingly valid base 32 strings).",
+            "resolved": "2019-05-20",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.13"
+            ]
+        },
+        {
+            "issue_id": "CODEC-132",
+            "project": "Commons Codec",
+            "title": "BeiderMorseEncoder OOM issues",
+            "type": "Bug",
+            "description": "In Lucene/Solr, we integrated this encoder into the latest release.\n\nOur tests use a variety of random strings, and we have recent jenkins failures\nfrom some input streams (of length <= 10), using huge amounts of memory (e.g. > 64MB),\nresulting in OOM.\n\nI've created a test case (length is 30 here) that will OOM with -Xmx256M. \n\nI haven't dug into this much as to what's causing it, but I suspect there might be a bug\nrevolving around certain punctuation characters: we didn't see this happening until\nwe beefed up our random string generation to start producing \"html-like\" strings.",
+            "resolved": "2012-03-07",
+            "versions": [
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-131",
+            "project": "Commons Codec",
+            "title": "DoubleMetaphone javadoc contains dead links",
+            "type": "Bug",
+            "description": "DoubleMetaphone documentation points to dead links in the domain cuj.com:\n\n   Original Article: http://www.cuj.com/documents/s=8038/cuj0006philips/\n   Original Source Code: ftp://ftp.cuj.com/pub/2000/1806/philips.zip",
+            "resolved": "2012-03-07",
+            "versions": [],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-130",
+            "project": "Commons Codec",
+            "title": "Base64InputStream.skip skips underlying stream, not output",
+            "type": "Bug",
+            "description": "Base64InputStream.skip() skips within underlying stream, leading to unexpected behaviour.\n\nThe following code will reproduce the issue:\n\n@Test\npublic void testSkip() throws Throwable {\n    InputStream ins =\n            new ByteArrayInputStream(\"AAAA////\".getBytes(\"ISO-8859-1\"));//should decode to {0, 0, 0, 255, 255, 255}\n    Base64InputStream instance = new Base64InputStream(ins);\n    assertEquals(3L, instance.skip(3L)); //should skip 3 decoded characters, or 4 encoded characters\n    assertEquals(255, instance.read()); //Currently returns 3, as it is decoding \"A/\", not \"//\" \n}\n\nThe following code, if added to Base64InputStream, or (BaseNCodecInputStream in the dev build) would resolve the issue:\n\n@Override\npublic long skip(long n) throws IOException {\n    //delegate to read()\n    long bytesRead = 0;\n    while ((bytesRead < n) && (read() != -1)) {\n        bytesRead++;\n    }\n    return bytesRead;\n}\n\nMore efficient code may be possible.",
+            "resolved": "2012-03-19",
+            "versions": [
+                "1.5"
+            ],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-128",
+            "project": "Commons Codec",
+            "title": "Documentation spelling fixes",
+            "type": "Bug",
+            "description": null,
+            "resolved": "2011-09-13",
+            "versions": [],
+            "fixVersions": [
+                "1.6"
+            ]
+        },
+        {
+            "issue_id": "CODEC-127",
+            "project": "Commons Codec",
+            "title": "Non-ascii characters in source files",
+            "type": "Bug",
+            "description": "Some of the test cases include characters in a native encoding (possibly UTF-8), rather than using Unicode escapes.\n\nThis can cause a problem for IDEs if they don't know the encoding (e.g. cause compilation errors, which is how I found the issue), and possibly some transformations may corrupt the contents, e.g. fixing EOL.\n\nI think we should have a rule of using Unicode escapes for all such non-ascii characters.\nIt's particularly important for non-ISO-8859-1 characters.\n\nSome example classes with non-ascii characters:\n\n{code}\nbinary\\Base64Test.java:96         byte[] decode = b64.decode(\"SGVsbG{\u00b4\u2510\u00a2\u00b4\u2510\u00a2\u00b4\u2510\u00a2\u00b4\u2510\u00a2\u00b4\u2510\u00a2\u00b4\u2510\u00a2}8gV29ybGQ=\");\nlanguage\\ColognePhoneticTest.java:110             {\"m\u251c\u00c2nchengladbach\", \"664645214\"},\nlanguage\\ColognePhoneticTest.java:130         String[][] data = {{\"bergisch-gladbach\", \"174845214\"}, {\"M\u251c\u255dller-L\u251c\u255ddenscheidt\", \"65752682\"}};\nlanguage\\ColognePhoneticTest.java:137             {\"Meyer\", \"M\u251c\u255dller\"},\nlanguage\\ColognePhoneticTest.java:143             {\"ganz\", \"G\u251c\u00f1nse\"},\nlanguage\\DoubleMetaphoneTest.java:1222         this.getDoubleMetaphone().isDoubleMetaphoneEqual(\"\u00b4\u2510\u00a2\", \"S\");\nlanguage\\DoubleMetaphoneTest.java:1227         this.getDoubleMetaphone().isDoubleMetaphoneEqual(\"\u00b4\u2510\u00a2\", \"N\");\nlanguage\\SoundexTest.java:367         if (Character.isLetter('\u00b4\u2510\u00a2')) {\nlanguage\\SoundexTest.java:369                 Assert.assertEquals(\"\u00b4\u2510\u00a2000\", this.getSoundexEncoder().encode(\"\u00b4\u2510\u00a2\"));\nlanguage\\SoundexTest.java:375             Assert.assertEquals(\"\", this.getSoundexEncoder().encode(\"\u00b4\u2510\u00a2\"));\nlanguage\\SoundexTest.java:387         if (Character.isLetter('\u00b4\u2510\u00a2')) {\nlanguage\\SoundexTest.java:389                 Assert.assertEquals(\"\u00b4\u2510\u00a2000\", this.getSoundexEncoder().encode(\"\u00b4\u2510\u00a2\"));\nlanguage\\SoundexTest.java:395             Assert.assertEquals(\"\", this.getSoundexEncoder().encode(\"\u00b4\u2510\u00a2\"));\n{code}\n\nThe characters are probably not correct above, because I used a crude perl script to find them:\n\n{code}\nperl -ne \"$.=1 if $s ne $ARGV;print qq($ARGV:$. $_) if m/\\P{ASCII}/;$s=$ARGV;\" xxxx.java\n{code}\n\nlanguage\\SoundexTest.java:367 in particular is incorrect, because it's supposed to be a single character.\n\nNow one might think that native2ascii -encoding UTF-8 would fix that, but it gives:\n\nif (Character.isLetter('\\ufffd'))\n\nwhich is an \"unknown\" character.\n\nSimilarly for binary\\Base64Test.java:96.\n\nIt's not all that clear what the Unicode escapes should be in these cases, but probably not the unknown character.\n\n[Possibly the characters got mangled at some point, or maybe they have always been wrong]\n\nThe ColognePhoneticTest.java cases are less serious, as the characters are valid ISO-8859-1 (accented German), but given that the rest of the file uses unicode escaps, I think they should be changed too (but add comments to say what they are, e.g. o-umlaut, u-umlaut)",
+            "resolved": "2011-08-17",
+            "versions": [
+                "1.5"
+            ],
+            "fixVersions": [
+                "1.6"
+            ]
+        },
+        {
+            "issue_id": "CODEC-123",
+            "project": "Commons Codec",
+            "title": "ColognePhonetic Javadoc should use HTML entities for special characters.",
+            "type": "Bug",
+            "description": "The ColognePhonetic class contains Javadoc with umlauts and other characters that do not always play well in editors. Change these characters to HTML entities. This means we should also be able to remove the UTF-8 settings in the POM for Javadoc.",
+            "resolved": "2011-05-18",
+            "versions": [
+                "1.5"
+            ],
+            "fixVersions": [
+                "1.6"
+            ]
+        },
+        {
+            "issue_id": "CODEC-122",
+            "project": "Commons Codec",
+            "title": "Bug in ColognePhonetic.java",
+            "type": "Bug",
+            "description": "During the use of org.apache.commons.codec.language.ColognePhonetic I recognized an error in method public String colognePhonetic(String text). The method does not handle the character 'J'. Thus Strings containig a J will not completely by calculated to the phonetic code. The characters 'J' will remain.",
+            "resolved": "2011-05-19",
+            "versions": [
+                "1.5"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-121",
+            "project": "Commons Codec",
+            "title": "QuotedPrintableCodec does not support soft line break per the 'quoted-printable' example on Wikipedia",
+            "type": "Bug",
+            "description": "Writing a unit test I discovered that the example Wikipedia uses for quoted-printable data does not decode but instead throws an exception.  \nTheir example is here:  http://en.wikipedia.org/wiki/Quoted-printable#Example\n\ntest:\n\n  String qpdata   = \"If you believe that truth=3Dbeauty, then surely=20=\\r\\n\" +\n\t\t    \"mathematics is the most beautiful branch of philosophy.\";\n\n  String expected = \"If you believe that truth=beauty, then surely \" +\n\t\t    \"mathematics is the most beautiful branch of philosophy.\";\n\n  assertEquals( expected,  new QuotedPrintableCodec().decode(qpdata) );\n\nI suppose I could fix if you like but currently I'm not a registered developer.  \n\n\n",
+            "resolved": "2014-11-05",
+            "versions": [
+                "1.5",
+                "1.6"
+            ],
+            "fixVersions": [
+                "1.10"
+            ]
+        },
+        {
+            "issue_id": "CODEC-117",
+            "project": "Commons Codec",
+            "title": "Caverphone encodes names starting and ending with \"mb\" incorrectly.",
+            "type": "Bug",
+            "description": "Caverphone encode names starting and ending with \"mb\" incorrectly.\n\nAccording to the spec:\n\"If the name ends with mb make it m2\".\n\nThis has been coded as:\n\"If the name _starts_ with mb make it m2\".",
+            "resolved": "2011-03-30",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-115",
+            "project": "Commons Codec",
+            "title": "DoubleMetaphone.maxCodeLen should probably be private",
+            "type": "Bug",
+            "description": "DoubleMetaphone.maxCodeLen should probably be private - it has public getter and setter anyway.",
+            "resolved": "2011-01-28",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-114",
+            "project": "Commons Codec",
+            "title": "org.apache.commons.codec.language.Soundex.US_ENGLISH_MAPPING should be package protected MALICIOUS_CODE",
+            "type": "Bug",
+            "description": "Findbugs says:\n\norg.apache.commons.codec.language.Soundex.US_ENGLISH_MAPPING should be package protected MALICIOUS_CODE http://findbugs.sourceforge.net/bugDescriptions.html#MS_PKGPROTECT",
+            "resolved": "2011-01-27",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-113",
+            "project": "Commons Codec",
+            "title": "org.apache.commons.codec.language.RefinedSoundex.US_ENGLISH_MAPPING should be package protected MALICIOUS_CODE",
+            "type": "Bug",
+            "description": "Findbugs says:\n\norg.apache.commons.codec.language.RefinedSoundex.US_ENGLISH_MAPPING should be package protected\tMALICIOUS_CODE\thttp://findbugs.sourceforge.net/bugDescriptions.html#MS_PKGPROTECT",
+            "resolved": "2011-01-27",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-112",
+            "project": "Commons Codec",
+            "title": "Base64.encodeBase64(byte[] binaryData, boolean isChunked, boolean urlSafe, int maxResultSize) throws IAE for valid maxResultSize if isChunked is false",
+            "type": "Bug",
+            "description": "If isChunked is false, Base64.encodeBase64(byte[] binaryData, boolean isChunked, boolean urlSafe, int maxResultSize) throws IAE for valid maxResultSize.\n\nTest case and fix will be applied shortly.",
+            "resolved": "2011-01-27",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-111",
+            "project": "Commons Codec",
+            "title": "org.apache.commons.codec.net.URLCodec.ESCAPE_CHAR isn't final but should be",
+            "type": "Bug",
+            "description": "org.apache.commons.codec.net.URLCodec.ESCAPE_CHAR isn't final but should be",
+            "resolved": "2011-01-24",
+            "versions": [
+                "1.2",
+                "1.3",
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-108",
+            "project": "Commons Codec",
+            "title": "Base64 encoding issue for larger avi files",
+            "type": "Bug",
+            "description": "I am using base64.encode/decode for xml files..it works fine with smaller files. But, when i try to encode larger avi files using Base64 encoder..it reduces file size. \n\nCould you please tell me, why its happening ??\n",
+            "resolved": "2011-01-13",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-105",
+            "project": "Commons Codec",
+            "title": "ArrayIndexOutOfBoundsException when doing multiple reads() on encoding Base64InputStream",
+            "type": "Bug",
+            "description": "When encoding a sizable stream byte by byte (so, just calling Base64InputStream.read()), after 10920 successful read()s, this happens: \n\njava.lang.ArrayIndexOutOfBoundsException: 2\n        at org.apache.commons.codec.binary.Base64.encode(Base64.java:502)\n        at org.apache.commons.codec.binary.Base64InputStream.read(Base64InputStream.java:157)\n        at org.apache.commons.codec.binary.Base64InputStream.read(Base64InputStream.java:109)\n\nBased on this, the necessary conditions seem to be that buffer = null and modulus = 2. Then, if a read() is done, a single-byte buffer is used, whose length is doubled by resizeBuffer(), but that still doesn't make it big enough to hold the 4 bytes written to it because modulus was just incremented to 0. \n\nHere's some sample code:\n\nimport org.apache.commons.codec.binary.Base64InputStream;\n\npublic class TestReads {\n    public static void main(String[] args) {\n        Base64InputStream b64stream = new Base64InputStream(System.in, true, 0, null);\n        int n = 0;\n        try {\n            while (b64stream.read() != -1) n++;\n        } catch (Exception x) {\n            System.out.println(n);\n            x.printStackTrace();\n        }\n    }\n}\n",
+            "resolved": "2011-01-24",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-102",
+            "project": "Commons Codec",
+            "title": "Base64OutputStream can miss last byte",
+            "type": "Bug",
+            "description": "Base64OutputStream misuses Base64.encode class. The documentation specifically says to call call encode with inAvail = -1, in order to signal Base64 that there is no more input, and it should wrap up the remaining bytes. Base64OutputStream does not do so, and as a result, last bytes can be missed.\n\nMy proposed fix is to add the following to beginning of Base64OutputStream#flush(boolean):\nif (doEncode) {\n   base64.encode(null, 0, -1);\n}",
+            "resolved": "2010-06-14",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-101",
+            "project": "Commons Codec",
+            "title": "Base64InputStream#read(byte[]) incorrectly returns 0 at end of any stream which is multiple of 3 bytes long",
+            "type": "Bug",
+            "description": "Using new InputStreamReader(new Base64InputStream(in, true)) sometimes fails with \"java.io.IOException: Underlying input stream returned zero bytes\".\n\nThis is been tracked down that Base64InputStream#read(byte[]) incorrectly returns 0 at end of any stream which is multiple of 3 bytes long.",
+            "resolved": "2011-01-21",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-99",
+            "project": "Commons Codec",
+            "title": "Base64.encodeBase64String() shouldn't chunk",
+            "type": "Bug",
+            "description": "Base64.encodeBase64String() shouldn't chunk.\n\nChange this:\n\n{code}\npublic static String encodeBase64String(byte[] binaryData) {\n    return StringUtils.newStringUtf8(encodeBase64(binaryData, true));\n}\n{code}\n\nTo this:\n\n{code}\npublic static String encodeBase64String(byte[] binaryData) {\n    return StringUtils.newStringUtf8(encodeBase64(binaryData, false));\n}\n{code}\n\n\n\nThis will fix the following tests ggregory added a few minutes ago:\n\n        //assertEquals(\"Zg==\", Base64.encodeBase64String(StringUtils.getBytesUtf8(\"f\")));\n        //assertEquals(\"Zm8=\", Base64.encodeBase64String(StringUtils.getBytesUtf8(\"fo\")));\n        //assertEquals(\"Zm9v\", Base64.encodeBase64String(StringUtils.getBytesUtf8(\"foo\")));\n        //assertEquals(\"Zm9vYg==\", Base64.encodeBase64String(StringUtils.getBytesUtf8(\"foob\")));\n        //assertEquals(\"Zm9vYmE=\", Base64.encodeBase64String(StringUtils.getBytesUtf8(\"fooba\")));\n        //assertEquals(\"Zm9vYmFy\", Base64.encodeBase64String(StringUtils.getBytesUtf8(\"foobar\")));\n\n",
+            "resolved": "2011-01-23",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-98",
+            "project": "Commons Codec",
+            "title": "Base64InputStream causes NullPointerException on some input",
+            "type": "Bug",
+            "description": "Certain (malformed?) input to {{Base64InputStream}} causes a {{NullPointerException}} in {{Base64.decode}}.\n\nThe exception occurs when {{Base64.decode}} is entered with the following conditions:\n\n* {{buffer}} is {{null}}\n* {{modulus}} is {{3}} from a previous entry.\n* {{inAvail}} is {{-1}} because {{Base64InputStream.read}} reached EOF on line 150.\n\nUnder these conditions, {{Base64.decode}} reaches line 581 with {{buffer}} still {{null}} and throws a {{NullPointerException}}.\n\nHere is some input data that will trigger it:\n\n{noformat}\nH4sIAAAAAAAAAFvzloG1uIhBKiuxLFGvODW5tCizpFIvODM9LzXFPykrNbmE8//eDC2bq/+ZGJij\nGdiT8/NKUvNKShiYop2iGTiLgQoTS0qLUgsZ6hgYfRh4SjJSE3PS84GmZOSWMAj5gMzVz0nMS9cP\nLinKzEu3rigoLQJpXvNZ/AcbR8gDJgaGigIGBqbLayAuMUxNKdVLTyxJTc7QS07WSyzKLC7JL8lJ\n1StJLErMKynNSdTLyUxOzStO1fOB0AwQwMjEwOrJwJMbn+mSWFkclpiTmeID4joml2SWpYZk5qaW\nMEj45Bel62flpyTqlwAF9F2A9oBkrMEqnYtSoXyob1hy4z1dShgEIL4oLcnM0Q8N9XQBqubKjYfa\nDjTV1AfoZn2Im/WTk/XhbtaHu1kf6mZ9T5g2YED8BwKgj8WAbtIDuUkP5CY9mJt22FSkZEXf/QkK\noCIGeVRFSYlA/zsBCZjq//9/PvSP1VvMxMDkxcCe6ZuZk5NZ7MPAnemcUZSfl5+Tn15ZwiCF5n2E\nnDUoDhjVfhrpNABdpI5qWTJYmZ5nsD9Cg0pwSWnSyhOCaYXmAerMoDgsxnAkzG1R+XmpYPXL9Bln\n1RhJPQarL+dgYNM1MLUyMKioKAYFOCvIBb8vl8qCOFxA4/jAiRIU7HqgYN8zk/n7jNxWfbAXeXJS\nE4tLgOnUKbOk2IuBOzcfzqso6M1QmrzKkedPzcYO3QZu129As4xITlZI6QqYFNhz44v9EkFpCGua\nLmEQdkktS83JL8gF5g4FqBGlIJ+wAI1gKJtZEvTws/j3FluPu4lcr7ra9OfHKXIZNTa4FPd8n33J\nQXPFLte9AZe5uBaJvGrKVl+rbrTaXDZO6NwU7gnHOVgzzsmnGX2Y5GDqrst8wcTear0Ab1yj6PrD\nF977vL/5iUMg773My5qLLK8OVAu6Tz7Xcyjy9Uym02Z/+xY7m85nYo/t4E93FXFKOf9/a3X78neS\njE5Tu066K3Mdf17m66mbpXN9y34ZZ3ErRobfn+RfzVBIWj0vc82vY7YPvM5eLHHOulV77M6CoB4h\nxb/FjHWHRR+ldb6QmSP1ROGwGs+nx2quwitN7+mIpsRFhU37JPRoZe2ZjiX/70j7CS1tz51YP/3W\n/xfnV2i/4rAoYeAN9nA0NTQqBxYMQcGOAG5\n{noformat}\n\nSay this is read from file with a {{byte[]}} of size {{1024}} using {{Base64InputStream.read(byte[])}}.  In the first iteration, all {{1190}} bytes get read into {{buf}}, then it enters {{Base64.setInitialBuffer}} and assigns the {{byte[1024]}} to {{buffer}} and does a round of decoding.  When it then enters {{Base64.readResults}} on line {{162}} in {{Base64InputStream}}, it sets {{buffer}} to {{null}}, {{modulus}} has the left-over value {{3}}, and the NPE occurs the next iteration.\n\n{{Base64InputStream}} could avoid this by returning right away on EOF ({{-1}}), but I think the real fix needs to happen in {{Base64}} since it this same situation could be created by direct use.  My guess is either more needs to happen in the body of the {{if}} on line {{542}} (set {{modulus}} to {{0}}?) or the condition on line {{573}} is flawed and needs adjusting.\n",
+            "resolved": "2010-06-02",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "Nightly Builds"
+            ]
+        },
+        {
+            "issue_id": "CODEC-97",
+            "project": "Commons Codec",
+            "title": "Base64 default constructor behaviour changed to enable chunking in 1.4",
+            "type": "Bug",
+            "description": "The following test passes in commons-codec 1.3 but fails in 1.4:\n\n{code}\npublic void testObjectEncode() throws Exception {\n    Base64 b64 = new Base64();\n    assertEquals(\"SGVsbG8gV29ybGQ=\", new String(b64.encode(\"Hello World\".getBytes())));\n}\n{code}\n\nCommons-codec 1.3 returns \"SGVsbG8gV29ybGQ=\".\n\nCommons-codec 1.4 returns \"SGVsbG8gV29ybGQ=\\r\\n\".\n\nI'd understand if you want to close this as \"Won't Fix\", since the behaviour wasn't documented before (the constructor wasn't even present!) and now it is. \n\nHowever, there is still no test for this behaviour on trunk as far as I can tell, so it would be good to add one so it doesn't change again in the future. I'll attach a patch for Base64Test which you can apply on trunk which will do so.\n",
+            "resolved": "2010-03-27",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-96",
+            "project": "Commons Codec",
+            "title": "Base64 encode() method is no longer thread-safe, breaking clients using it as a shared BinaryEncoder",
+            "type": "Bug",
+            "description": "Streaming support was added to Base64 in commons-codec 1.4 with CODEC-69. This introduced instance variables to Base64 which means the class can no longer be used as a shared BinaryEncoder instance.\n\nFor example, BinaryEncoder has an interface which could be (and was) used like this with Base64:\n\n{code:java}\nclass Example {\n    private BinaryEncoder encoder = new Base64();\n\n    byte[] someMethod(byte[] data) {\n        try {\n            return encoder.encode(data);\n        }\n        catch (EncoderException e) {\n            throw new RuntimeException(e);\n        }\n    } \n}\n{code}\n\nBase64 is no longer thread-safe in commons-codec 1.4, so code like the above which is accessed by multiple threads can throw NullPointerException:\n\n{noformat}\njava.lang.NullPointerException\n\tat org.apache.commons.codec.binary.Base64.encode(Base64.java:469)\n\tat org.apache.commons.codec.binary.Base64.encode(Base64.java:937)\n\tat ... (application code)\n{noformat}\n\nLooking at the implementation of Base64, I think making it thread-safe for this kind of usage would be quite tricky. I haven't attempted to prepare a patch.\n\nI would be happy if it was indicated in the Javadoc that Base64 is not thread-safe and should not be shared. However, some other users of commons-codec might be more worried about this regression.\n",
+            "resolved": "2012-04-03",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.7"
+            ]
+        },
+        {
+            "issue_id": "CODEC-94",
+            "project": "Commons Codec",
+            "title": "unexpected CRLF at end of base64 encoded string",
+            "type": "Bug",
+            "description": "Sometimes, a base64 encoded string ends inappropriately with \\r\\n characters.\n\nIn the example below, i used value 64 as line lenght and the generated base64 string lenght was 44; nevertheless string ends with CRLF .\n\n(i think, this bug is not related to bug #CODEC-89)\n\nHow to reproduce:\n\n{code:title=Test.java|borderStyle=solid}\npublic class Test {\n\tpublic static void main(String args[]) throws Exception {\n\n\t\tbyte[] input = new byte[] {\n\t\t\t\t25, 109, -39, -23, 82, -47, -88, 115, \n\t\t\t\t-34, 126, -57, 16, -110, -110, 60, -7, \n\t\t\t\t-123, -3, 60, 91, 112, -93, -67, -65, -71,\n\t\t\t\t-107, 123, -15, -106, 86, -80, 79\n\t\t};\n\n\t\tBase64 b64 = new Base64(64);\n\t\tString output = new String(b64.encode(input));\n\n\t\tSystem.out.println(\"*\"+output+\"*\");\n\t}\n}\n{code}\n\nthe output was: GW3Z6VLRqHPefscQkpI8+YX9PFtwo72/uZV78ZZWsE8=\\r\\n\n",
+            "resolved": "2011-01-21",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-92",
+            "project": "Commons Codec",
+            "title": "Many test cases use getBytes() which uses the default platform encoding so tests may fail on some platforms",
+            "type": "Bug",
+            "description": "Many test cases use getBytes() or new .String(byte[] bytes).\nThese both use the default platform encoding so the tests may fail on some platforms.\n\nThe tests should either use a known encoding (e.g. UTF-8) or should use bytes directly (e.g. 'h','e','l','l','o' instead of \"hello\".getBytes())\n\nThere don't seem to be any examples of such method calls in the main code, so the priority has been set to minor.",
+            "resolved": "2011-01-22",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-89",
+            "project": "Commons Codec",
+            "title": "new Base64().encode() appends a CRLF, and chunks results into 76 character lines",
+            "type": "Bug",
+            "description": "The instance encode() method (e.g. new Base64().encode()) appends a CRLF.  Actually it's fully chunking the output into 76 character lines.  Commons-Codec-1.3 did not do this.  The static Base64.encodeBase64() method behaves the same in both 1.3 and 1.4, so this problem only affects the instance encode() method.\n\n\n{code}\nimport org.apache.commons.codec.binary.*;\n\npublic class B64 {\n\n  public static void main(String[] args) throws Exception {\n    Base64 b64 = new Base64();\n\n    String s1 = \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\";\n    String s2 = \"aaaaaaaaaa\";\n    String s3 = \"a\";\n    \n    byte[] b1 = s1.getBytes(\"UTF-8\");\n    byte[] b2 = s2.getBytes(\"UTF-8\");\n    byte[] b3 = s3.getBytes(\"UTF-8\");\n\n    byte[] result;\n    result = Base64.encodeBase64(b1);\n    System.out.println(\"[\" + new String(result, \"UTF-8\") + \"]\");\n    result = b64.encode(b1);\n    System.out.println(\"[\" + new String(result, \"UTF-8\") + \"]\");\n\n    result = Base64.encodeBase64(b2);\n    System.out.println(\"[\" + new String(result, \"UTF-8\") + \"]\");\n    result = b64.encode(b2);\n    System.out.println(\"[\" + new String(result, \"UTF-8\") + \"]\");\n\n    result = Base64.encodeBase64(b3);\n    System.out.println(\"[\" + new String(result, \"UTF-8\") + \"]\");\n    result = b64.encode(b3);\n    System.out.println(\"[\" + new String(result, \"UTF-8\") + \"]\");\n\n  }\n}\n{code}\n\n\nHere's my output:\n\n{noformat}\n$ java -cp commons-codec-1.3.jar:. B64\n[YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYQ==]\n[YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYQ==]\n[YWFhYWFhYWFhYQ==]\n[YWFhYWFhYWFhYQ==]\n[YQ==]\n[YQ==]\n\n\n$ java -cp commons-codec-1.4.jar:. B64\n[YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYQ==]\n[YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFh\nYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYQ==\n]\n[YWFhYWFhYWFhYQ==]\n[YWFhYWFhYWFhYQ==\n]\n[YQ==]\n[YQ==\n]\n{noformat}\n",
+            "resolved": "2010-03-27",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.5"
+            ]
+        },
+        {
+            "issue_id": "CODEC-87",
+            "project": "Commons Codec",
+            "title": "DigestUtils: MD5 checksum is not calculated correctly on linux64-platforms",
+            "type": "Bug",
+            "description": "Actual behaviour: \n\nThe class DigesterUtils calculates different md5-hashes depending on plattform.\n\nI used jdk1.5.0_19-32bit on win32 and jdk1.5.0_19-64bit on SLES 10 (64-bit) for testing. \n\nThe effect depends on the charactersequence that is used for the calculation of the hash. There are some charactersequences that are calculated correctly. I think that the hash that is calculated on Windows 32 is the correct one since we have checked it by using an other library for calculating md5-hashes (Tagish-Auth-1.0.3). Since both of the tested libraries internally make use of the class java.security.MessageDigest but differ in the way the calculated byte[] is transformed in a hex-string, I think that the problem is located in the Hex.encodeHex(byte[] hashedBytes) method.\n\nExpected behaviour: \nThe md5-hash should should not depend on the platform and should be equal for all platforms.\n\nTestcase:\n\nSystem.out.println(DigestUtils.md5Hex(\"a9P,+$\")); \n\nproduces the hash 79c28faa4fec5ceb98137f548f1d6fe3 on Windows XP (32bit).\n\nThe same instruction produces 3191078c1fa327f9856b5b54628f2a39 on Suse Enterprise Linux 10 (64bit).\n",
+            "resolved": "2009-09-14",
+            "versions": [
+                "1.3",
+                "1.4"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-84",
+            "project": "Commons Codec",
+            "title": "Double Metaphone bugs in alternative encoding",
+            "type": "Bug",
+            "description": "The new test case (CODEC-83) has highlighted a number of issues with the \"alternative\" encoding in the Double Metaphone implementation\n\n1) Bug in the handleG method when \"G\" is followed by \"IER\" \n *  The alternative encoding of \"Angier\" results in \"ANKR\" rather than \"ANJR\"\n *  The alternative encoding of \"rogier\" results in \"RKR\" rather than \"RJR\"\n\nThe problem is in the handleG() method and is caused by the wrong length (4 instead of 3) being used in the contains() method:\n\n{code}\n } else if (contains(value, index + 1, 4, \"IER\")) {\n{code}\n\n...this should be\n\n{code}\n } else if (contains(value, index + 1, 3, \"IER\")) {\n{code}\n\n\n2)  Bug in the handleL method\n * The alternative encoding of \"cabrillo\" results in \"KPRL \" rather than \"KPR\"\n\nThe problem is that the first thing this method does is append an \"L\" to both primary & alternative encoding. When the conditionL0() method returns true then the \"L\" should not be appended for the alternative encoding\n\n{code}\nresult.append('L');\nif (charAt(value, index + 1) == 'L') {\n    if (conditionL0(value, index)) {\n        result.appendAlternate(' ');\n    }\n    index += 2;\n} else {\n    index++;\n}\nreturn index;\n{code}\n\nSuggest refeactoring this to\n\n{code}\nif (charAt(value, index + 1) == 'L') {\n    if (conditionL0(value, index)) {\n        result.appendPrimary('L');\n    } else {\n        result.append('L');\n    }\n    index += 2;\n} else {\n    result.append('L');\n    index++;\n}\nreturn index;\n{code}\n\n3) Bug in the conditionL0() method for words ending in \"AS\" and \"OS\"\n * The alternative encoding of \"gallegos\" results in \"KLKS\" rather than \"KKS\"\n\nThe problem is caused by the wrong start position being used in the contains() method, which means its not checking the last two characters of the word but checks the previous & current position instead:\n\n{code}\n        } else if ((contains(value, index - 1, 2, \"AS\", \"OS\") || \n{code}\n\n...this should be\n\n{code}\n        } else if ((contains(value, value.length() - 2, 2, \"AS\", \"OS\") || \n{code}\n\nI'll attach a patch for review",
+            "resolved": "2009-08-03",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-81",
+            "project": "Commons Codec",
+            "title": "Base64's new constructor parameters ignored",
+            "type": "Bug",
+            "description": "Base64's new constructor parameters are ignored (e.g. chunkSize and chunkSeparator) when using the Encoder interface.\n\n",
+            "resolved": "2009-07-28",
+            "versions": [
+                "Nightly Builds"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-80",
+            "project": "Commons Codec",
+            "title": "Regression:  Base64.encode(chunk=true) has bug when input length is multiple of 76",
+            "type": "Bug",
+            "description": "Regression:  Base64.encode(chunk=true) has bug when input length is multiple of 76\n\nThe resulting array is correct except there are two extra 0 bytes appended to the end.",
+            "resolved": "2009-07-24",
+            "versions": [
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-77",
+            "project": "Commons Codec",
+            "title": "Base64 bug with empty input (new byte[0])",
+            "type": "Bug",
+            "description": "Base64.encode(new byte[0]) doesn't return an empty byte array back!  It returns CRLF.",
+            "resolved": "2009-07-13",
+            "versions": [
+                "Nightly Builds"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-76",
+            "project": "Commons Codec",
+            "title": "All links to fixed bugs in the \"Changes Report\" http://commons.apache.org/codec/changes-report.html point nowhere, e.g. http://issues.apache.org/jira/browse/34157. Looks as if all JIRA tickets were renumbered.",
+            "type": "Bug",
+            "description": "All links to fixed bugs in the \"Changes Report\" http://commons.apache.org/codec/changes-report.html point nowhere, e.g. http://issues.apache.org/jira/browse/34157. Looks as if all JIRA tickets were renumbered.",
+            "resolved": "2009-07-16",
+            "versions": [
+                "1.1",
+                "1.2",
+                "1.3",
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-73",
+            "project": "Commons Codec",
+            "title": "Make string2byte conversions indepedent of platform default encoding",
+            "type": "Bug",
+            "description": "Both the library itself and many of its tests are utterly dependent on the JVM's default charset. For example, {{DigestUtils}} calls {{String.getBytes()}} to convert an input string to a byte array, happily delivering different digests for the same input string if run on different platforms.\n\nIf you want to try out the havor yourself, just run the unit tests in a JVM with UTF-16, e.g. by adding the line\n{code:xml}\n<argLine>-Dfile.encoding=UTF-16</argLine>\n{code}\nto the configuration of the Surefire Plugin in the POM.",
+            "resolved": "2009-08-06",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-72",
+            "project": "Commons Codec",
+            "title": "Soundex and RefinedSoundex issues with character arrays",
+            "type": "Bug",
+            "description": "Soundex and RefinedSoundex both have public US_ENGLISH_MAPPING char arrays. These don't appear to be used externally, so should be made private - or at least package protected.\n\nAlso, the class constructors store externally mutable char arrays; it would be better if these were copied.\n\nPatch to follow.",
+            "resolved": "2009-03-24",
+            "versions": [],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-68",
+            "project": "Commons Codec",
+            "title": "isBase64 throws ArrayIndexOutOfBoundsException on some non-BASE64 bytes",
+            "type": "Bug",
+            "description": "the following code throws an ArrayIndexOutOfBoundsException although it is perfectly valid (the byte 0x9c should be ignored according to the standard):\n\n{code}\nbyte[x] = new byte[] { 'n', 'A', '=', '=', 0x9c };\nBase64.decodeBase64(x);\n{code}\n\nThe problem is the following method:\n\n{code}\n    private static boolean isBase64(byte octect) {\n        if (octect == PAD) {\n            return true;\n        } else if (base64Alphabet[octect] == -1) {\n            return false;\n        } else {\n            return true;\n        }\n    }\n{code}\n\nin Java octect is a *signed* value, so it is not correct to use it as an offset for an array [0..254] which base64Alphabet is. 0x9c is -100!\n\nFIX:\nuse base64Alphabet[ 0xff & octect ] in the \"else if\" block to convert the octet prior using it as an offset for the lookup table",
+            "resolved": "2008-05-04",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-65",
+            "project": "Commons Codec",
+            "title": "Fix case-insensitive string handling",
+            "type": "Bug",
+            "description": "The language codecs are platform-depedent, please see [Common Bug #3|http://www.nabble.com/Re%3A-Common-Bugs-p14931921s177.html] for details.",
+            "resolved": "2008-04-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-61",
+            "project": "Commons Codec",
+            "title": "Base64.encodeBase64() throws NegativeArraySizeException on large files",
+            "type": "Bug",
+            "description": "The NegativeArraySizeException exception is thrown by Base64.EncodeBase64() for arrays larger than 268435455 bytes (2^31/8-1).\n\npublic static byte[] encodeBase64(byte[] binaryData, boolean isChunked)  starts with the following three lines:\n\n        int lengthDataBits = binaryData.length * EIGHTBIT;\n        int fewerThan24bits = lengthDataBits % TWENTYFOURBITGROUP;\n        int numberTriplets = lengthDataBits / TWENTYFOURBITGROUP;\n\nThe first of the lines will cause an integer overflow in lengthDataBits for lengths larger than 2^31/8-1, making it a negative number. The fix is trivial (but not tested on the running code, I just ran through a few numbers to validate that it computes the same results as the original code):\n\n        int lengthData = binaryData.length;\n        int fewerThan24bits = lengthData % (TWENTYFOURBITGROUP / EIGHTBIT) * EIGHTBIT;\n        int numberTriplets = lengthData / (TWENTYFOURBITGROUP / EIGHTBIT);\n\nThis way the encoder will be able to process files of up to 2^31-1 bytes in length, which is much better than ~250MB.\n\nThe issue was found in commons 1.3; the source code above was taken from SVN trunk so I assume it's still present in 1.4: http://svn.apache.org/repos/asf/commons/proper/codec/trunk/src/java/org/apache/commons/codec/binary/Base64.java\n",
+            "resolved": "2008-03-08",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-58",
+            "project": "Commons Codec",
+            "title": "Character set used by Base64 not documented",
+            "type": "Bug",
+            "description": "The Javadoc for the Base64 class does not document which character set is returned by encode() and expected by decode(). The RFC specifies \"characters\", not \"bytes\" as the result of the encoding, and yet Base64 returns bytes. It should provide complete information as to how to convert these bytes to and from Strings. I assume the character set used is ASCII, but that should be made explicit in the Javadoc.",
+            "resolved": "2009-07-18",
+            "versions": [
+                "1.1",
+                "1.2",
+                "1.3",
+                "1.4"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-57",
+            "project": "Commons Codec",
+            "title": "Metaphone.metaphone(String) returns an empty string when passed the word \"why\".",
+            "type": "Bug",
+            "description": "An empty string is returned from the Metaphone.metaphone(String) method when passed the value \"why\". Variations on the value, such as \"wwwhy\" and \"wwhhhy\" also return empty strings.\n\nThis appears to be an issue since other implementations of the metaphone algorithm, namely the PHP version, returns \"H\" when passed the value \"why\".",
+            "resolved": "2008-04-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-56",
+            "project": "Commons Codec",
+            "title": "RefinedSoundex creates instance before al fields have been initialized",
+            "type": "Bug",
+            "description": "The RefinedSoundex code creates an instance of itself in the variable US_ENGLISH; however this appears before some of the other static final variables.\n\nThe variable US_ENGLISH needs to be moved after the other variables.\n\nSee patch to follow.",
+            "resolved": "2007-10-27",
+            "versions": [],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-54",
+            "project": "Commons Codec",
+            "title": "testUsEnglishStatic doesn't fail",
+            "type": "Bug",
+            "description": "The source code for SoundexTest has this:\n\n    // This test fails.\n    public void testUsEnglishStatic()\n    {\n        assertEquals( Soundex.US_ENGLISH.soundex( \"Williams\" ), \"W452\" );\n    }\n\nHowever the test doesn't seem to fail.\n\nIt's followed by:\n\n    // This test succeeds.\n    public void testNewInstance()\n    {\n        assertEquals( new Soundex().soundex( \"Williams\" ), \"W452\" );\n    }",
+            "resolved": "2007-10-28",
+            "versions": [],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-53",
+            "project": "Commons Codec",
+            "title": "build.xml \"dist\" target refers to ../LICENSE",
+            "type": "Bug",
+            "description": "The source distribution for commons-codec-1.3/build.xml file has a \"dist\" and \"jar\" targets that refer to ../LICENSE which does not exist.  Therefore, an \"ant dist\" build fails at the \"copy\" tasks that refer to this missing file one directory *back* from the unpacked \"commons-codec-1.3\" directory, such as:\n\nBUILD FAILED\nC:\\Apps\\Libraries\\Java\\commons-codec-1.3\\build.xml:93: Warning: Could not find file C:\\Apps\\Libraries\\Java\\LICENSE to copy.\n\nPlease (1) include the LICENSE file itself in \"commons-codec-1.3\" directory, and then (2) fix lines 93 and 100 of build.xml to refer to \"LICENSE\" and not \"../LICENSE\".",
+            "resolved": "2006-10-16",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-51",
+            "project": "Commons Codec",
+            "title": "2 Test failures in SoundexTest",
+            "type": "Bug",
+            "description": "Testsuite: org.apache.commons.codec.language.SoundexTest\nTests run: 25, Failures: 2, Errors: 0, Time elapsed: 0.907 sec\n\nTestcase: testUsMappingOWithDiaeresis(org.apache.commons.codec.language.SoundexTest):   FAILED\nexpected:<?000> but was:<>\njunit.framework.ComparisonFailure: expected:<?000> but was:<>\n        at org.apache.commons.codec.language.SoundexTest.testUsMappingOWithDiaeresis(SoundexTest.java:349)\n        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)\n        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)\n\n\nTestcase: testUsMappingEWithAcute(org.apache.commons.codec.language.SoundexTest):       FAILED\nexpected:<?000> but was:<>\njunit.framework.ComparisonFailure: expected:<?000> but was:<>\n        at org.apache.commons.codec.language.SoundexTest.testUsMappingEWithAcute(SoundexTest.java:364)\n        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)\n        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)",
+            "resolved": "2008-03-08",
+            "versions": [],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-34",
+            "project": "Commons Codec",
+            "title": "[codec] BinaryCodec.toAsciiString outputs answer in reverse byte order.",
+            "type": "Bug",
+            "description": "In Codec 1.3,\nBinaryCodec.toAsciiString outputs answer in reverse byte order.  For example:\nbyte [0,1,2] becomes [00000010,00000001,00000000].\n\nBeanShell output:\n\nBinaryCodec.toAsciiString reverses the input byte array.\nbsh % hex = \"0077FF\";\n<0077FF>\nbsh % bytes = Hex.decodeHex(hex.toCharArray());\n<[B@1d520c4>\nbsh % bytes[0];\n<0>\nbsh % bytes[1];\n<119>\nbsh % bytes[2];\n<-1>\nbsh % BinaryCodec.toAsciiString(bytes);\n<111111110111011100000000>",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-33",
+            "project": "Commons Codec",
+            "title": "[codec] URLCodec does not encode correctly with special characters in UTF-8 charset..",
+            "type": "Bug",
+            "description": "URLCodec does not encode correctly with special characters in UTF-8 charset.\nFor eg, for the following special char  \u00f1\n\ntest case:\nRun the following test program (java EncodeTest \u00f1) see the output from\nboth URLCodec and java.net.URLEncoder.\n\n--------------------------------------------------------------------------\nimport org.apache.commons.codec.EncoderException;\nimport org.apache.commons.codec.DecoderException;\nimport org.apache.commons.codec.net.URLCodec;\n\npublic class EncodeTest\n{\n    //////////////////////////////////////////////////\n    // STATIC VARIABLES\n    //////////////////////////////////////////////////\n    private static URLCodec myInstance = new URLCodec();\n\n    //////////////////////////////////////////////////\n    // STATIC PUBLIC METHODS\n    //////////////////////////////////////////////////\n\n    /**\n     * Given a url, encode it\n     */\n    public static String encode(String s)\n    {\n        try\n        {\n            System.out.println(\"TEST \"+myInstance.getDefaultCharset());//UTF-8\n\n            String s1 =  myInstance.encode(s1);\n            \n            String s2 = java.net.URLEncoder.encode(s);\n            \n\n            System.out.println(s1);\n            System.out.println(s2);\n        }\n        catch (Exception ee)\n        {\n            // No point to do anything here, as it does not seem\n            // to be caught.  Best we can do is just return\n            // the string passed in.\n            System.out.println(ee);\n        }\n        return s;\n    }\n\n    public static String decode(String s)\n    {\n        try\n        {\n            s = myInstance.decode(s);\n        }\n        catch (DecoderException ee)\n        {\n            // No point to do anything here, as it does not seem\n            // to be caught.  Best we can do is just return\n            // the string passed in.\n        }\n        return s;\n    }\n    \n    \n    public static void main(String argv[])\n    {\n\t\tEncodeTest et = new EncodeTest();\n\t\tet.encode(argv[0]);\n    \n    }\n}\n-------------------------------------------------------------------",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-32",
+            "project": "Commons Codec",
+            "title": "[codec] Base64 decoder throws exception if byte sent in < 0",
+            "type": "Bug",
+            "description": "RFC 2045 stipulates that any unknown byte encountered during decoding should be \ndisregarded. All negative bytes sent to the decoder will produce the following \nerror though:\n\n\n\njava.lang.ArrayIndexOutOfBoundsException: -62\n\tat org.apache.commons.codec.binary.Base64.isBase64(Base64.java:137)\n\tat org.apache.commons.codec.binary.Base64.discardNonBase64(Base64.java:478)\n\tat org.apache.commons.codec.binary.Base64.decodeBase64(Base64.java:374)\n\tat TestCase.main(Unknown Source)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:\n39)\n\tat sun.reflect.DelegatingMethodAccessorImpl.\ninvoke(DelegatingMethodAccessorImpl.java:25)\n\tat java.lang.reflect.Method.invoke(Method.java:324)\n\tat com.intellij.rt.execution.application.AppMain.main(AppMain.java:78)\n\n\nCuurent method:\n\n    private static boolean isBase64(byte octect) {\n        if (octect == PAD) {\n            return true;\n        } else if (base64Alphabet[octect] == -1) {\n            return false;\n        } else {\n            return true;\n        }\n    }\n\nFixed method:\n    private static boolean isBase64(byte octect) {\n        if (octect == PAD) {\n            return true;\n        } else if (octect < 0 || base64Alphabet[octect] == -1) {\n            return false;\n        } else {\n            return true;\n        }\n    }",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.1"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-31",
+            "project": "Commons Codec",
+            "title": "Base64 chunked encoding not compliant with RFC 2045 section 2.1 CRLF",
+            "type": "Bug",
+            "description": "Base64 chunked encoding not compliant with RFC 2045 section 2.1 CRLF. We use\n\"\\n\" instead of CRLF or \"\\r\\n\".",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": [
+                "1.3"
+            ]
+        },
+        {
+            "issue_id": "CODEC-30",
+            "project": "Commons Codec",
+            "title": "[codec] Character \"\u00c3\u00b6\" or \"\u00c3\u00a9\" not mapped in soundex encoding",
+            "type": "Bug",
+            "description": "When calling soundex.soundex\\(x) with x a string with a diacritical mark \nlike \"\u00c3\u00b6\" or \"\u00c3\u00a9\" the following exception occurs:\n\njava.lang.ArrayIndexOutOfBoundsException: 131\n        at org.apache.commons.codec.language.Soundex.map(Soundex.java:199)\n        at org.apache.commons.codec.language.Soundex.getMappingCode(Soundex.java:157)\n\nThis happens when calling the difference(s1, s2) in codec verion 1.3-dev this \nexception occurs too\n\nCheers Rogier",
+            "resolved": "2008-03-08",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-29",
+            "project": "Commons Codec",
+            "title": "Soundex.setMaxLength causes bugs and is not needed.",
+            "type": "Bug",
+            "description": "Calling Soundex.setMaxLength() with a value of 2 or less causes the wrong answer\nto be returned. Since the encoding returned by Soundex is /always/ of length 4\nby definition (we do not use the '-' in as a letter-nnn separator for some\nreason) the need for a maxLength attribute is not needed (I claim). Deprecate\nthe field and accessor methods.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.1"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-28",
+            "project": "Commons Codec",
+            "title": "Need a test for Double Metaphone",
+            "type": "Bug",
+            "description": "Kyle Burton submitted a Test for DoubleMetaphone when he submitted a version of \nDoubleMetaphone from CPAN.  This code was copied from CPAN, and at the time, I\nwasn't interested in opening up a can of worms by even broaching the subject of\nlicense compatibility (at the time there was a civil war on community@\nsurrounding the LGPL) - We removed that implementation of DoubleMetaphone\nshortly before promotion from the sandbox.  Here is a link to his test:\n\nhttp://www.bgw.org/projects/java/phonetic/jakarta-commons-codec/TestDoubleMetaphone.java",
+            "resolved": "2006-07-14",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-27",
+            "project": "Commons Codec",
+            "title": "A unit test for Double Metaphone",
+            "type": "Bug",
+            "description": "A unit test for Double Metaphone is missing and that is blocking 1.1.1.\nA unit test will be attached shortly.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.1"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-26",
+            "project": "Commons Codec",
+            "title": "base64 codec doesnt ignore all illegal chars",
+            "type": "Bug",
+            "description": "Reading the base64 code after the release I noticed that it isn't actually\nRFC2045 compliant. Top of page 25, http://www.ietf.org/rfc/rfc2045.txt -\n\n\"Any characters outside of the base64 alphabet are to be ignored in\nbase64-encoded data.\"\n\nInstead, the base64 decoder just throws away (some) whitespace. The lookups in\ndecodeBase64 will return -1 for illegal characters, which isn't checked for and\nwill be mistakenly incorporated into the data.\n\nI guess the bug seems a little far-fetched, but XML 1.1 already had to expand\ntheir definition of end-of-line to take account of text processing on\nmainframes, which would trigger exactly this problem:\nhttp://www.w3.org/TR/xml11/#sec2.11\n\nI've been bitten by this one in the past, bizarrely enough, and was checking the\ncode to see if I could start using the apache codec instead of one I'd written.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "Nightly Builds"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-25",
+            "project": "Commons Codec",
+            "title": "[Codec] Default URL encoding logic broken",
+            "type": "Bug",
+            "description": "It looks like there are some changes made to the URLCodec class(rev 1.7 and 1.8)\nthat do not seem quite right (in my opinion). \n\nhttp://cvs.apache.org/viewcvs.cgi/jakarta-commons/codec/src/java/org/apache/commons/codec/net/URLCodec.java?r1=1.7&r2=1.9\n\nThe ENCODING variable in my original patch was made final static for a good\nreason. It is not supposed to be anything but US-ASCII. After all, the whole\npoint of URL encoding is to represent non-ASCII data using a limited set of\nASCII characters only, hence, 'US-ASCII' as a final static variable ENCODING.\nWith the present code, if US-ASCII incompatible encoding is used (such as\nUTF-16, EBCDIC), URLCodec may produce erroneous results. I understand that the\nintention of the revision 1.7 & 1.8 was to allow for user defined default\nencoding, but in its present form URLCodec does not seem to produce the desired\nresults.\n\nThe patch I am about to attach should take care of the problem while retaining\nthe existing (intended) semantics of the URLCodec class.\n\nOleg",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": [
+                "1.3"
+            ]
+        },
+        {
+            "issue_id": "CODEC-24",
+            "project": "Commons Codec",
+            "title": "[codec] encode/decode fails for \"\u00a1\"",
+            "type": "Bug",
+            "description": "If you encode the character \"\u00a1\" - inverted exclamation mark - it becomes \n%C2%A1, which is incorrect it should be %A1. If you decode \"%A1\" it should \ngive you \"\u00a1\"  and instead it give ? - which means it's producing a character \nit can't display, possibly a binary char. If you decode \"%C2%A1\" you do \nget \"\u00a1\", but \"%A1\" is the conversion for \"\u00a1\" and not \"%C2%A1\".",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-23",
+            "project": "Commons Codec",
+            "title": "[codec] RefinedSoundex nit: unused local variable 'mapped'",
+            "type": "Bug",
+            "description": "In [codec] RefinedSoundex.soundex(): unused local variable 'mapped'.\nAttached path removes it.\nAs an Commons committer, do I have commit rights to the Sandbox for nits such \nas these?",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.1"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-22",
+            "project": "Commons Codec",
+            "title": "[codec] Base64.isArrayByteBase64() throws an ArrayIndexOutOfBoundsException for negative octets.",
+            "type": "Bug",
+            "description": "If I try org.apache.commons.codec.binary.Base64.isArrayByteBase64() on a\nparticular byteArray I get a ArrayIndexOutOfBoundsException.\n\nHere is the stackTrace:\njava.lang.ArrayIndexOutOfBoundsException: -94\n        at org.apache.commons.codec.binary.Base64.isBase64(Base64.java:137)\n        at org.apache.commons.codec.binary.Base64.isArrayByteBase64(Base64.java:163)\n        at\nit.injava.rosetta.manager.PacketManager.decryptPacket(PacketManager.java:41)\n        at it.injava.rosetta.net.MulticastListener.run(MulticastListener.java:95)\n        at java.lang.Thread.run(Thread.java:534)\n\nThe correct result should be 'false': absolutely the byteArray is not a Base64\nstream but I want to use this method exactly to understand when byteArray is (or\nit is not) a real Base64 stream.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-21",
+            "project": "Commons Codec",
+            "title": "[codec] Alterations to Binary.java and its unit test for 1.3 release",
+            "type": "Bug",
+            "description": "* BIT_n constants made private\n* Used BITS in for loop to make code shorter and cleaner\n* Added two new methods for encoding and decoding to BitSet\n  curtesy of Vish Krishnan - sorry Vish I had to change some\n  things on your contribs.\n* Made 100% test coverage as validated by clover",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": [
+                "1.3"
+            ]
+        },
+        {
+            "issue_id": "CODEC-20",
+            "project": "Commons Codec",
+            "title": "[codec] URLCodec.decode() corrupts characters > 127 in unencoded strings",
+            "type": "Bug",
+            "description": "If URLCodec.decode() is called with a String that contains unencoded characters\nin the 128-255 range, these characters are corrupted. The reason for this is in\nthe way characters that don't need decoding are passed from the source to the\ntarget string:\n\n            int b = bytes[i];\n            \n            (...)\n     \n            buffer.write(b);\n\nIf a character code is > 127, it results in integer b being in the -128..-1\nrange, and when it's lowest byte is written to the buffer it's something else\nthan the original one. \n\nI think the fix would be to add 256 to b if b is less than zero.",
+            "resolved": "2008-03-08",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-19",
+            "project": "Commons Codec",
+            "title": "Change name of urldecode and urlencode in URLCodec",
+            "type": "Bug",
+            "description": "Change the names of these methods to urlDecode and urlEncode.  This is more\nconsistent with the rest of the package.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-18",
+            "project": "Commons Codec",
+            "title": "[codec] Bug in Base64 Decoder",
+            "type": "Bug",
+            "description": "I downloaded commons-codec-1.3.jar. Then I write one program that reads one \nTIFF image file '00001.tif', encodes it and writes it in some text file in the \ntext format. Then it reads the text file and after decoding, it writes it to \nanother TIFF file '00002.tif'. Now when I opened image '00002.tif', it gives me \nthe message 'Tiff Decode Error. This is not a valid TIFF file !'.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-17",
+            "project": "Commons Codec",
+            "title": "[codec] Metaphone B not handling ending MB correctly",
+            "type": "Bug",
+            "description": "Error in case for 'B', if a word ends in \"MB\" (ie \"COMB\"), Metaphone should \nnot add B to the code.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "Nightly Builds"
+            ],
+            "fixVersions": [
+                "1.3"
+            ]
+        },
+        {
+            "issue_id": "CODEC-16",
+            "project": "Commons Codec",
+            "title": "[codec][PATCH] add 2 new methods for encoding strings",
+            "type": "Bug",
+            "description": "Added two new methods for encoding to Strings in\nBase64.  Forgot to add the dual methods for decoding...\nlater...",
+            "resolved": "2007-10-27",
+            "versions": [],
+            "fixVersions": [
+                "1.1"
+            ]
+        },
+        {
+            "issue_id": "CODEC-13",
+            "project": "Commons Codec",
+            "title": "[codec] Base64 does not handle whitespace correctly",
+            "type": "Bug",
+            "description": "In HttpClient we have a bug concerning problems with whitespace handling in\nBase64.java, In HttpClient we have a bug concerning problems with whitespace handling in\nBase64.java, Bug 9931.  We have about resolved it, and think we should send our\nchanges upstream.  Are you interested?.  We have about resolved it, and think we should send our\nchanges upstream.  Are you interested?",
+            "resolved": "2007-10-27",
+            "versions": [],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-12",
+            "project": "Commons Codec",
+            "title": "[codec] Deprecated calls and 1 failure in the SoundexTest",
+            "type": "Bug",
+            "description": "[junit] Running org.apache.commons.codec.language.SoundexTest\n    [junit] Tests run: 19, Failures: 1, Errors: 0, Time elapsed: 0.06 sec\n\n\nIn jpackage.org we run \"ant (...) test jar javadoc\" and if a test fails we get a:\n\nBUILD FAILED\n/home/fnasser/topdir/BUILD/jakarta-commons-codec-1.3/build.xml:180: Test\norg.apache.commons.codec.language.SoundexTest failed\n\nand the RPMs are not generated.  Can this be fixed?  A patch that we can apply\nto the 1.3 sources perhaps?  I've excluded the Soundex tests altogether so we\ncould build but the ideal would be to run and pass the tests as a sanity test of\nthe build process.\n\nWe noticed that there are deprecated calls in this test:\n\ncompile.tests:\n    [javac] Compiling 17 source files to\n/home/fnasser/topdir/BUILD/jakarta-commons-codec-1.3/build/tests\n    [javac]\n/home/fnasser/topdir/BUILD/jakarta-commons-codec-1.3/src/test/org/apache/commons/codec/language/SoundexTest.java:298:\nwarning: getMaxLength() in org.apache.commons.codec.language.Soundex has been\ndeprecated\n    [javac]         soundex.setMaxLength(soundex.getMaxLength());\n    [javac]                                     ^\n    [javac]\n/home/fnasser/topdir/BUILD/jakarta-commons-codec-1.3/src/test/org/apache/commons/codec/language/SoundexTest.java:298:\nwarning: setMaxLength(int) in org.apache.commons.codec.language.Soundex has been\ndeprecated\n    [javac]         soundex.setMaxLength(soundex.getMaxLength());\n    [javac]                ^\n    [javac]\n/home/fnasser/topdir/BUILD/jakarta-commons-codec-1.3/src/test/org/apache/commons/codec/language/SoundexTest.java:304:\nwarning: setMaxLength(int) in org.apache.commons.codec.language.Soundex has been\ndeprecated\n    [javac]         soundex.setMaxLength(2);\n    [javac]                ^\n    [javac]\n/home/fnasser/topdir/BUILD/jakarta-commons-codec-1.3/src/test/org/apache/commons/codec/net/URLCodecTest.java:44:\nwarning: getEncoding() in org.apache.commons.codec.net.URLCodec has been deprecated\n    [javac]         assertEquals(urlCodec.getEncoding(),\nurlCodec.getDefaultCharset());\n    [javac]                              ^\n    [javac] 4 warnings\n\n\nThanks for your attention.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-11",
+            "project": "Commons Codec",
+            "title": "Possible enhancements to DigestUtil",
+            "type": "Bug",
+            "description": "Henri posted an interesting class to the list,\nhttp://www.osjava.org/genjava-core/xref/com/generationjava/security/Securer.html\n\nWondering if this has anything that might be of general interest to add to the\nDigestUtil or a supplemental class.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-10",
+            "project": "Commons Codec",
+            "title": "[codec] Using US_ENGLISH static in Soundex causes NPE",
+            "type": "Bug",
+            "description": "If I generate a soundex like so:\n  Soundex.US_ENGLISH.soundex( \"Williams\" )\nI get a NullPointerException.\n\nBut if I use the following:\n  new Soundex().soundex( \"Williams\" )\neverything works fine.\n\nI think the order of initialization of statics may be to blame.  I'll attach a\ntest case.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-9",
+            "project": "Commons Codec",
+            "title": "[Codec][PATCH] Inconsistent use of the word 'encodning' in the URLCodec API",
+            "type": "Bug",
+            "description": "This patch deprecates URLCodec#getEncoding method and replaces it with\nURLCodec#getCharSet method, because the term encoding is used in RFC1522 to\nrefer to the encoding/decoding algorithm, whereas charset is used to refer to\nthe character set associated with the unencoded text. \n\nLet me know if you agree/disagree\n\nOleg",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": [
+                "1.3"
+            ]
+        },
+        {
+            "issue_id": "CODEC-7",
+            "project": "Commons Codec",
+            "title": "because The OutputStreamWriter not flush, so short String will  encoded error...",
+            "type": "Bug",
+            "description": "because The OutputStreamWriter not flush, so short String will  encoded error...\n\n\norg.apache.commons.codec.base64 bug, i coreect,anyone can notify the committer \n\npublic static String encode(String data, String\ncharEncoding)\n        throws UnsupportedEncodingException {\n\n        // Check arguments\n        if (data == null) {\n            data = \"\";\n        }\n        if (charEncoding == null) {\n            charEncoding = DEFAULT_CHAR_ENCODING;\n        }\n\n        // Convert to byte[]\n        ByteArrayOutputStream bos = new\nByteArrayOutputStream();\n        OutputStreamWriter osw = new\nOutputStreamWriter(bos, charEncoding);\n        try {\n            osw.write(data);\n//*****should add start*********\n            osw.flush()\n//*****should add end*********\n\n        } catch (IOException ioe) {\n            throw new\nRuntimeException(ioe.toString());\n        }\n\n        // Encode\n        byte[] encodedData =\nencode(bos.toByteArray());",
+            "resolved": "2007-10-27",
+            "versions": [
+                "Nightly Builds"
+            ],
+            "fixVersions": []
+        },
+        {
+            "issue_id": "CODEC-6",
+            "project": "Commons Codec",
+            "title": "[codec] Source tarball spews files all over the place",
+            "type": "Bug",
+            "description": "The packaging is incorrect. The files in the src tarball should\nall be underneath a directory like \"commons-codec-1.3-src\", as is done\nfor the other packages.\n\nInstead we see:\n\n$ tar tzf commons-codec-1.3-src.tar.gz\n\nsrc/\nsrc/conf/\nsrc/java/\nsrc/java/org/\nsrc/java/org/apache/\nsrc/java/org/apache/commons/\nsrc/java/org/apache/commons/codec/\nsrc/java/org/apache/commons/codec/binary/\nsrc/java/org/apache/commons/codec/digest/\nsrc/java/org/apache/commons/codec/language/\nsrc/java/org/apache/commons/codec/net/\nsrc/media/\nsrc/test/\nsrc/test/org/\nsrc/test/org/apache/\nsrc/test/org/apache/commons/\nsrc/test/org/apache/commons/codec/\nsrc/test/org/apache/commons/codec/binary/\nsrc/test/org/apache/commons/codec/digest/\nsrc/test/org/apache/commons/codec/language/\nsrc/test/org/apache/commons/codec/net/\nLICENSE-header.txt\nLICENSE.txt\nNOTICE.txt\nPROPOSAL.html\nRELEASE-NOTES-1.0-dev.txt\nRELEASE-NOTES-1.1.txt\nRELEASE-NOTES-1.2.txt\nRELEASE-NOTES.txt\nRELEASE-PLAN\nTODO\nbuild.properties.sample\nbuild.xml\n....\n\nNaughty!!",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.3"
+            ],
+            "fixVersions": [
+                "1.4"
+            ]
+        },
+        {
+            "issue_id": "CODEC-5",
+            "project": "Commons Codec",
+            "title": "[codec] Hex converts illegal characters to 255",
+            "type": "Bug",
+            "description": "List:       jakarta-commons-dev\nSubject:    [codec] Proposal for improvement Hex codec\nFrom:       Tom van den Berge <tom.vandenberge () bibit ! com>\nDate:       2004-04-15 8:49:31\nMessage-ID: <407E4C9B.5070701 () bibit ! com>\n[Download message RAW]\n\nI'm using the Hex codec to decode e.g. the string \"qq\". What surprises \nme is that this obviously illegal hex value is decoded into one byte \nvalue 255. In fact all non-hex 'character-pairs' are decoded to value 255.\n\nWouldn't it be better to throw a DecoderException if illegal characters \nare passed in?\n\nThe current implementation decodes values that is is actually not able \nto decode, which is wrong.\n\nCheers,\nTom",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": [
+                "1.3"
+            ]
+        },
+        {
+            "issue_id": "CODEC-4",
+            "project": "Commons Codec",
+            "title": "[codec] ClassCastException in Hex.decode(Object) fixed.",
+            "type": "Bug",
+            "description": "You get a ClassCastException in Hex.decode(Object) if you pass in a String object.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.1"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-3",
+            "project": "Commons Codec",
+            "title": "Soundex encoding bugs",
+            "type": "Bug",
+            "description": "Soundex encoding bugs:\n(1) The HW rule is not applied.\n(2) hyphens and apostrophes are not ignored.\nFixed in CVS.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.1"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-2",
+            "project": "Commons Codec",
+            "title": "Provide a package.html for org/apache/commons/codec/net",
+            "type": "Bug",
+            "description": "The net subpackage does not have adequate JavaDoc.  A package.html needs to be\ncreated which acts as a usage guide for the codec in that package.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "1.2"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        },
+        {
+            "issue_id": "CODEC-1",
+            "project": "Commons Codec",
+            "title": "[CODEC] IndexOutOfBoundsException  when encoding non-ASCII characters",
+            "type": "Bug",
+            "description": "URLCodec causes an IndexOutOfBoundsException in BitSet when encoding non-ASCII\ncharacters.",
+            "resolved": "2007-10-27",
+            "versions": [
+                "Nightly Builds"
+            ],
+            "fixVersions": [
+                "1.2"
+            ]
+        }
+    ]
+}

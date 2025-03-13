@@ -1,0 +1,140 @@
+{
+    "Lang": {
+        "git_url": "https://github.com/apache/commons-lang.git",
+        "jira_url": "http://issues.apache.org/jira",
+        "project": "LANG",
+	"group":"Commons"
+    },
+    "Math": {
+        "git_url": "https://github.com/apache/commons-math.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "MATH",
+	"group":"Commons"
+    },
+    "Weaver": {
+        "git_url": "https://github.com/apache/commons-weaver.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "WEAVER",
+	"group":"Commons"
+    },
+    "Crypto": {
+        "git_url": "https://github.com/apache/commons-crypto.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "CRYPTO",
+	"group":"Commons"
+    },
+     "Hive": {
+        "git_url": "https://github.com/apache/hive.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "HIVE",
+	"group":"Apache"
+    },
+    "Compress": {
+        "git_url": "https://github.com/apache/commons-compress.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "COMPRESS",
+	"group":"Commons"
+    },
+    "Codec": {
+        "git_url": "https://github.com/apache/commons-codec.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "CODEC",
+	"group":"Commons"
+    },
+    "Collections": {
+        "git_url": "https://github.com/apache/commons-collections.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "COLLECTIONS",
+	"group":"Commons"
+    },
+    "Csv": {
+        "git_url": "https://github.com/apache/commons-csv.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "CSV",
+	"group":"Commons"
+    },
+    "Configuration": {
+        "git_url": "https://github.com/apache/commons-configuration.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "CONFIGURATION",
+	"group":"Commons"
+    },
+    "Io": {
+        "git_url": "https://github.com/apache/commons-io.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "IO",
+	"group":"Commons"
+    },
+    "Cli": {
+        "git_url": "https://github.com/apache/commons-cli.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "CLI",
+	"group":"Commons"
+    },
+    "Net": {
+        "git_url": "https://github.com/apache/commons-net.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "NET",
+	"group":"Commons"
+    },
+    "Imaging": {
+        "git_url": "https://github.com/apache/commons-imaging.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "IMAGING",
+	"group":"Commons"
+    },
+    "Ely": {
+        "git_url": "https://github.com/wildfly-security/wildfly-elytron.git",
+       	"jira_url": "https://issues.redhat.com",
+       	"project": "ELY",
+	"group":"Wildfly"
+    },
+    "Wfarq": {
+        "git_url": "https://github.com/wildfly/wildfly-arquillian.git",
+       	"jira_url": "https://issues.redhat.com",
+       	"project": "WFARQ",
+	"group":"Wildfly"
+    },
+    "Amqp": {
+        "git_url": "https://github.com/spring-projects/spring-amqp.git",
+       	"jira_url": "https://jira.spring.io",
+       	"project": "AMQP",
+	"group":"Spring"
+    },
+    "Batch": {
+        "git_url": "https://github.com/spring-projects/spring-batch.git",
+       	"jira_url": "https://jira.spring.io",
+       	"project": "BATCH",
+	"group":"Spring"
+    },
+    "Datacmns": {
+        "git_url": "https://github.com/spring-projects/spring-data-commons.git",
+       	"jira_url": "https://jira.spring.io",
+       	"project": "DATACMNS",
+	"group":"Spring"
+    },
+    "Datagraph": {
+        "git_url": "https://github.com/spring-projects/spring-data-neo4j.git",
+       	"jira_url": "https://jira.spring.io",
+       	"project": "DATAGRAPH",
+	"group":"Spring"
+    },
+    "Maven": {
+        "git_url": "https://github.com/apache/maven.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "MAVEN",
+	"group":"Apache"
+    },
+    "Wicket": {
+        "git_url": "https://github.com/apache/wicket.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "WICKET",
+	"group":"Apache"
+    },
+    "JxPath": {
+        "git_url": "https://github.com/apache/commons-jxpath.git",
+       	"jira_url": "http://issues.apache.org/jira",
+       	"project": "JXPATH",
+	"group":"Commons"
+    }      
+}

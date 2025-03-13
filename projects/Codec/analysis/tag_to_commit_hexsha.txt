@@ -1,0 +1,82 @@
+{
+    "CODEC_1_1": {
+        "hash": "71e7260746a902d1070a190fd78bd560464860b9",
+        "filtered name": "1.1"
+    },
+    "CODEC_1_2": {
+        "hash": "71e7260746a902d1070a190fd78bd560464860b9",
+        "filtered name": "1.2"
+    },
+    "CODEC_1_3": {
+        "hash": "71e7260746a902d1070a190fd78bd560464860b9",
+        "filtered name": "1.3"
+    },
+    "commons-codec-1.5": {
+        "hash": "36e7620574736400941c5154bf663b198abafa7c",
+        "filtered name": "1.5"
+    },
+    "CODEC_1_4": {
+        "hash": "f3db0de1fe8c429bd3c869108074fed4bdf25b3a",
+        "filtered name": "1.4"
+    },
+    "1_6": {
+        "hash": "7e8c20bd1b0593c3496a168be573aed40609a433",
+        "filtered name": "1.6"
+    },
+    "1.7": {
+        "hash": "55a0c64a1d75cab8930bcaad6fee3d62c10ac916",
+        "filtered name": "1.7"
+    },
+    "1.8": {
+        "hash": "03aa0776df745abd944666731e8859ec5ed487ba",
+        "filtered name": "1.8"
+    },
+    "1.9": {
+        "hash": "66436373d83a18676dd6d24f0317200a4daf83f0",
+        "filtered name": "1.9"
+    },
+    "1.10": {
+        "hash": "0929762d9dc10ccc62c7a227f69cd831e2bfb1b8",
+        "filtered name": "1.10"
+    },
+    "commons-codec-1.11": {
+        "hash": "28910eec203524b002f0dfeb8a391b88f835a7c0",
+        "filtered name": "1.11"
+    },
+    "commons-codec-1.12": {
+        "hash": "c74ed13a8b14421a5eb1bdc83430d413545682dd",
+        "filtered name": "1.12"
+    },
+    "commons-codec-1.13": {
+        "hash": "3ebef4ad92e31697fb52ca7cc71904c68654c2c8",
+        "filtered name": "1.13"
+    },
+    "commons-codec-1.14": {
+        "hash": "f5a61f0cd029f18666163f414f848ba0e1b39976",
+        "filtered name": "1.14"
+    },
+    "rel/commons-codec-1.15": {
+        "hash": "d470c55714a656f3562b71c391cc67afa0e02ef0",
+        "filtered name": "1.15"
+    },
+    "commons-codec-1.16-rc1": {
+        "hash": "e57b88ed485b54418b19358328095cd14ea1e742",
+        "filtered name": "1.16"
+    },
+    "rel/commons-codec-1.16.0": {
+        "hash": "780cc73a629b332f317f46b30b7ce2df9270daa6",
+        "filtered name": "1.16.0"
+    },
+    "rel/commons-codec-1.16.1": {
+        "hash": "353e79cd3edd84e1250021e896974d9018fc74bb",
+        "filtered name": "1.16.1"
+    },
+    "rel/commons-codec-1.17.0": {
+        "hash": "ad28b0f1ea4010dc0eaeb1d1cda041efe0ef7323",
+        "filtered name": "1.17.0"
+    },
+    "rel/commons-codec-1.17.1": {
+        "hash": "166e04e82f920f4ab0a5fe9e0eb95c7350b2b42e",
+        "filtered name": "1.17.1"
+    }
+}

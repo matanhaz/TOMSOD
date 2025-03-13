@@ -1,0 +1,8 @@
+{
+    "counters": {
+        "num of functions": 4264,
+        "num of functions no tests": 3215,
+        "num of files": 487,
+        "num of files no tests": 361
+    }
+}

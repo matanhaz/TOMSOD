@@ -1,0 +1,118 @@
+{
+    "NET_1_0_0": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.0.0"
+    },
+    "NET_1_1_0": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.1.0"
+    },
+    "NET_1_1_0_rc1": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.1.0."
+    },
+    "NET_1_1_1": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.1.1"
+    },
+    "NET_1_2_0": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.2.0"
+    },
+    "NET_1_2_0_TEMP": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.2.0."
+    },
+    "NET_1_2_1": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.2.1"
+    },
+    "NET_1_2_2": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.2.2"
+    },
+    "NET_1_3_0": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.3.0"
+    },
+    "NET_1_4_0": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1.4.0"
+    },
+    "v1-3-8": {
+        "hash": "a7fb411ce58472825ec1df10282ad883cbd057ee",
+        "filtered name": "1"
+    },
+    "NET_1_5_0": {
+        "hash": "2981acd1cb78b461665954f064be1ac27897cdaf",
+        "filtered name": "1.5.0"
+    },
+    "NET_2_0": {
+        "hash": "be5af473dca0fd652be1637d824d0baebb492947",
+        "filtered name": "2.0"
+    },
+    "commons-net-2.1-rc4": {
+        "hash": "5aad1de5a532540a0ee33f2a8989f562d4945dd7",
+        "filtered name": "2.1"
+    },
+    "commons-net-2.1": {
+        "hash": "5aad1de5a532540a0ee33f2a8989f562d4945dd7",
+        "filtered name": "2.1"
+    },
+    "NET_2_1_r924745": {
+        "hash": "e771cac9982f083e3d9c2d4c827f6f03e88f67aa",
+        "filtered name": "2.1."
+    },
+    "NET_2_2": {
+        "hash": "91db96b2f79d3e22238e5877fd75a8a8f4848c5c",
+        "filtered name": "2.2"
+    },
+    "NET_3_0": {
+        "hash": "c1026d8510ea97d8c5990cc0d281269311b54caa",
+        "filtered name": "3.0"
+    },
+    "NET_3_0_1": {
+        "hash": "432510450e21779226669b40d0b3531baaf8e27b",
+        "filtered name": "3.0.1"
+    },
+    "NET_3_1": {
+        "hash": "6919eed1a4f064f445849b30da2281f67925cdee",
+        "filtered name": "3.1"
+    },
+    "NET_3_2": {
+        "hash": "87058fcc14851401368176e34ccbe07688513c60",
+        "filtered name": "3.2"
+    },
+    "NET_3_3": {
+        "hash": "bcba9364c60b6b24dc916b1f30af6912c73949e6",
+        "filtered name": "3.3"
+    },
+    "NET_3_4": {
+        "hash": "2586f75769dc9c82de31c47412f3b41076a9c55b",
+        "filtered name": "3.4"
+    },
+    "NET_3_5": {
+        "hash": "328c4046d88629d1d7d484e88cb4293541bc1141",
+        "filtered name": "3.5"
+    },
+    "NET_3_6": {
+        "hash": "a76bed1f8338e0bffb78b3b5a918aede47135520",
+        "filtered name": "3.6"
+    },
+    "NET_3_7": {
+        "hash": "1eb03503f39c508b2b3ca157cfd35ee2dcbf1c22",
+        "filtered name": "3.7"
+    },
+    "rel/commons-net-3.7.1": {
+        "hash": "7827f0549526920b91aa2e62d2a1e7682c36e1e7",
+        "filtered name": "3.7.1"
+    },
+    "rel/commons-net-3.7.2": {
+        "hash": "ef9ccad4fd281d6af41282a7e7e06c91e12e0caa",
+        "filtered name": "3.7.2"
+    },
+    "rel/commons-net-3.8.0": {
+        "hash": "09f128a0f1373f227dea360c55b06c6638f83a36",
+        "filtered name": "3.8.0"
+    }
+}

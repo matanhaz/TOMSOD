@@ -1,0 +1,3 @@
+project,technique,precision,recall,wasted,f-score,expense,t-score,cost,exam-score
+Compress,using MRR,0,0,0,0,0,0,0,0
+Compress,using avg sim,0,0,0,0,0,0,0,0

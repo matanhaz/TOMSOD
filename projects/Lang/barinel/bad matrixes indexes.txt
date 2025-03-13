@@ -1,0 +1,25 @@
+{
+    "not in other methods": [],
+    "empty matrixes | empty bug list": [],
+    "duplicated matrixes": [],
+    "precision 0": [
+        "15",
+        "13",
+        "11",
+        "7",
+        "5",
+        "3",
+        "14",
+        "10"
+    ],
+    "precision 0 bug id": [
+        "219",
+        "168",
+        "122",
+        "112",
+        "106",
+        "58",
+        "171",
+        "120"
+    ]
+}

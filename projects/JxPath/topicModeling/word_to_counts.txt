@@ -1,0 +1,6964 @@
+{
+    "words": {
+        "initial": {
+            "count files": 1036,
+            "count total": 1107
+        },
+        "submission": {
+            "count files": 1008,
+            "count total": 1079
+        },
+        "checkstyle": {
+            "count files": 972,
+            "count total": 1357
+        },
+        "happy": {
+            "count files": 900,
+            "count total": 978
+        },
+        "major": {
+            "count files": 178,
+            "count total": 213
+        },
+        "refactoring": {
+            "count files": 386,
+            "count total": 452
+        },
+        "improve": {
+            "count files": 160,
+            "count total": 242
+        },
+        "formatting": {
+            "count files": 47,
+            "count total": 51
+        },
+        "documentation": {
+            "count files": 54,
+            "count total": 61
+        },
+        "clean-up": {
+            "count files": 384,
+            "count total": 421
+        },
+        "removal": {
+            "count files": 168,
+            "count total": 186
+        },
+        "deprecate": {
+            "count files": 23,
+            "count total": 28
+        },
+        "method": {
+            "count files": 198,
+            "count total": 263
+        },
+        "jxpath-38": {
+            "count files": 1,
+            "count total": 1
+        },
+        "classfunctions": {
+            "count files": 3,
+            "count total": 11
+        },
+        "throw": {
+            "count files": 24,
+            "count total": 25
+        },
+        "npe": {
+            "count files": 8,
+            "count total": 11
+        },
+        "search": {
+            "count files": 20,
+            "count total": 21
+        },
+        "function": {
+            "count files": 342,
+            "count total": 392
+        },
+        "null": {
+            "count files": 20,
+            "count total": 21
+        },
+        "n": {
+            "count files": 6,
+            "count total": 6
+        },
+        "bull": {
+            "count files": 158,
+            "count total": 167
+        },
+        "jxpath": {
+            "count files": 1485,
+            "count total": 2757
+        },
+        "codebase": {
+            "count files": 158,
+            "count total": 167
+        },
+        "get": {
+            "count files": 171,
+            "count total": 180
+        },
+        "little": {
+            "count files": 158,
+            "count total": 167
+        },
+        "better": {
+            "count files": 164,
+            "count total": 173
+        },
+        "familiarity": {
+            "count files": 158,
+            "count total": 167
+        },
+        "tiny": {
+            "count files": 158,
+            "count total": 167
+        },
+        "refactorings": {
+            "count files": 159,
+            "count total": 171
+        },
+        "unnecessary": {
+            "count files": 165,
+            "count total": 174
+        },
+        "el": {
+            "count files": 158,
+            "count total": 167
+        },
+        "etc": {
+            "count files": 164,
+            "count total": 175
+        },
+        "along": {
+            "count files": 158,
+            "count total": 167
+        },
+        "way": {
+            "count files": 158,
+            "count total": 167
+        },
+        "jxpath-141": {
+            "count files": 3,
+            "count total": 3
+        },
+        "functionlibrary": {
+            "count files": 7,
+            "count total": 17
+        },
+        "multithreading": {
+            "count files": 3,
+            "count total": 3
+        },
+        "issue": {
+            "count files": 1369,
+            "count total": 2511
+        },
+        "pmd": {
+            "count files": 1333,
+            "count total": 2424
+        },
+        "findbugs": {
+            "count files": 23,
+            "count total": 26
+        },
+        "fix": {
+            "count files": 1865,
+            "count total": 3112
+        },
+        "synchronization": {
+            "count files": 4,
+            "count total": 4
+        },
+        "describe": {
+            "count files": 2,
+            "count total": 2
+        },
+        "bug": {
+            "count files": 248,
+            "count total": 301
+        },
+        "report": {
+            "count files": 49,
+            "count total": 52
+        },
+        "http": {
+            "count files": 37,
+            "count total": 55
+        },
+        "apache": {
+            "count files": 1314,
+            "count total": 2581
+        },
+        "org": {
+            "count files": 1314,
+            "count total": 2557
+        },
+        "bugzilla": {
+            "count files": 34,
+            "count total": 49
+        },
+        "show_bug": {
+            "count files": 34,
+            "count total": 49
+        },
+        "cgi": {
+            "count files": 34,
+            "count total": 49
+        },
+        "id": {
+            "count files": 276,
+            "count total": 292
+        },
+        "loop": {
+            "count files": 17,
+            "count total": 18
+        },
+        "string": {
+            "count files": 28,
+            "count total": 35
+        },
+        "array": {
+            "count files": 17,
+            "count total": 19
+        },
+        "calling": {
+            "count files": 8,
+            "count total": 9
+        },
+        "equal": {
+            "count files": 31,
+            "count total": 53
+        },
+        "use": {
+            "count files": 84,
+            "count total": 92
+        },
+        "map": {
+            "count files": 6,
+            "count total": 6
+        },
+        "avoid": {
+            "count files": 12,
+            "count total": 12
+        },
+        "error": {
+            "count files": 75,
+            "count total": 92
+        },
+        "due": {
+            "count files": 3,
+            "count total": 3
+        },
+        "getbeaninfo": {
+            "count files": 2,
+            "count total": 3
+        },
+        "object": {
+            "count files": 169,
+            "count total": 181
+        },
+        "class": {
+            "count files": 63,
+            "count total": 71
+        },
+        "guard": {
+            "count files": 1,
+            "count total": 1
+        },
+        "npes": {
+            "count files": 1,
+            "count total": 1
+        },
+        "exception": {
+            "count files": 95,
+            "count total": 106
+        },
+        "path": {
+            "count files": 45,
+            "count total": 79
+        },
+        "tostring": {
+            "count files": 126,
+            "count total": 141
+        },
+        "inheritance": {
+            "count files": 9,
+            "count total": 10
+        },
+        "leniency": {
+            "count files": 9,
+            "count total": 10
+        },
+        "cache": {
+            "count files": 27,
+            "count total": 32
+        },
+        "context": {
+            "count files": 70,
+            "count total": 83
+        },
+        "factory": {
+            "count files": 9,
+            "count total": 10
+        },
+        "setfunctions": {
+            "count files": 7,
+            "count total": 8
+        },
+        "completely": {
+            "count files": 6,
+            "count total": 6
+        },
+        "override": {
+            "count files": 6,
+            "count total": 6
+        },
+        "default": {
+            "count files": 20,
+            "count total": 20
+        },
+        "thus": {
+            "count files": 9,
+            "count total": 9
+        },
+        "enable": {
+            "count files": 42,
+            "count total": 57
+        },
+        "secure": {
+            "count files": 6,
+            "count total": 6
+        },
+        "implementation": {
+            "count files": 415,
+            "count total": 461
+        },
+        "interface": {
+            "count files": 8,
+            "count total": 9
+        },
+        "jxpathcontextfactory": {
+            "count files": 5,
+            "count total": 19
+        },
+        "common": {
+            "count files": 14,
+            "count total": 15
+        },
+        "result": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jxpath-127": {
+            "count files": 19,
+            "count total": 23
+        },
+        "change": {
+            "count files": 234,
+            "count total": 292
+        },
+        "dynamic": {
+            "count files": 66,
+            "count total": 92
+        },
+        "classloading": {
+            "count files": 19,
+            "count total": 23
+        },
+        "consult": {
+            "count files": 19,
+            "count total": 23
+        },
+        "classloader": {
+            "count files": 19,
+            "count total": 23
+        },
+        "catch": {
+            "count files": 37,
+            "count total": 73
+        },
+        "ioexceptions": {
+            "count files": 1,
+            "count total": 1
+        },
+        "reading": {
+            "count files": 1,
+            "count total": 1
+        },
+        "resource": {
+            "count files": 1,
+            "count total": 1
+        },
+        "interface-based": {
+            "count files": 3,
+            "count total": 3
+        },
+        "introspection": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jxpath-152": {
+            "count files": 3,
+            "count total": 3
+        },
+        "synchronize": {
+            "count files": 5,
+            "count total": 5
+        },
+        "access": {
+            "count files": 36,
+            "count total": 40
+        },
+        "hashmap": {
+            "count files": 4,
+            "count total": 4
+        },
+        "put": {
+            "count files": 3,
+            "count total": 3
+        },
+        "call": {
+            "count files": 26,
+            "count total": 28
+        },
+        "jxpathintrospector": {
+            "count files": 9,
+            "count total": 31
+        },
+        "multiple": {
+            "count files": 199,
+            "count total": 239
+        },
+        "reporting": {
+            "count files": 62,
+            "count total": 75
+        },
+        "type": {
+            "count files": 36,
+            "count total": 50
+        },
+        "conversion": {
+            "count files": 28,
+            "count total": 37
+        },
+        "extension": {
+            "count files": 88,
+            "count total": 109
+        },
+        "handling": {
+            "count files": 49,
+            "count total": 60
+        },
+        "collection": {
+            "count files": 101,
+            "count total": 119
+        },
+        "argument": {
+            "count files": 29,
+            "count total": 40
+        },
+        "extenstion": {
+            "count files": 10,
+            "count total": 10
+        },
+        "introduce": {
+            "count files": 89,
+            "count total": 103
+        },
+        "specialize": {
+            "count files": 38,
+            "count total": 42
+        },
+        "support": {
+            "count files": 761,
+            "count total": 1258
+        },
+        "namespaces": {
+            "count files": 396,
+            "count total": 434
+        },
+        "implement": {
+            "count files": 276,
+            "count total": 292
+        },
+        "iterator": {
+            "count files": 31,
+            "count total": 39
+        },
+        "simplify": {
+            "count files": 32,
+            "count total": 34
+        },
+        "expressioncontext": {
+            "count files": 21,
+            "count total": 21
+        },
+        "add": {
+            "count files": 870,
+            "count total": 1356
+        },
+        "pointer": {
+            "count files": 238,
+            "count total": 278
+        },
+        "comparison": {
+            "count files": 99,
+            "count total": 110
+        },
+        "ensure": {
+            "count files": 86,
+            "count total": 89
+        },
+        "document": {
+            "count files": 100,
+            "count total": 106
+        },
+        "order": {
+            "count files": 82,
+            "count total": 87
+        },
+        "problem": {
+            "count files": 186,
+            "count total": 212
+        },
+        "reduce": {
+            "count files": 74,
+            "count total": 77
+        },
+        "number": {
+            "count files": 73,
+            "count total": 85
+        },
+        "place": {
+            "count files": 9,
+            "count total": 9
+        },
+        "nodepointers": {
+            "count files": 9,
+            "count total": 9
+        },
+        "clone": {
+            "count files": 11,
+            "count total": 11
+        },
+        "iteration": {
+            "count files": 46,
+            "count total": 56
+        },
+        "hasnext": {
+            "count files": 6,
+            "count total": 6
+        },
+        "times": {
+            "count files": 6,
+            "count total": 6
+        },
+        "would": {
+            "count files": 36,
+            "count total": 42
+        },
+        "mess": {
+            "count files": 6,
+            "count total": 6
+        },
+        "return": {
+            "count files": 111,
+            "count total": 119
+        },
+        "value": {
+            "count files": 125,
+            "count total": 139
+        },
+        "amount": {
+            "count files": 65,
+            "count total": 65
+        },
+        "cloning": {
+            "count files": 65,
+            "count total": 65
+        },
+        "move": {
+            "count files": 151,
+            "count total": 160
+        },
+        "propertyiterator": {
+            "count files": 156,
+            "count total": 184
+        },
+        "dom": {
+            "count files": 251,
+            "count total": 345
+        },
+        "container": {
+            "count files": 203,
+            "count total": 273
+        },
+        "lang": {
+            "count files": 41,
+            "count total": 94
+        },
+        "xml": {
+            "count files": 117,
+            "count total": 144
+        },
+        "remove": {
+            "count files": 109,
+            "count total": 158
+        },
+        "dependency": {
+            "count files": 58,
+            "count total": 60
+        },
+        "everywhere": {
+            "count files": 16,
+            "count total": 16
+        },
+        "except": {
+            "count files": 16,
+            "count total": 16
+        },
+        "need": {
+            "count files": 26,
+            "count total": 26
+        },
+        "non-lenient": {
+            "count files": 15,
+            "count total": 16
+        },
+        "mode": {
+            "count files": 15,
+            "count total": 16
+        },
+        "compiledexpressions": {
+            "count files": 23,
+            "count total": 35
+        },
+        "createpath": {
+            "count files": 63,
+            "count total": 164
+        },
+        "without": {
+            "count files": 53,
+            "count total": 63
+        },
+        "rename": {
+            "count files": 117,
+            "count total": 130
+        },
+        "createpathandsetvalue": {
+            "count files": 69,
+            "count total": 84
+        },
+        "removepath": {
+            "count files": 51,
+            "count total": 65
+        },
+        "relative": {
+            "count files": 37,
+            "count total": 47
+        },
+        "trailing": {
+            "count files": 7,
+            "count total": 9
+        },
+        "w": {
+            "count files": 9,
+            "count total": 12
+        },
+        "organize": {
+            "count files": 93,
+            "count total": 97
+        },
+        "import": {
+            "count files": 94,
+            "count total": 98
+        },
+        "getvalue": {
+            "count files": 113,
+            "count total": 136
+        },
+        "expr": {
+            "count files": 3,
+            "count total": 4
+        },
+        "perform": {
+            "count files": 5,
+            "count total": 6
+        },
+        "setlenient": {
+            "count files": 2,
+            "count total": 3
+        },
+        "true": {
+            "count files": 2,
+            "count total": 2
+        },
+        "advertise": {
+            "count files": 1,
+            "count total": 1
+        },
+        "effect": {
+            "count files": 1,
+            "count total": 1
+        },
+        "case": {
+            "count files": 72,
+            "count total": 80
+        },
+        "isnode": {
+            "count files": 36,
+            "count total": 36
+        },
+        "iscontainer": {
+            "count files": 36,
+            "count total": 36
+        },
+        "clean": {
+            "count files": 92,
+            "count total": 98
+        },
+        "aspath": {
+            "count files": 102,
+            "count total": 122
+        },
+        "ignore": {
+            "count files": 36,
+            "count total": 36
+        },
+        "property": {
+            "count files": 98,
+            "count total": 113
+        },
+        "see": {
+            "count files": 24,
+            "count total": 29
+        },
+        "nagoya": {
+            "count files": 3,
+            "count total": 4
+        },
+        "getparent": {
+            "count files": 20,
+            "count total": 20
+        },
+        "actual": {
+            "count files": 20,
+            "count total": 20
+        },
+        "parent": {
+            "count files": 26,
+            "count total": 27
+        },
+        "nodepointer": {
+            "count files": 53,
+            "count total": 186
+        },
+        "intermediate": {
+            "count files": 21,
+            "count total": 21
+        },
+        "helper": {
+            "count files": 24,
+            "count total": 24
+        },
+        "refactor": {
+            "count files": 22,
+            "count total": 23
+        },
+        "situation": {
+            "count files": 28,
+            "count total": 33
+        },
+        "open": {
+            "count files": 28,
+            "count total": 33
+        },
+        "traversal": {
+            "count files": 28,
+            "count total": 33
+        },
+        "make": {
+            "count files": 98,
+            "count total": 105
+        },
+        "opening": {
+            "count files": 29,
+            "count total": 38
+        },
+        "consistent": {
+            "count files": 28,
+            "count total": 33
+        },
+        "throughout": {
+            "count files": 28,
+            "count total": 33
+        },
+        "ri": {
+            "count files": 1076,
+            "count total": 1991
+        },
+        "jxpath-96": {
+            "count files": 5,
+            "count total": 6
+        },
+        "nodepointerfactory": {
+            "count files": 10,
+            "count total": 14
+        },
+        "variablepointers": {
+            "count files": 5,
+            "count total": 6
+        },
+        "external": {
+            "count files": 63,
+            "count total": 83
+        },
+        "namespace": {
+            "count files": 87,
+            "count total": 130
+        },
+        "registration": {
+            "count files": 70,
+            "count total": 100
+        },
+        "roll": {
+            "count files": 13,
+            "count total": 16
+        },
+        "back": {
+            "count files": 14,
+            "count total": 17
+        },
+        "feature": {
+            "count files": 31,
+            "count total": 35
+        },
+        "prefix": {
+            "count files": 75,
+            "count total": 93
+        },
+        "jxpathcontext": {
+            "count files": 103,
+            "count total": 193
+        },
+        "match": {
+            "count files": 65,
+            "count total": 76
+        },
+        "mapping": {
+            "count files": 8,
+            "count total": 8
+        },
+        "inherit": {
+            "count files": 8,
+            "count total": 8
+        },
+        "child": {
+            "count files": 43,
+            "count total": 49
+        },
+        "next": {
+            "count files": 26,
+            "count total": 26
+        },
+        "nextnode": {
+            "count files": 25,
+            "count total": 25
+        },
+        "javadoc": {
+            "count files": 63,
+            "count total": 68
+        },
+        "links": {
+            "count files": 41,
+            "count total": 85
+        },
+        "jdom": {
+            "count files": 201,
+            "count total": 292
+        },
+        "beanutils": {
+            "count files": 43,
+            "count total": 45
+        },
+        "jee": {
+            "count files": 40,
+            "count total": 42
+        },
+        "navigation": {
+            "count files": 40,
+            "count total": 42
+        },
+        "inheritdoc": {
+            "count files": 40,
+            "count total": 42
+        },
+        "additional": {
+            "count files": 59,
+            "count total": 61
+        },
+        "comment": {
+            "count files": 43,
+            "count total": 45
+        },
+        "line": {
+            "count files": 40,
+            "count total": 42
+        },
+        "feed": {
+            "count files": 40,
+            "count total": 42
+        },
+        "end": {
+            "count files": 40,
+            "count total": 42
+        },
+        "source": {
+            "count files": 41,
+            "count total": 43
+        },
+        "file": {
+            "count files": 45,
+            "count total": 48
+        },
+        "old": {
+            "count files": 40,
+            "count total": 42
+        },
+        "constructor": {
+            "count files": 44,
+            "count total": 49
+        },
+        "suite": {
+            "count files": 282,
+            "count total": 313
+        },
+        "junit": {
+            "count files": 42,
+            "count total": 86
+        },
+        "test": {
+            "count files": 682,
+            "count total": 940
+        },
+        "update": {
+            "count files": 99,
+            "count total": 111
+        },
+        "relocate": {
+            "count files": 40,
+            "count total": 42
+        },
+        "artifact": {
+            "count files": 40,
+            "count total": 42
+        },
+        "pom": {
+            "count files": 40,
+            "count total": 42
+        },
+        "downgrade": {
+            "count files": 40,
+            "count total": 42
+        },
+        "jxpath-113": {
+            "count files": 4,
+            "count total": 6
+        },
+        "childcontext": {
+            "count files": 7,
+            "count total": 21
+        },
+        "redundant": {
+            "count files": 21,
+            "count total": 23
+        },
+        "check": {
+            "count files": 6,
+            "count total": 6
+        },
+        "name": {
+            "count files": 18,
+            "count total": 24
+        },
+        "format": {
+            "count files": 125,
+            "count total": 129
+        },
+        "code": {
+            "count files": 102,
+            "count total": 108
+        },
+        "getnode": {
+            "count files": 124,
+            "count total": 136
+        },
+        "replace": {
+            "count files": 69,
+            "count total": 82
+        },
+        "tab": {
+            "count files": 67,
+            "count total": 73
+        },
+        "space": {
+            "count files": 104,
+            "count total": 110
+        },
+        "predicate": {
+            "count files": 5,
+            "count total": 7
+        },
+        "non-node": {
+            "count files": 1,
+            "count total": 1
+        },
+        "wrapping": {
+            "count files": 1,
+            "count total": 1
+        },
+        "cast": {
+            "count files": 6,
+            "count total": 6
+        },
+        "jxpath-100": {
+            "count files": 2,
+            "count total": 2
+        },
+        "sort": {
+            "count files": 4,
+            "count total": 6
+        },
+        "union": {
+            "count files": 3,
+            "count total": 4
+        },
+        "pulling": {
+            "count files": 2,
+            "count total": 2
+        },
+        "first": {
+            "count files": 6,
+            "count total": 7
+        },
+        "node": {
+            "count files": 43,
+            "count total": 52
+        },
+        "coreoperation": {
+            "count files": 120,
+            "count total": 142
+        },
+        "expression": {
+            "count files": 123,
+            "count total": 149
+        },
+        "key": {
+            "count files": 253,
+            "count total": 258
+        },
+        "format-number": {
+            "count files": 15,
+            "count total": 15
+        },
+        "ends-with": {
+            "count files": 196,
+            "count total": 196
+        },
+        "jxpath-132": {
+            "count files": 196,
+            "count total": 196
+        },
+        "upgrade": {
+            "count files": 223,
+            "count total": 265
+        },
+        "javacc": {
+            "count files": 222,
+            "count total": 264
+        },
+        "optimization": {
+            "count files": 28,
+            "count total": 43
+        },
+        "optimize": {
+            "count files": 60,
+            "count total": 62
+        },
+        "parser": {
+            "count files": 345,
+            "count total": 522
+        },
+        "using": {
+            "count files": 64,
+            "count total": 66
+        },
+        "skip": {
+            "count files": 60,
+            "count total": 62
+        },
+        "instead": {
+            "count files": 103,
+            "count total": 112
+        },
+        "special_character": {
+            "count files": 60,
+            "count total": 62
+        },
+        "enum": {
+            "count files": 1,
+            "count total": 1
+        },
+        "keyword": {
+            "count files": 1,
+            "count total": 1
+        },
+        "copy": {
+            "count files": 4,
+            "count total": 4
+        },
+        "getaccessibleproperty": {
+            "count files": 4,
+            "count total": 4
+        },
+        "propertyutils": {
+            "count files": 4,
+            "count total": 4
+        },
+        "index": {
+            "count files": 31,
+            "count total": 38
+        },
+        "latest": {
+            "count files": 30,
+            "count total": 32
+        },
+        "complete": {
+            "count files": 268,
+            "count total": 293
+        },
+        "overhaul": {
+            "count files": 243,
+            "count total": 268
+        },
+        "placate": {
+            "count files": 340,
+            "count total": 358
+        },
+        "stylecheck": {
+            "count files": 340,
+            "count total": 358
+        },
+        "pr": {
+            "count files": 3,
+            "count total": 3
+        },
+        "locale-independent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "committers": {
+            "count files": 2,
+            "count total": 2
+        },
+        "list": {
+            "count files": 5,
+            "count total": 18
+        },
+        "rid": {
+            "count files": 13,
+            "count total": 13
+        },
+        "assert": {
+            "count files": 2,
+            "count total": 2
+        },
+        "--": {
+            "count files": 2,
+            "count total": 2
+        },
+        "asserttrue": {
+            "count files": 2,
+            "count total": 2
+        },
+        "doc": {
+            "count files": 1,
+            "count total": 1
+        },
+        "re-enabled": {
+            "count files": 1,
+            "count total": 1
+        },
+        "miss": {
+            "count files": 37,
+            "count total": 43
+        },
+        "refactored": {
+            "count files": 7,
+            "count total": 8
+        },
+        "parse": {
+            "count files": 7,
+            "count total": 8
+        },
+        "allow": {
+            "count files": 11,
+            "count total": 12
+        },
+        "alternative": {
+            "count files": 7,
+            "count total": 8
+        },
+        "fixing": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-87": {
+            "count files": 1,
+            "count total": 1
+        },
+        "store": {
+            "count files": 2,
+            "count total": 2
+        },
+        "xmlurl": {
+            "count files": 1,
+            "count total": 1
+        },
+        "apis": {
+            "count files": 5,
+            "count total": 5
+        },
+        "transformer": {
+            "count files": 1,
+            "count total": 1
+        },
+        "readable": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testing": {
+            "count files": 48,
+            "count total": 91
+        },
+        "break": {
+            "count files": 37,
+            "count total": 42
+        },
+        "cut": {
+            "count files": 28,
+            "count total": 28
+        },
+        "servlet": {
+            "count files": 64,
+            "count total": 98
+        },
+        "jxpathservletcontexts": {
+            "count files": 32,
+            "count total": 47
+        },
+        "validate": {
+            "count files": 4,
+            "count total": 4
+        },
+        "arg": {
+            "count files": 2,
+            "count total": 2
+        },
+        "cohesion": {
+            "count files": 2,
+            "count total": 3
+        },
+        "set": {
+            "count files": 15,
+            "count total": 27
+        },
+        "v": {
+            "count files": 2,
+            "count total": 3
+        },
+        "hashset": {
+            "count files": 2,
+            "count total": 3
+        },
+        "new": {
+            "count files": 31,
+            "count total": 31
+        },
+        "base": {
+            "count files": 7,
+            "count total": 7
+        },
+        "mock": {
+            "count files": 7,
+            "count total": 7
+        },
+        "classcastexception": {
+            "count files": 11,
+            "count total": 11
+        },
+        "servletrequesthandler": {
+            "count files": 10,
+            "count total": 19
+        },
+        "jxpath-120": {
+            "count files": 7,
+            "count total": 7
+        },
+        "cleaner": {
+            "count files": 1,
+            "count total": 1
+        },
+        "efficiency": {
+            "count files": 1,
+            "count total": 1
+        },
+        "synchro": {
+            "count files": 1,
+            "count total": 1
+        },
+        "last": {
+            "count files": 7,
+            "count total": 7
+        },
+        "bean": {
+            "count files": 130,
+            "count total": 242
+        },
+        "either": {
+            "count files": 31,
+            "count total": 35
+        },
+        "attribute": {
+            "count files": 56,
+            "count total": 106
+        },
+        "axis": {
+            "count files": 39,
+            "count total": 43
+        },
+        "create": {
+            "count files": 37,
+            "count total": 43
+        },
+        "abstractfactory": {
+            "count files": 33,
+            "count total": 43
+        },
+        "nodenametest": {
+            "count files": 8,
+            "count total": 20
+        },
+        "iswildcard": {
+            "count files": 6,
+            "count total": 6
+        },
+        "jxpath-133": {
+            "count files": 4,
+            "count total": 4
+        },
+        "compareto": {
+            "count files": 5,
+            "count total": 6
+        },
+        "associate": {
+            "count files": 4,
+            "count total": 4
+        },
+        "iscollection": {
+            "count files": 61,
+            "count total": 63
+        },
+        "getlength": {
+            "count files": 62,
+            "count total": 64
+        },
+        "promote": {
+            "count files": 12,
+            "count total": 13
+        },
+        "superclass": {
+            "count files": 12,
+            "count total": 13
+        },
+        "public": {
+            "count files": 31,
+            "count total": 32
+        },
+        "variable": {
+            "count files": 7,
+            "count total": 7
+        },
+        "qualify": {
+            "count files": 5,
+            "count total": 7
+        },
+        "names": {
+            "count files": 7,
+            "count total": 21
+        },
+        "indexing": {
+            "count files": 4,
+            "count total": 4
+        },
+        "whole": {
+            "count files": 8,
+            "count total": 8
+        },
+        "jxpath-151": {
+            "count files": 6,
+            "count total": 6
+        },
+        "inconsistent": {
+            "count files": 6,
+            "count total": 6
+        },
+        "iteratepointers": {
+            "count files": 18,
+            "count total": 24
+        },
+        "iterate": {
+            "count files": 10,
+            "count total": 16
+        },
+        "scalar": {
+            "count files": 5,
+            "count total": 5
+        },
+        "specify": {
+            "count files": 6,
+            "count total": 6
+        },
+        "distinguish": {
+            "count files": 6,
+            "count total": 6
+        },
+        "unspecified": {
+            "count files": 6,
+            "count total": 6
+        },
+        "scott": {
+            "count files": 2,
+            "count total": 3
+        },
+        "heaberlin": {
+            "count files": 2,
+            "count total": 3
+        },
+        "stackoverflow": {
+            "count files": 2,
+            "count total": 3
+        },
+        "message": {
+            "count files": 15,
+            "count total": 17
+        },
+        "setting": {
+            "count files": 5,
+            "count total": 6
+        },
+        "jxpath-68": {
+            "count files": 5,
+            "count total": 6
+        },
+        "meaningful": {
+            "count files": 5,
+            "count total": 6
+        },
+        "imminent": {
+            "count files": 5,
+            "count total": 6
+        },
+        "stack": {
+            "count files": 5,
+            "count total": 6
+        },
+        "overflow": {
+            "count files": 5,
+            "count total": 6
+        },
+        "detect": {
+            "count files": 18,
+            "count total": 20
+        },
+        "root": {
+            "count files": 11,
+            "count total": 13
+        },
+        "jxpath-131": {
+            "count files": 12,
+            "count total": 13
+        },
+        "jxpath-104": {
+            "count files": 9,
+            "count total": 9
+        },
+        "determine": {
+            "count files": 2,
+            "count total": 2
+        },
+        "whether": {
+            "count files": 8,
+            "count total": 9
+        },
+        "given": {
+            "count files": 2,
+            "count total": 2
+        },
+        "qname": {
+            "count files": 8,
+            "count total": 27
+        },
+        "denote": {
+            "count files": 2,
+            "count total": 2
+        },
+        "valid": {
+            "count files": 2,
+            "count total": 2
+        },
+        "ie": {
+            "count files": 2,
+            "count total": 2
+        },
+        "please": {
+            "count files": 14,
+            "count total": 18
+        },
+        "follow": {
+            "count files": 16,
+            "count total": 20
+        },
+        "discussion": {
+            "count files": 14,
+            "count total": 18
+        },
+        "another": {
+            "count files": 18,
+            "count total": 22
+        },
+        "attempt": {
+            "count files": 20,
+            "count total": 24
+        },
+        "closing": {
+            "count files": 18,
+            "count total": 22
+        },
+        "domnodeiterator": {
+            "count files": 8,
+            "count total": 16
+        },
+        "previous": {
+            "count files": 7,
+            "count total": 7
+        },
+        "cause": {
+            "count files": 11,
+            "count total": 11
+        },
+        "fail": {
+            "count files": 6,
+            "count total": 6
+        },
+        "setvalue": {
+            "count files": 40,
+            "count total": 78
+        },
+        "text": {
+            "count files": 2,
+            "count total": 2
+        },
+        "creation": {
+            "count files": 20,
+            "count total": 24
+        },
+        "revert": {
+            "count files": 11,
+            "count total": 14
+        },
+        "jxpath-61": {
+            "count files": 7,
+            "count total": 7
+        },
+        "converter": {
+            "count files": 17,
+            "count total": 17
+        },
+        "configurable": {
+            "count files": 17,
+            "count total": 17
+        },
+        "proper": {
+            "count files": 4,
+            "count total": 7
+        },
+        "string-": {
+            "count files": 2,
+            "count total": 2
+        },
+        "primary": {
+            "count files": 2,
+            "count total": 2
+        },
+        "primitive": {
+            "count files": 2,
+            "count total": 2
+        },
+        "re-write": {
+            "count files": 18,
+            "count total": 18
+        },
+        "address": {
+            "count files": 24,
+            "count total": 29
+        },
+        "jxpath-91": {
+            "count files": 11,
+            "count total": 13
+        },
+        "full": {
+            "count files": 11,
+            "count total": 13
+        },
+        "sergey": {
+            "count files": 17,
+            "count total": 19
+        },
+        "vladimirov": {
+            "count files": 17,
+            "count total": 19
+        },
+        "jxpath-89": {
+            "count files": 3,
+            "count total": 3
+        },
+        "relax": {
+            "count files": 3,
+            "count total": 3
+        },
+        "restriction": {
+            "count files": 3,
+            "count total": 3
+        },
+        "different": {
+            "count files": 3,
+            "count total": 3
+        },
+        "tree": {
+            "count files": 3,
+            "count total": 3
+        },
+        "incompatible": {
+            "count files": 8,
+            "count total": 8
+        },
+        "simply": {
+            "count files": 3,
+            "count total": 3
+        },
+        "assumption": {
+            "count files": 3,
+            "count total": 3
+        },
+        "wrt": {
+            "count files": 3,
+            "count total": 3
+        },
+        "loc": {
+            "count files": 1,
+            "count total": 1
+        },
+        "arrayindexoutofbounds": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-109": {
+            "count files": 6,
+            "count total": 7
+        },
+        "select": {
+            "count files": 6,
+            "count total": 7
+        },
+        "attrs": {
+            "count files": 6,
+            "count total": 7
+        },
+        "regardless": {
+            "count files": 6,
+            "count total": 7
+        },
+        "jxpath-83": {
+            "count files": 23,
+            "count total": 23
+        },
+        "respect": {
+            "count files": 23,
+            "count total": 23
+        },
+        "preserve": {
+            "count files": 23,
+            "count total": 23
+        },
+        "jxpath-106": {
+            "count files": 1,
+            "count total": 1
+        },
+        "concat": {
+            "count files": 1,
+            "count total": 1
+        },
+        "found": {
+            "count files": 1,
+            "count total": 1
+        },
+        "michele": {
+            "count files": 34,
+            "count total": 42
+        },
+        "vivoda": {
+            "count files": 34,
+            "count total": 42
+        },
+        "graph": {
+            "count files": 28,
+            "count total": 28
+        },
+        "contain": {
+            "count files": 19,
+            "count total": 22
+        },
+        "dynamicpropertyhandlers": {
+            "count files": 14,
+            "count total": 14
+        },
+        "jxpath-73": {
+            "count files": 1,
+            "count total": 1
+        },
+        "indexoutofboundsexception": {
+            "count files": 1,
+            "count total": 1
+        },
+        "subclass": {
+            "count files": 1,
+            "count total": 1
+        },
+        "arrayioobe": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ex": {
+            "count files": 1,
+            "count total": 1
+        },
+        "printstacktrace": {
+            "count files": 2,
+            "count total": 2
+        },
+        "xpath": {
+            "count files": 16,
+            "count total": 16
+        },
+        "remain": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unchanged": {
+            "count files": 2,
+            "count total": 2
+        },
+        "generic": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-115": {
+            "count files": 2,
+            "count total": 2
+        },
+        "descendent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "non-elements": {
+            "count files": 1,
+            "count total": 1
+        },
+        "prevention": {
+            "count files": 14,
+            "count total": 14
+        },
+        "infinite": {
+            "count files": 19,
+            "count total": 20
+        },
+        "descent": {
+            "count files": 14,
+            "count total": 14
+        },
+        "recursive": {
+            "count files": 14,
+            "count total": 14
+        },
+        "jxpath-111": {
+            "count files": 3,
+            "count total": 3
+        },
+        "precedingorfollowingcontext": {
+            "count files": 6,
+            "count total": 15
+        },
+        "nullpointer": {
+            "count files": 5,
+            "count total": 39
+        },
+        "numbers": {
+            "count files": 3,
+            "count total": 3
+        },
+        "via": {
+            "count files": 3,
+            "count total": 3
+        },
+        "boolean": {
+            "count files": 10,
+            "count total": 12
+        },
+        "number-": {
+            "count files": 1,
+            "count total": 1
+        },
+        "correct": {
+            "count files": 3,
+            "count total": 3
+        },
+        "behavior": {
+            "count files": 3,
+            "count total": 3
+        },
+        "greater": {
+            "count files": 2,
+            "count total": 2
+        },
+        "length": {
+            "count files": 2,
+            "count total": 2
+        },
+        "thanks": {
+            "count files": 45,
+            "count total": 53
+        },
+        "barzilai": {
+            "count files": 2,
+            "count total": 2
+        },
+        "spinak": {
+            "count files": 2,
+            "count total": 2
+        },
+        "simple": {
+            "count files": 4,
+            "count total": 4
+        },
+        "style": {
+            "count files": 4,
+            "count total": 4
+        },
+        "stale": {
+            "count files": 4,
+            "count total": 4
+        },
+        "local-name": {
+            "count files": 3,
+            "count total": 3
+        },
+        "namespace-uri": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jxpath-102": {
+            "count files": 4,
+            "count total": 4
+        },
+        "core": {
+            "count files": 4,
+            "count total": 4
+        },
+        "rounding": {
+            "count files": 4,
+            "count total": 4
+        },
+        "handle": {
+            "count files": 28,
+            "count total": 32
+        },
+        "nan": {
+            "count files": 14,
+            "count total": 16
+        },
+        "values": {
+            "count files": 8,
+            "count total": 8
+        },
+        "correctly": {
+            "count files": 9,
+            "count total": 10
+        },
+        "jxpath-108": {
+            "count files": 3,
+            "count total": 5
+        },
+        "count": {
+            "count files": 3,
+            "count total": 5
+        },
+        "nodeset": {
+            "count files": 12,
+            "count total": 15
+        },
+        "insufficiently": {
+            "count files": 1,
+            "count total": 1
+        },
+        "scoped": {
+            "count files": 1,
+            "count total": 1
+        },
+        "person": {
+            "count files": 3,
+            "count total": 8
+        },
+        "state": {
+            "count files": 3,
+            "count total": 8
+        },
+        "ny": {
+            "count files": 3,
+            "count total": 8
+        },
+        "suppose": {
+            "count files": 5,
+            "count total": 10
+        },
+        "least": {
+            "count files": 3,
+            "count total": 8
+        },
+        "one": {
+            "count files": 3,
+            "count total": 8
+        },
+        "operation": {
+            "count files": 5,
+            "count total": 12
+        },
+        "merely": {
+            "count files": 3,
+            "count total": 4
+        },
+        "comparing": {
+            "count files": 6,
+            "count total": 7
+        },
+        "supply": {
+            "count files": 3,
+            "count total": 4
+        },
+        "jxpath-50": {
+            "count files": 5,
+            "count total": 5
+        },
+        "properly": {
+            "count files": 13,
+            "count total": 13
+        },
+        "submit": {
+            "count files": 8,
+            "count total": 8
+        },
+        "keith": {
+            "count files": 5,
+            "count total": 5
+        },
+        "gregory": {
+            "count files": 5,
+            "count total": 5
+        },
+        "lazy": {
+            "count files": 7,
+            "count total": 10
+        },
+        "jxpath-76": {
+            "count files": 2,
+            "count total": 2
+        },
+        "simplepathinterpreter": {
+            "count files": 25,
+            "count total": 92
+        },
+        "chain": {
+            "count files": 3,
+            "count total": 3
+        },
+        "form": {
+            "count files": 2,
+            "count total": 2
+        },
+        "nightlies": {
+            "count files": 2,
+            "count total": 2
+        },
+        "compile": {
+            "count files": 5,
+            "count total": 6
+        },
+        "fine": {
+            "count files": 2,
+            "count total": 2
+        },
+        "jdk": {
+            "count files": 2,
+            "count total": 2
+        },
+        "excessive": {
+            "count files": 2,
+            "count total": 2
+        },
+        "fascination": {
+            "count files": 2,
+            "count total": 2
+        },
+        "ternary": {
+            "count files": 2,
+            "count total": 2
+        },
+        "operator": {
+            "count files": 27,
+            "count total": 28
+        },
+        "solve": {
+            "count files": 1,
+            "count total": 1
+        },
+        "extensionfunction": {
+            "count files": 6,
+            "count total": 23
+        },
+        "convert": {
+            "count files": 7,
+            "count total": 13
+        },
+        "evalcontext": {
+            "count files": 8,
+            "count total": 23
+        },
+        "undeclarevariable": {
+            "count files": 4,
+            "count total": 6
+        },
+        "jxpath-20": {
+            "count files": 4,
+            "count total": 4
+        },
+        "removeall": {
+            "count files": 3,
+            "count total": 7
+        },
+        "element": {
+            "count files": 1,
+            "count total": 1
+        },
+        "slightly": {
+            "count files": 1,
+            "count total": 1
+        },
+        "inelegant": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unify": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-107": {
+            "count files": 1,
+            "count total": 1
+        },
+        "misplace": {
+            "count files": 1,
+            "count total": 1
+        },
+        "static": {
+            "count files": 3,
+            "count total": 3
+        },
+        "lazy-init": {
+            "count files": 2,
+            "count total": 2
+        },
+        "statics": {
+            "count files": 2,
+            "count total": 2
+        },
+        "contextfactory": {
+            "count files": 2,
+            "count total": 2
+        },
+        "compilationcontext": {
+            "count files": 2,
+            "count total": 2
+        },
+        "final": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jxpath-166": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jxpathcontextreferenceimpl": {
+            "count files": 28,
+            "count total": 161
+        },
+        "addnodepointerfactory": {
+            "count files": 4,
+            "count total": 5
+        },
+        "working": {
+            "count files": 3,
+            "count total": 3
+        },
+        "anymore": {
+            "count files": 3,
+            "count total": 3
+        },
+        "-n": {
+            "count files": 3,
+            "count total": 3
+        },
+        "vcs": {
+            "count files": 3,
+            "count total": 21
+        },
+        "svn": {
+            "count files": 9,
+            "count total": 35
+        },
+        "commons": {
+            "count files": 1280,
+            "count total": 2529
+        },
+        "trunks-proper": {
+            "count files": 3,
+            "count total": 21
+        },
+        "src": {
+            "count files": 1280,
+            "count total": 2502
+        },
+        "java": {
+            "count files": 1280,
+            "count total": 5012
+        },
+        "diff": {
+            "count files": 3,
+            "count total": 3
+        },
+        "--summarize": {
+            "count files": 3,
+            "count total": 3
+        },
+        "--depth": {
+            "count files": 3,
+            "count total": 6
+        },
+        "infinity": {
+            "count files": 3,
+            "count total": 6
+        },
+        "--ignoreancestry": {
+            "count files": 3,
+            "count total": 3
+        },
+        "-r": {
+            "count files": 3,
+            "count total": 3
+        },
+        "repos": {
+            "count files": 3,
+            "count total": 6
+        },
+        "asf": {
+            "count files": 3,
+            "count total": 6
+        },
+        "trunk": {
+            "count files": 5,
+            "count total": 13
+        },
+        "merge": {
+            "count files": 3,
+            "count total": 9
+        },
+        "-r1523175": {
+            "count files": 3,
+            "count total": 3
+        },
+        "---": {
+            "count files": 3,
+            "count total": 3
+        },
+        "reverse-merging": {
+            "count files": 3,
+            "count total": 3
+        },
+        "r1523175": {
+            "count files": 3,
+            "count total": 3
+        },
+        "r1523174": {
+            "count files": 3,
+            "count total": 3
+        },
+        "info": {
+            "count files": 3,
+            "count total": 3
+        },
+        "record": {
+            "count files": 3,
+            "count total": 3
+        },
+        "statistics": {
+            "count files": 3,
+            "count total": 6
+        },
+        "descendant-or-self": {
+            "count files": 3,
+            "count total": 3
+        },
+        "extract": {
+            "count files": 3,
+            "count total": 3
+        },
+        "reversecomparator": {
+            "count files": 4,
+            "count total": 7
+        },
+        "reuse": {
+            "count files": 2,
+            "count total": 2
+        },
+        "protect": {
+            "count files": 10,
+            "count total": 10
+        },
+        "reverse": {
+            "count files": 2,
+            "count total": 2
+        },
+        "run-time": {
+            "count files": 2,
+            "count total": 2
+        },
+        "dynabeans": {
+            "count files": 54,
+            "count total": 84
+        },
+        "accidentally-implemented": {
+            "count files": 2,
+            "count total": 2
+        },
+        "xslt": {
+            "count files": 2,
+            "count total": 2
+        },
+        "consistency": {
+            "count files": 1,
+            "count total": 1
+        },
+        "construct": {
+            "count files": 1,
+            "count total": 1
+        },
+        "strings": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-125": {
+            "count files": 11,
+            "count total": 12
+        },
+        "work": {
+            "count files": 15,
+            "count total": 16
+        },
+        "single": {
+            "count files": 11,
+            "count total": 12
+        },
+        "uri": {
+            "count files": 11,
+            "count total": 12
+        },
+        "visibility": {
+            "count files": 6,
+            "count total": 6
+        },
+        "basictypeconverter": {
+            "count files": 17,
+            "count total": 63
+        },
+        "untreated": {
+            "count files": 7,
+            "count total": 9
+        },
+        "atomicboolean": {
+            "count files": 7,
+            "count total": 9
+        },
+        "integrate": {
+            "count files": 3,
+            "count total": 3
+        },
+        "converterutils": {
+            "count files": 3,
+            "count total": 4
+        },
+        "integration": {
+            "count files": 1,
+            "count total": 1
+        },
+        "allocatecollection": {
+            "count files": 3,
+            "count total": 5
+        },
+        "abstract": {
+            "count files": 2,
+            "count total": 2
+        },
+        "pass": {
+            "count files": 4,
+            "count total": 4
+        },
+        "parameter": {
+            "count files": 6,
+            "count total": 20
+        },
+        "jxpath-129": {
+            "count files": 3,
+            "count total": 3
+        },
+        "partial": {
+            "count files": 3,
+            "count total": 3
+        },
+        "sp": {
+            "count files": 3,
+            "count total": 3
+        },
+        "ambiguous": {
+            "count files": 3,
+            "count total": 3
+        },
+        "unused": {
+            "count files": 11,
+            "count total": 11
+        },
+        "private": {
+            "count files": 2,
+            "count total": 2
+        },
+        "constant": {
+            "count files": 4,
+            "count total": 21
+        },
+        "potential": {
+            "count files": 1,
+            "count total": 1
+        },
+        "workaround": {
+            "count files": 8,
+            "count total": 8
+        },
+        "crimson": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getattributens": {
+            "count files": 1,
+            "count total": 1
+        },
+        "xerces": {
+            "count files": 1,
+            "count total": 1
+        },
+        "apply": {
+            "count files": 7,
+            "count total": 7
+        },
+        "patch": {
+            "count files": 7,
+            "count total": 9
+        },
+        "ulrich": {
+            "count files": 2,
+            "count total": 2
+        },
+        "nicolas": {
+            "count files": 2,
+            "count total": 2
+        },
+        "liss\ufffd": {
+            "count files": 2,
+            "count total": 2
+        },
+        "jxpath-97": {
+            "count files": 26,
+            "count total": 32
+        },
+        "externally-registered": {
+            "count files": 19,
+            "count total": 22
+        },
+        "externally": {
+            "count files": 18,
+            "count total": 19
+        },
+        "register": {
+            "count files": 18,
+            "count total": 19
+        },
+        "namespaced": {
+            "count files": 18,
+            "count total": 19
+        },
+        "also": {
+            "count files": 59,
+            "count total": 68
+        },
+        "preclude": {
+            "count files": 18,
+            "count total": 19
+        },
+        "explicitly": {
+            "count files": 18,
+            "count total": 19
+        },
+        "assign": {
+            "count files": 18,
+            "count total": 19
+        },
+        "within": {
+            "count files": 18,
+            "count total": 19
+        },
+        "beaninfo": {
+            "count files": 1,
+            "count total": 1
+        },
+        "lookup": {
+            "count files": 1,
+            "count total": 1
+        },
+        "documentcontainer": {
+            "count files": 7,
+            "count total": 39
+        },
+        "jxpath-124": {
+            "count files": 2,
+            "count total": 2
+        },
+        "produce": {
+            "count files": 1,
+            "count total": 1
+        },
+        "incorrect": {
+            "count files": 1,
+            "count total": 1
+        },
+        "fields": {
+            "count files": 1,
+            "count total": 1
+        },
+        "temporary": {
+            "count files": 5,
+            "count total": 5
+        },
+        "pending": {
+            "count files": 5,
+            "count total": 5
+        },
+        "release": {
+            "count files": 5,
+            "count total": 5
+        },
+        "version": {
+            "count files": 5,
+            "count total": 5
+        },
+        "currently": {
+            "count files": 5,
+            "count total": 5
+        },
+        "api": {
+            "count files": 7,
+            "count total": 7
+        },
+        "resolve": {
+            "count files": 3,
+            "count total": 3
+        },
+        "compatibility": {
+            "count files": 5,
+            "count total": 6
+        },
+        "b10": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jxpath-12": {
+            "count files": 6,
+            "count total": 6
+        },
+        "descendant": {
+            "count files": 4,
+            "count total": 4
+        },
+        "self": {
+            "count files": 4,
+            "count total": 4
+        },
+        "contribute": {
+            "count files": 4,
+            "count total": 4
+        },
+        "marcin": {
+            "count files": 4,
+            "count total": 4
+        },
+        "sarniak": {
+            "count files": 4,
+            "count total": 4
+        },
+        "undeclared": {
+            "count files": 10,
+            "count total": 10
+        },
+        "jxpath-114": {
+            "count files": 4,
+            "count total": 4
+        },
+        "javadocs": {
+            "count files": 4,
+            "count total": 5
+        },
+        "pi": {
+            "count files": 4,
+            "count total": 5
+        },
+        "calculation": {
+            "count files": 4,
+            "count total": 5
+        },
+        "like": {
+            "count files": 6,
+            "count total": 7
+        },
+        "calcs": {
+            "count files": 4,
+            "count total": 5
+        },
+        "efficient": {
+            "count files": 4,
+            "count total": 5
+        },
+        "quote": {
+            "count files": 4,
+            "count total": 5
+        },
+        "escape": {
+            "count files": 5,
+            "count total": 8
+        },
+        "equals-compatible": {
+            "count files": 5,
+            "count total": 6
+        },
+        "hashcode": {
+            "count files": 5,
+            "count total": 6
+        },
+        "similar": {
+            "count files": 4,
+            "count total": 5
+        },
+        "domnodepointer": {
+            "count files": 28,
+            "count total": 125
+        },
+        "empty": {
+            "count files": 10,
+            "count total": 12
+        },
+        "namespaceaware": {
+            "count files": 1,
+            "count total": 2
+        },
+        "false": {
+            "count files": 1,
+            "count total": 1
+        },
+        "take": {
+            "count files": 1,
+            "count total": 3
+        },
+        "hold": {
+            "count files": 2,
+            "count total": 2
+        },
+        "standard": {
+            "count files": 2,
+            "count total": 2
+        },
+        "validation": {
+            "count files": 2,
+            "count total": 4
+        },
+        "go": {
+            "count files": 2,
+            "count total": 2
+        },
+        "compiler": {
+            "count files": 212,
+            "count total": 400
+        },
+        "matter": {
+            "count files": 2,
+            "count total": 2
+        },
+        "anyway": {
+            "count files": 2,
+            "count total": 2
+        },
+        "filter": {
+            "count files": 2,
+            "count total": 2
+        },
+        "invalid": {
+            "count files": 3,
+            "count total": 3
+        },
+        "functionality": {
+            "count files": 16,
+            "count total": 16
+        },
+        "uniformity": {
+            "count files": 15,
+            "count total": 15
+        },
+        "incorporate": {
+            "count files": 2,
+            "count total": 2
+        },
+        "reset": {
+            "count files": 2,
+            "count total": 2
+        },
+        "jxpath-128": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unnessary": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-98": {
+            "count files": 9,
+            "count total": 10
+        },
+        "testcase": {
+            "count files": 5,
+            "count total": 5
+        },
+        "basicnodesettest": {
+            "count files": 20,
+            "count total": 35
+        },
+        "non-numeric": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-93": {
+            "count files": 16,
+            "count total": 17
+        },
+        "relational": {
+            "count files": 16,
+            "count total": 18
+        },
+        "conform": {
+            "count files": 17,
+            "count total": 17
+        },
+        "spec": {
+            "count files": 17,
+            "count total": 17
+        },
+        "jxpath-95": {
+            "count files": 10,
+            "count total": 12
+        },
+        "respective": {
+            "count files": 1,
+            "count total": 1
+        },
+        "package": {
+            "count files": 8,
+            "count total": 8
+        },
+        "jxpath-10": {
+            "count files": 7,
+            "count total": 7
+        },
+        "provide": {
+            "count files": 7,
+            "count total": 7
+        },
+        "backward-compatibility": {
+            "count files": 7,
+            "count total": 7
+        },
+        "nick": {
+            "count files": 3,
+            "count total": 3
+        },
+        "van": {
+            "count files": 3,
+            "count total": 3
+        },
+        "den": {
+            "count files": 3,
+            "count total": 3
+        },
+        "bleeken": {
+            "count files": 3,
+            "count total": 3
+        },
+        "dealing": {
+            "count files": 3,
+            "count total": 3
+        },
+        "verify": {
+            "count files": 2,
+            "count total": 3
+        },
+        "refix": {
+            "count files": 1,
+            "count total": 1
+        },
+        "accidentally": {
+            "count files": 1,
+            "count total": 1
+        },
+        "undo": {
+            "count files": 1,
+            "count total": 1
+        },
+        "attr": {
+            "count files": 4,
+            "count total": 8
+        },
+        "rather": {
+            "count files": 5,
+            "count total": 5
+        },
+        "getaccessiblemethod": {
+            "count files": 2,
+            "count total": 3
+        },
+        "recurse": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hierarchy": {
+            "count files": 1,
+            "count total": 1
+        },
+        "great": {
+            "count files": 1,
+            "count total": 1
+        },
+        "vasiliy": {
+            "count files": 1,
+            "count total": 4
+        },
+        "stashuk": {
+            "count files": 1,
+            "count total": 4
+        },
+        "re-applied": {
+            "count files": 1,
+            "count total": 2
+        },
+        "encapsulate": {
+            "count files": 7,
+            "count total": 7
+        },
+        "atomic": {
+            "count files": 1,
+            "count total": 1
+        },
+        "declare": {
+            "count files": 1,
+            "count total": 1
+        },
+        "emond": {
+            "count files": 1,
+            "count total": 1
+        },
+        "papegaaij": {
+            "count files": 1,
+            "count total": 1
+        },
+        "thank": {
+            "count files": 1,
+            "count total": 1
+        },
+        "much": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-154": {
+            "count files": 5,
+            "count total": 5
+        },
+        "inner": {
+            "count files": 6,
+            "count total": 10
+        },
+        "model": {
+            "count files": 442,
+            "count total": 846
+        },
+        "jxpath-142": {
+            "count files": 2,
+            "count total": 2
+        },
+        "nullpointerexceptions": {
+            "count files": 2,
+            "count total": 2
+        },
+        "dynamicpointer": {
+            "count files": 7,
+            "count total": 28
+        },
+        "b2": {
+            "count files": 2,
+            "count total": 2
+        },
+        "build": {
+            "count files": 5,
+            "count total": 7
+        },
+        "preparation": {
+            "count files": 2,
+            "count total": 2
+        },
+        "making": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sure": {
+            "count files": 1,
+            "count total": 1
+        },
+        "works": {
+            "count files": 2,
+            "count total": 2
+        },
+        "precedence": {
+            "count files": 11,
+            "count total": 11
+        },
+        "magic": {
+            "count files": 11,
+            "count total": 11
+        },
+        "part": {
+            "count files": 7,
+            "count total": 8
+        },
+        "inequality": {
+            "count files": 7,
+            "count total": 8
+        },
+        "jxpath-94": {
+            "count files": 2,
+            "count total": 2
+        },
+        "equality": {
+            "count files": 2,
+            "count total": 2
+        },
+        "multi-valued": {
+            "count files": 2,
+            "count total": 2
+        },
+        "small": {
+            "count files": 1,
+            "count total": 2
+        },
+        "useless": {
+            "count files": 1,
+            "count total": 1
+        },
+        "passing": {
+            "count files": 3,
+            "count total": 3
+        },
+        "getnodeset": {
+            "count files": 4,
+            "count total": 4
+        },
+        "general": {
+            "count files": 3,
+            "count total": 3
+        },
+        "possible": {
+            "count files": 3,
+            "count total": 5
+        },
+        "race": {
+            "count files": 1,
+            "count total": 1
+        },
+        "condition": {
+            "count files": 1,
+            "count total": 1
+        },
+        "thereby": {
+            "count files": 13,
+            "count total": 14
+        },
+        "refine": {
+            "count files": 2,
+            "count total": 3
+        },
+        "clearing": {
+            "count files": 2,
+            "count total": 3
+        },
+        "convenient": {
+            "count files": 1,
+            "count total": 1
+        },
+        "accumulate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "nodesets": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-105": {
+            "count files": 7,
+            "count total": 7
+        },
+        "getnodes": {
+            "count files": 2,
+            "count total": 2
+        },
+        "initialcontext": {
+            "count files": 3,
+            "count total": 11
+        },
+        "lead": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sealing": {
+            "count files": 4,
+            "count total": 4
+        },
+        "jxpath-135": {
+            "count files": 1,
+            "count total": 2
+        },
+        "self-evident": {
+            "count files": 1,
+            "count total": 2
+        },
+        "reversemap": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-123": {
+            "count files": 2,
+            "count total": 2
+        },
+        "unit": {
+            "count files": 1,
+            "count total": 1
+        },
+        "httpsessionandservletcontext": {
+            "count files": 2,
+            "count total": 7
+        },
+        "servletcontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "selectnodes": {
+            "count files": 3,
+            "count total": 4
+        },
+        "selectsinglenode": {
+            "count files": 3,
+            "count total": 4
+        },
+        "restore": {
+            "count files": 1,
+            "count total": 1
+        },
+        "binary": {
+            "count files": 3,
+            "count total": 4
+        },
+        "compat": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-85": {
+            "count files": 1,
+            "count total": 1
+        },
+        "eol-style": {
+            "count files": 6,
+            "count total": 8
+        },
+        "keywords": {
+            "count files": 6,
+            "count total": 8
+        },
+        "isboolean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getter": {
+            "count files": 1,
+            "count total": 1
+        },
+        "prove": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-88": {
+            "count files": 2,
+            "count total": 2
+        },
+        "getprefix": {
+            "count files": 7,
+            "count total": 15
+        },
+        "namespaceuri": {
+            "count files": 2,
+            "count total": 2
+        },
+        "jxpath-149": {
+            "count files": 3,
+            "count total": 3
+        },
+        "operations": {
+            "count files": 3,
+            "count total": 3
+        },
+        "non-iterator": {
+            "count files": 3,
+            "count total": 3
+        },
+        "lh": {
+            "count files": 3,
+            "count total": 3
+        },
+        "rh": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jxpath-101": {
+            "count files": 2,
+            "count total": 2
+        },
+        "original": {
+            "count files": 2,
+            "count total": 2
+        },
+        "variablecontextwrapper": {
+            "count files": 3,
+            "count total": 4
+        },
+        "visible": {
+            "count files": 2,
+            "count total": 2
+        },
+        "basic": {
+            "count files": 2,
+            "count total": 2
+        },
+        "basicnodeset": {
+            "count files": 10,
+            "count total": 22
+        },
+        "consolidate": {
+            "count files": 2,
+            "count total": 2
+        },
+        "duplicate": {
+            "count files": 2,
+            "count total": 2
+        },
+        "reformat": {
+            "count files": 3,
+            "count total": 6
+        },
+        "dead": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-136": {
+            "count files": 7,
+            "count total": 7
+        },
+        "cannot": {
+            "count files": 7,
+            "count total": 7
+        },
+        "reproduce": {
+            "count files": 7,
+            "count total": 7
+        },
+        "bulletproof": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sebastian": {
+            "count files": 1,
+            "count total": 1
+        },
+        "bazley": {
+            "count files": 1,
+            "count total": 1
+        },
+        "optional": {
+            "count files": 5,
+            "count total": 8
+        },
+        "whose": {
+            "count files": 5,
+            "count total": 8
+        },
+        "indirectly": {
+            "count files": 5,
+            "count total": 8
+        },
+        "propertypointers": {
+            "count files": 5,
+            "count total": 8
+        },
+        "strict": {
+            "count files": 5,
+            "count total": 8
+        },
+        "lazydynabeans": {
+            "count files": 5,
+            "count total": 8
+        },
+        "jxpathnotfoundexception": {
+            "count files": 6,
+            "count total": 14
+        },
+        "unset": {
+            "count files": 5,
+            "count total": 8
+        },
+        "jxpath-162": {
+            "count files": 1,
+            "count total": 1
+        },
+        "concurrency": {
+            "count files": 1,
+            "count total": 1
+        },
+        "factoryimplname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "field": {
+            "count files": 2,
+            "count total": 2
+        },
+        "uwe": {
+            "count files": 22,
+            "count total": 27
+        },
+        "barthel": {
+            "count files": 22,
+            "count total": 27
+        },
+        "main": {
+            "count files": 983,
+            "count total": 2006
+        },
+        "newinstance": {
+            "count files": 1,
+            "count total": 2
+        },
+        "proof": {
+            "count files": 11,
+            "count total": 16
+        },
+        "jxpath-118": {
+            "count files": 2,
+            "count total": 7
+        },
+        "current": {
+            "count files": 2,
+            "count total": 7
+        },
+        "mike": {
+            "count files": 2,
+            "count total": 7
+        },
+        "haller": {
+            "count files": 2,
+            "count total": 7
+        },
+        "github": {
+            "count files": 42,
+            "count total": 51
+        },
+        "jxpath-160": {
+            "count files": 10,
+            "count total": 10
+        },
+        "valueutils": {
+            "count files": 20,
+            "count total": 77
+        },
+        "size": {
+            "count files": 10,
+            "count total": 10
+        },
+        "stefan": {
+            "count files": 10,
+            "count total": 10
+        },
+        "albrecht": {
+            "count files": 10,
+            "count total": 10
+        },
+        "varargs": {
+            "count files": 10,
+            "count total": 12
+        },
+        "util": {
+            "count files": 57,
+            "count total": 134
+        },
+        "jxpath-177": {
+            "count files": 9,
+            "count total": 9
+        },
+        "martin": {
+            "count files": 9,
+            "count total": 9
+        },
+        "xarx": {
+            "count files": 9,
+            "count total": 9
+        },
+        "jxpathvariablesresolver": {
+            "count files": 1,
+            "count total": 15
+        },
+        "jxpath177test": {
+            "count files": 4,
+            "count total": 33
+        },
+        "nullpointerexception": {
+            "count files": 3,
+            "count total": 5
+        },
+        "ax": {
+            "count files": 75,
+            "count total": 141
+        },
+        "prepare": {
+            "count files": 2,
+            "count total": 2
+        },
+        "jxpath113test": {
+            "count files": 2,
+            "count total": 12
+        },
+        "jaxp": {
+            "count files": 1,
+            "count total": 5
+        },
+        "testissue113": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath-172": {
+            "count files": 16,
+            "count total": 17
+        },
+        "clarify": {
+            "count files": 16,
+            "count total": 17
+        },
+        "getpointer": {
+            "count files": 18,
+            "count total": 23
+        },
+        "jxpath172dynamictest": {
+            "count files": 2,
+            "count total": 6
+        },
+        "getcontext": {
+            "count files": 2,
+            "count total": 4
+        },
+        "jxpath172test": {
+            "count files": 4,
+            "count total": 12
+        },
+        "testbean172": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testissue172_propertydoesnotexist_notlenient": {
+            "count files": 1,
+            "count total": 1
+        },
+        "allocatenumber": {
+            "count files": 1,
+            "count total": 4
+        },
+        "internal": {
+            "count files": 33,
+            "count total": 39
+        },
+        "cancreatecollection": {
+            "count files": 1,
+            "count total": 2
+        },
+        "illegalargumentexception": {
+            "count files": 1,
+            "count total": 1
+        },
+        "runtimeexception": {
+            "count files": 8,
+            "count total": 12
+        },
+        "getindexedpropertylength": {
+            "count files": 1,
+            "count total": 2
+        },
+        "corefunctiontest": {
+            "count files": 6,
+            "count total": 12
+        },
+        "testextendedkeyfunction": {
+            "count files": 1,
+            "count total": 1
+        },
+        "initialization": {
+            "count files": 10,
+            "count total": 10
+        },
+        "jxpathbasicbeaninfo": {
+            "count files": 5,
+            "count total": 30
+        },
+        "getpropertydescriptors": {
+            "count files": 1,
+            "count total": 1
+        },
+        "findfactory": {
+            "count files": 1,
+            "count total": 3
+        },
+        "finddynamicbeaninfo": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getfunction": {
+            "count files": 6,
+            "count total": 14
+        },
+        "parseexpression": {
+            "count files": 2,
+            "count total": 3
+        },
+        "corefunction": {
+            "count files": 37,
+            "count total": 154
+        },
+        "functionformatnumber": {
+            "count files": 1,
+            "count total": 2
+        },
+        "newnodepointer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "variablepointer": {
+            "count files": 19,
+            "count total": 82
+        },
+        "getimmediatevaluepointer": {
+            "count files": 2,
+            "count total": 2
+        },
+        "domattributeiterator": {
+            "count files": 4,
+            "count total": 18
+        },
+        "testattr": {
+            "count files": 1,
+            "count total": 2
+        },
+        "wrapper": {
+            "count files": 1,
+            "count total": 1
+        },
+        "instance": {
+            "count files": 1,
+            "count total": 1
+        },
+        "predefined": {
+            "count files": 1,
+            "count total": 1
+        },
+        "setup": {
+            "count files": 13,
+            "count total": 13
+        },
+        "manual": {
+            "count files": 1,
+            "count total": 1
+        },
+        "copying": {
+            "count files": 1,
+            "count total": 1
+        },
+        "system": {
+            "count files": 1,
+            "count total": 1
+        },
+        "arraycopy": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dynamicpropertypointer": {
+            "count files": 11,
+            "count total": 40
+        },
+        "getpropertynames": {
+            "count files": 7,
+            "count total": 12
+        },
+        "commons-parent": {
+            "count files": 2,
+            "count total": 3
+        },
+        "license": {
+            "count files": 2,
+            "count total": 3
+        },
+        "header": {
+            "count files": 2,
+            "count total": 3
+        },
+        "travisci": {
+            "count files": 2,
+            "count total": 3
+        },
+        "action": {
+            "count files": 2,
+            "count total": 3
+        },
+        "clirr": {
+            "count files": 2,
+            "count total": 3
+        },
+        "japicmp": {
+            "count files": 2,
+            "count total": 3
+        },
+        "spotbugs": {
+            "count files": 2,
+            "count total": 3
+        },
+        "servletcontexthandler": {
+            "count files": 4,
+            "count total": 25
+        },
+        "collectpropertynames": {
+            "count files": 4,
+            "count total": 11
+        },
+        "random": {
+            "count files": 3,
+            "count total": 3
+        },
+        "failure": {
+            "count files": 3,
+            "count total": 3
+        },
+        "removenodepointerfactory": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jxpathcontextreferenceimpltestcase": {
+            "count files": 1,
+            "count total": 4
+        },
+        "testinit": {
+            "count files": 1,
+            "count total": 2
+        },
+        "lazydynabeantest": {
+            "count files": 2,
+            "count total": 6
+        },
+        "teststrictlazydynabeanpropertyfactory": {
+            "count files": 1,
+            "count total": 2
+        },
+        "parseexception": {
+            "count files": 3,
+            "count total": 26
+        },
+        "packagefunctions": {
+            "count files": 2,
+            "count total": 14
+        },
+        "createobject": {
+            "count files": 8,
+            "count total": 16
+        },
+        "declarevariable": {
+            "count files": 10,
+            "count total": 20
+        },
+        "getvalues": {
+            "count files": 1,
+            "count total": 1
+        },
+        "basicvariables": {
+            "count files": 4,
+            "count total": 16
+        },
+        "isdeclaredvariable": {
+            "count files": 2,
+            "count total": 4
+        },
+        "getvariable": {
+            "count files": 2,
+            "count total": 4
+        },
+        "removefunctions": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functioncache": {
+            "count files": 1,
+            "count total": 1
+        },
+        "addfunctions": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpathabstractfactoryexception": {
+            "count files": 1,
+            "count total": 6
+        },
+        "comparator": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getpropertydescriptor": {
+            "count files": 2,
+            "count total": 3
+        },
+        "stringbuilder": {
+            "count files": 32,
+            "count total": 38
+        },
+        "stringbuffer": {
+            "count files": 32,
+            "count total": 38
+        },
+        "processing": {
+            "count files": 32,
+            "count total": 38
+        },
+        "setexceptionhandler": {
+            "count files": 3,
+            "count total": 6
+        },
+        "setfactory": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setdecimalformatsymbols": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getdecimalformatsymbols": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setlocale": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getnodesetbykey": {
+            "count files": 2,
+            "count total": 4
+        },
+        "newcontext": {
+            "count files": 2,
+            "count total": 6
+        },
+        "setkeymanager": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setnamespacecontextpointer": {
+            "count files": 3,
+            "count total": 6
+        },
+        "getpointerbyid": {
+            "count files": 3,
+            "count total": 6
+        },
+        "setvariables": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getnamespaceuri": {
+            "count files": 9,
+            "count total": 20
+        },
+        "getpointerbykey": {
+            "count files": 2,
+            "count total": 4
+        },
+        "registernamespace": {
+            "count files": 3,
+            "count total": 6
+        },
+        "setidentitymanager": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpathcontextfactoryconfigurationerror": {
+            "count files": 2,
+            "count total": 23
+        },
+        "getmessage": {
+            "count files": 4,
+            "count total": 5
+        },
+        "jxpathexception": {
+            "count files": 2,
+            "count total": 25
+        },
+        "jxpathfunctionnotfoundexception": {
+            "count files": 1,
+            "count total": 6
+        },
+        "findinformant": {
+            "count files": 1,
+            "count total": 3
+        },
+        "registerdynamicclass": {
+            "count files": 1,
+            "count total": 2
+        },
+        "instantiate": {
+            "count files": 1,
+            "count total": 3
+        },
+        "registeratomicclass": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpathinvalidaccessexception": {
+            "count files": 1,
+            "count total": 12
+        },
+        "jxpathinvalidsyntaxexception": {
+            "count files": 1,
+            "count total": 6
+        },
+        "jxpathtypeconversionexception": {
+            "count files": 1,
+            "count total": 12
+        },
+        "mapdynamicpropertyhandler": {
+            "count files": 3,
+            "count total": 12
+        },
+        "setproperty": {
+            "count files": 6,
+            "count total": 12
+        },
+        "getproperty": {
+            "count files": 6,
+            "count total": 12
+        },
+        "xmldocumentcontainer": {
+            "count files": 3,
+            "count total": 23
+        },
+        "requirenonnull": {
+            "count files": 2,
+            "count total": 2
+        },
+        "constructorfunction": {
+            "count files": 2,
+            "count total": 10
+        },
+        "invoke": {
+            "count files": 2,
+            "count total": 4
+        },
+        "methodfunction": {
+            "count files": 2,
+            "count total": 10
+        },
+        "setposition": {
+            "count files": 23,
+            "count total": 47
+        },
+        "sortpointers": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getcontextnodelist": {
+            "count files": 1,
+            "count total": 1
+        },
+        "constructiterator": {
+            "count files": 1,
+            "count total": 1
+        },
+        "infosetutil": {
+            "count files": 4,
+            "count total": 16
+        },
+        "booleanvalue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "stringvalue": {
+            "count files": 2,
+            "count total": 5
+        },
+        "doublevalue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpathcompiledexpression": {
+            "count files": 10,
+            "count total": 46
+        },
+        "jxpathcontextfactoryreferenceimpl": {
+            "count files": 1,
+            "count total": 4
+        },
+        "compilepath": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getvariablepointer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "allocateconditionally": {
+            "count files": 1,
+            "count total": 3
+        },
+        "checksimplepath": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getrelativecontext": {
+            "count files": 1,
+            "count total": 2
+        },
+        "compileexpression": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createnodefactoryarray": {
+            "count files": 1,
+            "count total": 1
+        },
+        "namespaceresolver": {
+            "count files": 8,
+            "count total": 36
+        },
+        "getexternallyregisterednamespaceuri": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getexternallyregisteredprefix": {
+            "count files": 1,
+            "count total": 2
+        },
+        "describeposition": {
+            "count files": 1,
+            "count total": 2
+        },
+        "addescapes": {
+            "count files": 2,
+            "count total": 5
+        },
+        "ancestorcontext": {
+            "count files": 2,
+            "count total": 10
+        },
+        "attributecontext": {
+            "count files": 2,
+            "count total": 10
+        },
+        "getsinglenodepointer": {
+            "count files": 1,
+            "count total": 1
+        },
+        "descendantcontext": {
+            "count files": 4,
+            "count total": 14
+        },
+        "isrecursive": {
+            "count files": 1,
+            "count total": 1
+        },
+        "namespacecontext": {
+            "count files": 3,
+            "count total": 12
+        },
+        "nodesetcontext": {
+            "count files": 2,
+            "count total": 10
+        },
+        "parentcontext": {
+            "count files": 3,
+            "count total": 12
+        },
+        "predicatecontext": {
+            "count files": 4,
+            "count total": 18
+        },
+        "setpositionstandard": {
+            "count files": 1,
+            "count total": 2
+        },
+        "nest": {
+            "count files": 8,
+            "count total": 8
+        },
+        "rootcontext": {
+            "count files": 7,
+            "count total": 30
+        },
+        "setregisteredvalue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getregisteredvalue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getconstantcontext": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getvariablecontext": {
+            "count files": 1,
+            "count total": 2
+        },
+        "selfcontext": {
+            "count files": 2,
+            "count total": 10
+        },
+        "dopredicatename": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createnullpointerforpredicates": {
+            "count files": 1,
+            "count total": 2
+        },
+        "interpretsimpleexpressionpath": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dosteppredicatesstandard": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dopredicateindex": {
+            "count files": 1,
+            "count total": 2
+        },
+        "valuepointer": {
+            "count files": 2,
+            "count total": 8
+        },
+        "dosteppredicatespropertyowner": {
+            "count files": 1,
+            "count total": 2
+        },
+        "indexfrompredicate": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dostepnopredicatesstandard": {
+            "count files": 1,
+            "count total": 2
+        },
+        "islangattribute": {
+            "count files": 1,
+            "count total": 2
+        },
+        "iscollectionelement": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dopredicate": {
+            "count files": 1,
+            "count total": 2
+        },
+        "isnameattributeequal": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createnullpointer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dostepnopredicatespropertyowner": {
+            "count files": 1,
+            "count total": 2
+        },
+        "interpretsimplelocationpath": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getnodeiterator": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dostep": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createchildpointerforstep": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dopredicatesstandard": {
+            "count files": 1,
+            "count total": 4
+        },
+        "isempty": {
+            "count files": 12,
+            "count total": 12
+        },
+        "keyfrompredicate": {
+            "count files": 1,
+            "count total": 2
+        },
+        "unioncontext": {
+            "count files": 2,
+            "count total": 10
+        },
+        "computevalue": {
+            "count files": 17,
+            "count total": 34
+        },
+        "compute": {
+            "count files": 8,
+            "count total": 15
+        },
+        "assertargrange": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functioncontains": {
+            "count files": 1,
+            "count total": 3
+        },
+        "charsequence": {
+            "count files": 1,
+            "count total": 1
+        },
+        "functionname": {
+            "count files": 2,
+            "count total": 3
+        },
+        "functiontrue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionlang": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionboolean": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionfalse": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionlocalname": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionceiling": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionnamespaceuri": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionfloor": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionsum": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionsubstringbefore": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionnull": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionsubstringafter": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionposition": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionnot": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionnormalizespace": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertargcount": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionlast": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionsubstring": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functiontranslate": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionkey": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionstartswith": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functioncount": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionconcat": {
+            "count files": 1,
+            "count total": 3
+        },
+        "functionnumber": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionstringlength": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionround": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionid": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionendswith": {
+            "count files": 1,
+            "count total": 2
+        },
+        "functionstring": {
+            "count files": 1,
+            "count total": 2
+        },
+        "parenthesize": {
+            "count files": 1,
+            "count total": 2
+        },
+        "coreoperationadd": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationand": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationcompare": {
+            "count files": 5,
+            "count total": 30
+        },
+        "findmatch": {
+            "count files": 2,
+            "count total": 4
+        },
+        "coreoperationdivide": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationequal": {
+            "count files": 1,
+            "count total": 6
+        },
+        "coreoperationgreaterthan": {
+            "count files": 2,
+            "count total": 10
+        },
+        "evaluatecompare": {
+            "count files": 4,
+            "count total": 8
+        },
+        "coreoperationgreaterthanorequal": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationlessthan": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationlessthanorequal": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationmod": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationmultiply": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationnegate": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationnotequal": {
+            "count files": 1,
+            "count total": 6
+        },
+        "coreoperationor": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationrelationalexpression": {
+            "count files": 5,
+            "count total": 24
+        },
+        "containsmatch": {
+            "count files": 1,
+            "count total": 4
+        },
+        "coreoperationsubtract": {
+            "count files": 2,
+            "count total": 10
+        },
+        "coreoperationunion": {
+            "count files": 2,
+            "count total": 10
+        },
+        "valueiterator": {
+            "count files": 1,
+            "count total": 3
+        },
+        "pointeriterator": {
+            "count files": 1,
+            "count total": 3
+        },
+        "expressionpath": {
+            "count files": 7,
+            "count total": 28
+        },
+        "computecontextdependent": {
+            "count files": 3,
+            "count total": 3
+        },
+        "locationpath": {
+            "count files": 6,
+            "count total": 21
+        },
+        "nameattributetest": {
+            "count files": 1,
+            "count total": 6
+        },
+        "nodetypetest": {
+            "count files": 3,
+            "count total": 12
+        },
+        "nodetypetostring": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createcontextforstep": {
+            "count files": 1,
+            "count total": 2
+        },
+        "evalsteps": {
+            "count files": 1,
+            "count total": 2
+        },
+        "buildcontextchain": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getsinglenodepointerforsteps": {
+            "count files": 1,
+            "count total": 2
+        },
+        "searchforpath": {
+            "count files": 1,
+            "count total": 2
+        },
+        "issimplestep": {
+            "count files": 1,
+            "count total": 2
+        },
+        "arebasicpredicates": {
+            "count files": 1,
+            "count total": 2
+        },
+        "issimplepath": {
+            "count files": 1,
+            "count total": 1
+        },
+        "processinginstructiontest": {
+            "count files": 2,
+            "count total": 8
+        },
+        "step": {
+            "count files": 5,
+            "count total": 18
+        },
+        "axistostring": {
+            "count files": 1,
+            "count total": 2
+        },
+        "iscontextdependent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "treecompiler": {
+            "count files": 28,
+            "count total": 120
+        },
+        "isnameattributetest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "divide": {
+            "count files": 1,
+            "count total": 2
+        },
+        "variablereference": {
+            "count files": 5,
+            "count total": 17
+        },
+        "toexpressionarray": {
+            "count files": 1,
+            "count total": 2
+        },
+        "notequal": {
+            "count files": 1,
+            "count total": 2
+        },
+        "minus": {
+            "count files": 1,
+            "count total": 4
+        },
+        "lessthanorequal": {
+            "count files": 1,
+            "count total": 2
+        },
+        "literal": {
+            "count files": 1,
+            "count total": 2
+        },
+        "mod": {
+            "count files": 1,
+            "count total": 2
+        },
+        "tosteparray": {
+            "count files": 1,
+            "count total": 2
+        },
+        "greaterthan": {
+            "count files": 1,
+            "count total": 2
+        },
+        "sum": {
+            "count files": 1,
+            "count total": 2
+        },
+        "lessthan": {
+            "count files": 1,
+            "count total": 2
+        },
+        "greaterthanorequal": {
+            "count files": 1,
+            "count total": 2
+        },
+        "multiply": {
+            "count files": 1,
+            "count total": 2
+        },
+        "safeequals": {
+            "count files": 1,
+            "count total": 2
+        },
+        "newchildnodepointer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createchild": {
+            "count files": 8,
+            "count total": 32
+        },
+        "createattribute": {
+            "count files": 3,
+            "count total": 6
+        },
+        "setindex": {
+            "count files": 5,
+            "count total": 10
+        },
+        "printdeep": {
+            "count files": 1,
+            "count total": 2
+        },
+        "isdefaultnamespace": {
+            "count files": 1,
+            "count total": 2
+        },
+        "namespacepointer": {
+            "count files": 12,
+            "count total": 44
+        },
+        "setnamespaceresolver": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getvaluepointer": {
+            "count files": 2,
+            "count total": 2
+        },
+        "comparenodepointers": {
+            "count files": 1,
+            "count total": 2
+        },
+        "childiterator": {
+            "count files": 7,
+            "count total": 14
+        },
+        "testnode": {
+            "count files": 9,
+            "count total": 22
+        },
+        "islanguage": {
+            "count files": 3,
+            "count total": 6
+        },
+        "setattribute": {
+            "count files": 2,
+            "count total": 4
+        },
+        "attributeiterator": {
+            "count files": 8,
+            "count total": 16
+        },
+        "getabstractfactory": {
+            "count files": 1,
+            "count total": 2
+        },
+        "findvariables": {
+            "count files": 1,
+            "count total": 2
+        },
+        "comparechildnodepointers": {
+            "count files": 12,
+            "count total": 26
+        },
+        "createcollection": {
+            "count files": 1,
+            "count total": 2
+        },
+        "isleaf": {
+            "count files": 6,
+            "count total": 6
+        },
+        "getimmediatenode": {
+            "count files": 4,
+            "count total": 4
+        },
+        "variablepointerfactory": {
+            "count files": 3,
+            "count total": 16
+        },
+        "createnodepointer": {
+            "count files": 9,
+            "count total": 36
+        },
+        "contextwrapper": {
+            "count files": 1,
+            "count total": 2
+        },
+        "beanattributeiterator": {
+            "count files": 2,
+            "count total": 10
+        },
+        "beanpointer": {
+            "count files": 3,
+            "count total": 18
+        },
+        "beanpointerfactory": {
+            "count files": 1,
+            "count total": 8
+        },
+        "beanpropertypointer": {
+            "count files": 14,
+            "count total": 42
+        },
+        "setpropertyindex": {
+            "count files": 5,
+            "count total": 10
+        },
+        "setpropertyname": {
+            "count files": 4,
+            "count total": 8
+        },
+        "getpropertyname": {
+            "count files": 3,
+            "count total": 3
+        },
+        "getbasevalue": {
+            "count files": 1,
+            "count total": 1
+        },
+        "collectionattributenodeiterator": {
+            "count files": 2,
+            "count total": 10
+        },
+        "getelementnodeiterator": {
+            "count files": 2,
+            "count total": 4
+        },
+        "collectionchildnodeiterator": {
+            "count files": 2,
+            "count total": 10
+        },
+        "collectionnodeiterator": {
+            "count files": 3,
+            "count total": 12
+        },
+        "collectionpointer": {
+            "count files": 14,
+            "count total": 68
+        },
+        "collectionpointerfactory": {
+            "count files": 1,
+            "count total": 8
+        },
+        "langattributepointer": {
+            "count files": 6,
+            "count total": 26
+        },
+        "nullelementpointer": {
+            "count files": 5,
+            "count total": 26
+        },
+        "nullpropertypointer": {
+            "count files": 9,
+            "count total": 46
+        },
+        "createbadfactoryexception": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setnameattributevalue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setpositionallproperties": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getnodepointer": {
+            "count files": 3,
+            "count total": 3
+        },
+        "prepareforindividualproperty": {
+            "count files": 2,
+            "count total": 4
+        },
+        "setpositionindividualproperty": {
+            "count files": 1,
+            "count total": 2
+        },
+        "propertyownerpointer": {
+            "count files": 8,
+            "count total": 40
+        },
+        "isvalidproperty": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createnodeiterator": {
+            "count files": 2,
+            "count total": 4
+        },
+        "propertypointer": {
+            "count files": 9,
+            "count total": 40
+        },
+        "containerpointer": {
+            "count files": 13,
+            "count total": 52
+        },
+        "containerpointerfactory": {
+            "count files": 1,
+            "count total": 8
+        },
+        "getattribute": {
+            "count files": 2,
+            "count total": 4
+        },
+        "domattributepointer": {
+            "count files": 8,
+            "count total": 32
+        },
+        "domnamespaceiterator": {
+            "count files": 4,
+            "count total": 16
+        },
+        "collectnamespaces": {
+            "count files": 2,
+            "count total": 4
+        },
+        "getdefaultnamespaceuri": {
+            "count files": 1,
+            "count total": 2
+        },
+        "matchesqname": {
+            "count files": 2,
+            "count total": 4
+        },
+        "findenclosingattribute": {
+            "count files": 2,
+            "count total": 6
+        },
+        "getlocalname": {
+            "count files": 2,
+            "count total": 4
+        },
+        "getrelativepositionofpi": {
+            "count files": 2,
+            "count total": 2
+        },
+        "getname": {
+            "count files": 2,
+            "count total": 2
+        },
+        "dompointerfactory": {
+            "count files": 1,
+            "count total": 8
+        },
+        "dynabeanpointer": {
+            "count files": 3,
+            "count total": 20
+        },
+        "equalobjects": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dynabeanpointerfactory": {
+            "count files": 1,
+            "count total": 8
+        },
+        "dynabeanpropertypointer": {
+            "count files": 12,
+            "count total": 40
+        },
+        "isindexedproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getpropertyindex": {
+            "count files": 2,
+            "count total": 2
+        },
+        "isactualproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "strictlazydynabeanpointerfactory": {
+            "count files": 2,
+            "count total": 18
+        },
+        "strictlazydynabeanpointer": {
+            "count files": 1,
+            "count total": 5
+        },
+        "dynamicattributeiterator": {
+            "count files": 2,
+            "count total": 10
+        },
+        "dynamicpointerfactory": {
+            "count files": 1,
+            "count total": 8
+        },
+        "dynamicpropertyiterator": {
+            "count files": 1,
+            "count total": 6
+        },
+        "removekey": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jdomattributeiterator": {
+            "count files": 2,
+            "count total": 10
+        },
+        "jdomattributepointer": {
+            "count files": 6,
+            "count total": 24
+        },
+        "jdomnamespaceiterator": {
+            "count files": 4,
+            "count total": 16
+        },
+        "jdomnamespacepointer": {
+            "count files": 5,
+            "count total": 28
+        },
+        "jdomnodeiterator": {
+            "count files": 3,
+            "count total": 12
+        },
+        "jdomnodepointer": {
+            "count files": 27,
+            "count total": 129
+        },
+        "illegalstateexception": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getrelativepositionofelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getrelativepositionbyqname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "nodeparent": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getrelativepositionoftextnode": {
+            "count files": 1,
+            "count total": 1
+        },
+        "addcontent": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jdompointerfactory": {
+            "count files": 1,
+            "count total": 8
+        },
+        "add_escapes": {
+            "count files": 1,
+            "count total": 3
+        },
+        "simplecharstream": {
+            "count files": 13,
+            "count total": 138
+        },
+        "camel-case": {
+            "count files": 2,
+            "count total": 16
+        },
+        "reinit": {
+            "count files": 3,
+            "count total": 30
+        },
+        "expandbuff": {
+            "count files": 1,
+            "count total": 2
+        },
+        "updatelinecolumn": {
+            "count files": 1,
+            "count total": 2
+        },
+        "begintoken": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getline": {
+            "count files": 1,
+            "count total": 1
+        },
+        "adjustbeginlinecolumn": {
+            "count files": 1,
+            "count total": 2
+        },
+        "backup": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getsuffix": {
+            "count files": 1,
+            "count total": 2
+        },
+        "fillbuff": {
+            "count files": 1,
+            "count total": 3
+        },
+        "readchar": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getcolumn": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getimage": {
+            "count files": 1,
+            "count total": 2
+        },
+        "token": {
+            "count files": 2,
+            "count total": 6
+        },
+        "newtoken": {
+            "count files": 1,
+            "count total": 2
+        },
+        "tokenmgrerror": {
+            "count files": 4,
+            "count total": 24
+        },
+        "lexicalerror": {
+            "count files": 1,
+            "count total": 2
+        },
+        "xpathparser": {
+            "count files": 196,
+            "count total": 458
+        },
+        "corefunctionname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_137": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_73": {
+            "count files": 1,
+            "count total": 1
+        },
+        "gettoken": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jj_3r_64": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_98": {
+            "count files": 1,
+            "count total": 1
+        },
+        "subtractiveexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "orexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_133": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_88": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3_6": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_127": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_2_3": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jj_3r_124": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_36": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_52": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_2_6": {
+            "count files": 1,
+            "count total": 3
+        },
+        "axisspecifier": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_142": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_66": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_135": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_49": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_93": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_96": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_18": {
+            "count files": 1,
+            "count total": 1
+        },
+        "nodetest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jj_3r_100": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_54": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_69": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_118": {
+            "count files": 1,
+            "count total": 1
+        },
+        "primaryexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_82": {
+            "count files": 1,
+            "count total": 1
+        },
+        "absolutelocationpath": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_132": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_144": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_59": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unaryexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_71": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_117": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_107": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_31": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_70": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_29": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_34": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_2_5": {
+            "count files": 1,
+            "count total": 3
+        },
+        "setcompiler": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getnexttoken": {
+            "count files": 2,
+            "count total": 4
+        },
+        "jj_save": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jj_3r_115": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_94": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ncname_without_corefunctions": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_112": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_85": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_86": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_30": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_128": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_95": {
+            "count files": 1,
+            "count total": 1
+        },
+        "abbreviatedaxisspecifier": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_2_2": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jj_2_4": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jj_3r_143": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_26": {
+            "count files": 1,
+            "count total": 1
+        },
+        "axisname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_scan_token": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jj_3r_51": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_add_error_token": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jj_3r_24": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_79": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_2_1": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jj_rescan_token": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_58": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_126": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_77": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_139": {
+            "count files": 1,
+            "count total": 1
+        },
+        "relationalexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_41": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_148": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_28": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_35": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3_5": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3_3": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_50": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_131": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_17": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_65": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_20": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_120": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_134": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_55": {
+            "count files": 1,
+            "count total": 1
+        },
+        "additiveexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "locationstep": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jj_3r_90": {
+            "count files": 1,
+            "count total": 1
+        },
+        "relativelocationpath": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_106": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_102": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_42": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_consume_token": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jj_3r_109": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_72": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_138": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_110": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3_4": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3_1": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_145": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_62": {
+            "count files": 1,
+            "count total": 1
+        },
+        "pathexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "argumentlist": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_16": {
+            "count files": 1,
+            "count total": 1
+        },
+        "qname_without_corefunctions": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_150": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_81": {
+            "count files": 1,
+            "count total": 1
+        },
+        "equalityexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_123": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_125": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_46": {
+            "count files": 1,
+            "count total": 1
+        },
+        "wildcardname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_40": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_27": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_130": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_63": {
+            "count files": 1,
+            "count total": 1
+        },
+        "filterexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_113": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_67": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_114": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_104": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ncname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_136": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_45": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_74": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_15": {
+            "count files": 1,
+            "count total": 1
+        },
+        "andexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_39": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_149": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_25": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_23": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_22": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_129": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_92": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_33": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_151": {
+            "count files": 1,
+            "count total": 1
+        },
+        "generateparseexception": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_80": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_141": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_47": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_48": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_68": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_61": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_105": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_146": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_108": {
+            "count files": 1,
+            "count total": 1
+        },
+        "functioncall": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_84": {
+            "count files": 1,
+            "count total": 1
+        },
+        "nodetype": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_121": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_38": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_91": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_57": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_140": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_19": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_116": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_76": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_87": {
+            "count files": 1,
+            "count total": 1
+        },
+        "multiplicativeexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_83": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_37": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_78": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_147": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_101": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_43": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_103": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3_2": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_99": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_111": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unionexpr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_32": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_97": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_122": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_56": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_44": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_75": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_89": {
+            "count files": 1,
+            "count total": 1
+        },
+        "corefunctioncall": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_21": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_53": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_60": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jj_3r_119": {
+            "count files": 1,
+            "count total": 1
+        },
+        "xpathparsertokenmanager": {
+            "count files": 41,
+            "count total": 226
+        },
+        "jjmovestringliteraldfa2_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa16_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjcanmove_0": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa0_0": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jjmovestringliteraldfa14_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa21_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjchecknaddstates": {
+            "count files": 1,
+            "count total": 4
+        },
+        "reinitrounds": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jjmovestringliteraldfa9_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa13_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa8_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa6_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa18_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjchecknadd": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjcanmove_1": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa5_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjstartnfawithstates_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjstartnfa_0": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa19_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjchecknaddtwostates": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa7_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa1_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "switchto": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjstopatpos": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa4_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa12_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjstopstringliteraldfa_0": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa10_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "setdebugstream": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjcanmove_2": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa15_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjaddstates": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jjmovestringliteraldfa20_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa17_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovestringliteraldfa3_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjfilltoken": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jjmovestringliteraldfa11_0": {
+            "count files": 1,
+            "count total": 3
+        },
+        "jjmovenfa_0": {
+            "count files": 1,
+            "count total": 4
+        },
+        "httpsessionhandler": {
+            "count files": 3,
+            "count total": 12
+        },
+        "getrequestcontext": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getsessioncontext": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getapplicationcontext": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getpagecontext": {
+            "count files": 1,
+            "count total": 2
+        },
+        "keywordvariables": {
+            "count files": 5,
+            "count total": 22
+        },
+        "pagecontexthandler": {
+            "count files": 3,
+            "count total": 12
+        },
+        "pagescopecontext": {
+            "count files": 3,
+            "count total": 14
+        },
+        "pagescopecontexthandler": {
+            "count files": 3,
+            "count total": 12
+        },
+        "servletrequestandcontext": {
+            "count files": 1,
+            "count total": 6
+        },
+        "canconvert": {
+            "count files": 3,
+            "count total": 6
+        },
+        "convertnulltoprimitive": {
+            "count files": 1,
+            "count total": 2
+        },
+        "unmodifiablecollection": {
+            "count files": 1,
+            "count total": 2
+        },
+        "convertstringtoprimitive": {
+            "count files": 1,
+            "count total": 2
+        },
+        "valuenodeset": {
+            "count files": 1,
+            "count total": 2
+        },
+        "classloaderutil": {
+            "count files": 3,
+            "count total": 27
+        },
+        "getclass": {
+            "count files": 1,
+            "count total": 8
+        },
+        "addabbreviation": {
+            "count files": 1,
+            "count total": 2
+        },
+        "tocanonicalname": {
+            "count files": 1,
+            "count total": 4
+        },
+        "le": {
+            "count files": 1,
+            "count total": 1
+        },
+        "engligh-centric": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath11compatibletypeconverter": {
+            "count files": 2,
+            "count total": 8
+        },
+        "keymanagerutils": {
+            "count files": 2,
+            "count total": 16
+        },
+        "singlenodeextendedkeymanager": {
+            "count files": 1,
+            "count total": 6
+        },
+        "getextendedkeymanager": {
+            "count files": 1,
+            "count total": 2
+        },
+        "methodlookuputils": {
+            "count files": 5,
+            "count total": 20
+        },
+        "lookupmethod": {
+            "count files": 1,
+            "count total": 2
+        },
+        "matchparametertypes": {
+            "count files": 1,
+            "count total": 2
+        },
+        "lookupstaticmethod": {
+            "count files": 1,
+            "count total": 2
+        },
+        "matchtype": {
+            "count files": 1,
+            "count total": 2
+        },
+        "lookupconstructor": {
+            "count files": 1,
+            "count total": 2
+        },
+        "compare": {
+            "count files": 1,
+            "count total": 2
+        },
+        "typeutils": {
+            "count files": 5,
+            "count total": 18
+        },
+        "settypeconverter": {
+            "count files": 1,
+            "count total": 2
+        },
+        "wrapprimitive": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getcollectionhint": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getaccessiblemethodfrominterfacenest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "expandcollection": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getdynamicpropertyhandler": {
+            "count files": 1,
+            "count total": 4
+        },
+        "modern": {
+            "count files": 2,
+            "count total": 2
+        },
+        "domparser": {
+            "count files": 1,
+            "count total": 4
+        },
+        "parsexml": {
+            "count files": 3,
+            "count total": 6
+        },
+        "registerxmlparser": {
+            "count files": 1,
+            "count total": 4
+        },
+        "getparser": {
+            "count files": 1,
+            "count total": 4
+        },
+        "jdomparser": {
+            "count files": 1,
+            "count total": 4
+        },
+        "xmlparser2": {
+            "count files": 6,
+            "count total": 24
+        },
+        "setignoringelementcontentwhitespace": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setvalidating": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setcoalescing": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setignoringcomments": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setnamespaceaware": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setexpandentityreferences": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertelementvalues": {
+            "count files": 1,
+            "count total": 2
+        },
+        "removepointers": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testadd": {
+            "count files": 1,
+            "count total": 1
+        },
+        "assertelementnames": {
+            "count files": 1,
+            "count total": 2
+        },
+        "addpointers": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testremove": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpathtestcase": {
+            "count files": 15,
+            "count total": 112
+        },
+        "assertxpathvalueiterator": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathsetvalue": {
+            "count files": 1,
+            "count total": 4
+        },
+        "assertxpathvalueandpointer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathpointer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathpointeriterator": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathcreatepath": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathcreatepathandsetvalue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathvalue": {
+            "count files": 1,
+            "count total": 4
+        },
+        "assertxpathvaluetype": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertdocumentorder": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathnodetype": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathvaluelenient": {
+            "count files": 1,
+            "count total": 2
+        },
+        "assertxpathpointerlenient": {
+            "count files": 1,
+            "count total": 2
+        },
+        "nestedtestbean": {
+            "count files": 4,
+            "count total": 18
+        },
+        "setint": {
+            "count files": 2,
+            "count total": 4
+        },
+        "setname": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setstrings": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testbean": {
+            "count files": 9,
+            "count total": 32
+        },
+        "getlist": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getintegers": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setnestedbean": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setmap": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setintegers": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setboolean": {
+            "count files": 1,
+            "count total": 2
+        },
+        "getset": {
+            "count files": 1,
+            "count total": 1
+        },
+        "setbeans": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testmixedmodelbean": {
+            "count files": 1,
+            "count total": 4
+        },
+        "setmatrix": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testnull": {
+            "count files": 2,
+            "count total": 5
+        },
+        "setnothing": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpath118test": {
+            "count files": 2,
+            "count total": 14
+        },
+        "somechildclass": {
+            "count files": 1,
+            "count total": 6
+        },
+        "testjxpath118issuewithaspath": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jxpath149test": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testcomplexoperationwithvariables": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testjx177_union1": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dotest": {
+            "count files": 6,
+            "count total": 12
+        },
+        "testjx177_union2": {
+            "count files": 1,
+            "count total": 1
+        },
+        "exceptionhandlertest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpathcompiledexpressiontest": {
+            "count files": 1,
+            "count total": 8
+        },
+        "assertxpathexpression": {
+            "count files": 1,
+            "count total": 4
+        },
+        "stresstest": {
+            "count files": 2,
+            "count total": 4
+        },
+        "stressrunnable": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testthreads": {
+            "count files": 1,
+            "count total": 1
+        },
+        "recursiveaxestest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "recursivebean": {
+            "count files": 3,
+            "count total": 14
+        },
+        "setfirst": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setsecond": {
+            "count files": 1,
+            "count total": 2
+        },
+        "simplepathinterpretertest": {
+            "count files": 7,
+            "count total": 24
+        },
+        "testdopredicatename": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testdostepnopredicatespropertyowner": {
+            "count files": 1,
+            "count total": 1
+        },
+        "assertvalueandpointer": {
+            "count files": 1,
+            "count total": 4
+        },
+        "assertnullpointer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "pointersignature": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testdopredicateindex": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testbeanwithnode": {
+            "count files": 3,
+            "count total": 10
+        },
+        "setvendor": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setobject": {
+            "count files": 1,
+            "count total": 2
+        },
+        "createtestbeanwithdom": {
+            "count files": 1,
+            "count total": 1
+        },
+        "contextdependencytest": {
+            "count files": 1,
+            "count total": 4
+        },
+        "testcontextdependency": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testformatnumberfunction": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcorefunctions": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testkeyfunction": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testidfunction": {
+            "count files": 1,
+            "count total": 1
+        },
+        "coreoperationtest": {
+            "count files": 2,
+            "count total": 4
+        },
+        "testinfosettypes": {
+            "count files": 1,
+            "count total": 1
+        },
+        "extensionfunctiontest": {
+            "count files": 17,
+            "count total": 36
+        },
+        "teststaticmethodlookupwithconversion": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testnodesetreturn": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmethodlookup": {
+            "count files": 1,
+            "count total": 1
+        },
+        "teststaticmethodlookupwithexpressioncontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmethodlookupwithexpressioncontextandargument": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmethodlookupwithexpressioncontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcollectionmethodcall": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testconstructorlookup": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testconstructorlookupwithexpressioncontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmethodcall": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testallocation": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testexpressioncontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcollectionreturn": {
+            "count files": 1,
+            "count total": 1
+        },
+        "teststaticmethodlookup": {
+            "count files": 1,
+            "count total": 1
+        },
+        "teststaticmethodcall": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testfunctions": {
+            "count files": 15,
+            "count total": 74
+        },
+        "instancepath": {
+            "count files": 1,
+            "count total": 2
+        },
+        "isinstance": {
+            "count files": 1,
+            "count total": 2
+        },
+        "classname": {
+            "count files": 1,
+            "count total": 2
+        },
+        "countpointers": {
+            "count files": 1,
+            "count total": 2
+        },
+        "item": {
+            "count files": 1,
+            "count total": 2
+        },
+        "ismap": {
+            "count files": 1,
+            "count total": 2
+        },
+        "pathwithsuffix": {
+            "count files": 1,
+            "count total": 2
+        },
+        "setfooandbar": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testfunctions2": {
+            "count files": 1,
+            "count total": 4
+        },
+        "increment": {
+            "count files": 1,
+            "count total": 2
+        },
+        "variablefactory": {
+            "count files": 2,
+            "count total": 8
+        },
+        "variabletest": {
+            "count files": 13,
+            "count total": 26
+        },
+        "testcreatepathdeclarevariablesetcollectionelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathdeclarevariablesetproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testinvalidvariablename": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testvariablesinexpressions": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathandsetvaluedeclvarsetcollectionelementproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testnestedcontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreateandsetvaluepathdeclarevariablesetcollectionelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testvariables": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathandsetvaluedeclarevariablesetproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testunionofvariableandnode": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testsetvalue": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathdeclarevariablesetcollectionelementproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "aliasednamespaceiterationtest": {
+            "count files": 3,
+            "count total": 16
+        },
+        "createcontext": {
+            "count files": 6,
+            "count total": 11
+        },
+        "dotestiterate": {
+            "count files": 1,
+            "count total": 4
+        },
+        "createdocumentcontainer": {
+            "count files": 6,
+            "count total": 12
+        },
+        "beanmodeltestcase": {
+            "count files": 39,
+            "count total": 86
+        },
+        "testbooleanpredicate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testiteratepropertyarraywithhasnext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathexpandexistingcollectionandsetproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testrelativecontextparent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testindividual": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testsetcontextdependentnode": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmultiple": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testcreatepathexpandnewcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxisdescendant": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testindexpredicate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testsetpropertyvalue": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxischild": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testiterateandset": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxisancestor": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testrelativecontextabsolutepath": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testremovepathpropertyvalue": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxisprecedingsibling": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxischildnestedcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testrelativecontextinheritance": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testattributelang": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxisfollowing": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxisfollowingsibling": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepath": {
+            "count files": 4,
+            "count total": 4
+        },
+        "testaxisparent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxisattribute": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testcreatepathandsetvalueexpandexistingcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testunion": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testattributename": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testcreatepathandsetvalue": {
+            "count files": 3,
+            "count total": 3
+        },
+        "relativeproperty": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testiteratepointersetvalue": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testaxisdescendantorself": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaxispreceding": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testsetcollectionelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathexpandexistingcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathandsetvalueexpandnewcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testiteratepropertyarraywithouthasnext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testrelativecontextrelativepath": {
+            "count files": 1,
+            "count total": 1
+        },
+        "embeddedcolonmapkeystest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "emptycollectiontest": {
+            "count files": 1,
+            "count total": 4
+        },
+        "haschild": {
+            "count files": 1,
+            "count total": 2
+        },
+        "externalxmlnamespacetest": {
+            "count files": 6,
+            "count total": 24
+        },
+        "dotestcreateandsetattribute": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dotestattribute": {
+            "count files": 1,
+            "count total": 2
+        },
+        "dotestelement": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpath151test": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpath154test": {
+            "count files": 2,
+            "count total": 8
+        },
+        "mixedmodeltest": {
+            "count files": 16,
+            "count total": 32
+        },
+        "testvar": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testbeanbean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testiteratepointersarrayelementwithvariable": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmatrix": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testerrorproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcollectionpointer": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testvarbean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmapbean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testiteratearray": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathandsetvaluewithmatrix": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testlistbean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testiteratepointersarray": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testiteratevector": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmixedmodelfactory": {
+            "count files": 2,
+            "count total": 8
+        },
+        "xmlmodeltestcase": {
+            "count files": 15,
+            "count total": 32
+        },
+        "assertxmlsignature": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testnamespacemapping": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcontainer": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testid": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testtypeconversions": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testremovepath": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testaxisnamespace": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testnodes": {
+            "count files": 1,
+            "count total": 1
+        },
+        "xmlpreservespacetest": {
+            "count files": 3,
+            "count total": 12
+        },
+        "xmlspacetest": {
+            "count files": 3,
+            "count total": 12
+        },
+        "xmluppercaseelementstest": {
+            "count files": 3,
+            "count total": 12
+        },
+        "badlyimplementedfactorytest": {
+            "count files": 2,
+            "count total": 4
+        },
+        "testbadfactoryimplementation": {
+            "count files": 1,
+            "count total": 1
+        },
+        "beanmodeltest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testindexedproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testbeanfactory": {
+            "count files": 2,
+            "count total": 8
+        },
+        "testindexedpropertybean": {
+            "count files": 1,
+            "count total": 4
+        },
+        "getindexed": {
+            "count files": 1,
+            "count total": 2
+        },
+        "containermodeltest": {
+            "count files": 6,
+            "count total": 16
+        },
+        "listcontainer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testcontainervariablewithcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcontainerrootwithcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "arraycontainer": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testcontainermapwithcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcontainerpropertywithcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dommodeltest": {
+            "count files": 3,
+            "count total": 24
+        },
+        "appendxmlsignature": {
+            "count files": 2,
+            "count total": 16
+        },
+        "getxmlsignature": {
+            "count files": 2,
+            "count total": 6
+        },
+        "testgetelementdescendantorself": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testdomfactory": {
+            "count files": 3,
+            "count total": 12
+        },
+        "adddomelement": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testlazyproperty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testdynabeanfactory": {
+            "count files": 2,
+            "count total": 8
+        },
+        "dynamicpropertiesmodeltest": {
+            "count files": 16,
+            "count total": 32
+        },
+        "testcreatepathcreatebean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testsetnewkey": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testsetprimitivevalue": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathcollectionelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testremovepatharrayelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcollectionofmaps": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathandsetvaluecollectionelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathnewcollectionelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathandsetvaluenewcollectionelement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testmapofmaps": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testsetcollection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcreatepathandsetvaluecreatebean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testdynamicpropertyfactory": {
+            "count files": 2,
+            "count total": 8
+        },
+        "jdommodeltest": {
+            "count files": 3,
+            "count total": 24
+        },
+        "testjdomfactory": {
+            "count files": 3,
+            "count total": 12
+        },
+        "addjdomelement": {
+            "count files": 1,
+            "count total": 2
+        },
+        "jxpathservletcontexttest": {
+            "count files": 6,
+            "count total": 14
+        },
+        "testservletrequestwithoutsession": {
+            "count files": 1,
+            "count total": 1
+        },
+        "checkpointeriterator": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testpagecontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testservletrequest": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getservletcontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testservletcontext": {
+            "count files": 1,
+            "count total": 1
+        },
+        "basictypeconvertertest": {
+            "count files": 8,
+            "count total": 18
+        },
+        "assertconversion": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testlisttoarray": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testpointertostring": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testarraytolist": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testnodesettointeger": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testprimitivetostring": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testnodesettostring": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testinvalidconversion": {
+            "count files": 1,
+            "count total": 1
+        },
+        "classloaderutiltest": {
+            "count files": 9,
+            "count total": 36
+        },
+        "teardown": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testclassloadsuccesswithcontextclassloader": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testclassloader": {
+            "count files": 1,
+            "count total": 6
+        },
+        "testcurrentclassloaderfallback": {
+            "count files": 1,
+            "count total": 1
+        },
+        "callexamplemessagemethodandassertsuccess": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testclassloadfailwithoutcontextclassloader": {
+            "count files": 1,
+            "count total": 1
+        },
+        "executetestmethodunderclassloader": {
+            "count files": 1,
+            "count total": 3
+        },
+        "callexamplemessagemethodandassertclassnotfoundjxpathexception": {
+            "count files": 1,
+            "count total": 2
+        },
+        "exceptionpropertytestbean": {
+            "count files": 3,
+            "count total": 6
+        },
+        "geterrorstring": {
+            "count files": 1,
+            "count total": 1
+        },
+        "geterrorbean": {
+            "count files": 1,
+            "count total": 1
+        },
+        "geterrorstringarray": {
+            "count files": 1,
+            "count total": 1
+        }
+    }
+}

@@ -1,0 +1,7852 @@
+{
+    "words": {
+        "remove": {
+            "count files": 170,
+            "count total": 618
+        },
+        "unused": {
+            "count files": 49,
+            "count total": 65
+        },
+        "local": {
+            "count files": 15,
+            "count total": 16
+        },
+        "variable": {
+            "count files": 43,
+            "count total": 59
+        },
+        "fix": {
+            "count files": 209,
+            "count total": 835
+        },
+        "bug": {
+            "count files": 53,
+            "count total": 101
+        },
+        "modify": {
+            "count files": 15,
+            "count total": 16
+        },
+        "base64": {
+            "count files": 32,
+            "count total": 186
+        },
+        "remedy": {
+            "count files": 2,
+            "count total": 2
+        },
+        "non-compliance": {
+            "count files": 2,
+            "count total": 2
+        },
+        "rfc": {
+            "count files": 7,
+            "count total": 13
+        },
+        "non-base64": {
+            "count files": 2,
+            "count total": 4
+        },
+        "character": {
+            "count files": 36,
+            "count total": 69
+        },
+        "discard": {
+            "count files": 9,
+            "count total": 21
+        },
+        "decode": {
+            "count files": 13,
+            "count total": 23
+        },
+        "explicitly": {
+            "count files": 2,
+            "count total": 2
+        },
+        "state": {
+            "count files": 4,
+            "count total": 4
+        },
+        "outside": {
+            "count files": 4,
+            "count total": 4
+        },
+        "alphabet": {
+            "count files": 8,
+            "count total": 15
+        },
+        "ignore": {
+            "count files": 13,
+            "count total": 16
+        },
+        "new": {
+            "count files": 66,
+            "count total": 131
+        },
+        "function": {
+            "count files": 8,
+            "count total": 8
+        },
+        "discardnonbase64": {
+            "count files": 2,
+            "count total": 2
+        },
+        "call": {
+            "count files": 67,
+            "count total": 105
+        },
+        "prior": {
+            "count files": 2,
+            "count total": 2
+        },
+        "note": {
+            "count files": 13,
+            "count total": 20
+        },
+        "isarraybase64": {
+            "count files": 2,
+            "count total": 2
+        },
+        "whitespace": {
+            "count files": 47,
+            "count total": 48
+        },
+        "testing": {
+            "count files": 6,
+            "count total": 8
+        },
+        "contents": {
+            "count files": 3,
+            "count total": 3
+        },
+        "encode": {
+            "count files": 30,
+            "count total": 46
+        },
+        "byte": {
+            "count files": 44,
+            "count total": 135
+        },
+        "array": {
+            "count files": 51,
+            "count total": 97
+        },
+        "unit": {
+            "count files": 91,
+            "count total": 109
+        },
+        "test": {
+            "count files": 161,
+            "count total": 1467
+        },
+        "update": {
+            "count files": 85,
+            "count total": 142
+        },
+        "reflect": {
+            "count files": 14,
+            "count total": 16
+        },
+        "change": {
+            "count files": 76,
+            "count total": 166
+        },
+        "relate": {
+            "count files": 2,
+            "count total": 2
+        },
+        "severity": {
+            "count files": 4,
+            "count total": 4
+        },
+        "description": {
+            "count files": 8,
+            "count total": 9
+        },
+        "resource": {
+            "count files": 10,
+            "count total": 12
+        },
+        "folder": {
+            "count files": 7,
+            "count total": 7
+        },
+        "location": {
+            "count files": 5,
+            "count total": 5
+        },
+        "creation": {
+            "count files": 26,
+            "count total": 26
+        },
+        "time": {
+            "count files": 7,
+            "count total": 7
+        },
+        "unnecessary": {
+            "count files": 54,
+            "count total": 64
+        },
+        "cast": {
+            "count files": 10,
+            "count total": 15
+        },
+        "type": {
+            "count files": 53,
+            "count total": 69
+        },
+        "object": {
+            "count files": 27,
+            "count total": 35
+        },
+        "expression": {
+            "count files": 15,
+            "count total": 20
+        },
+        "base64test": {
+            "count files": 2,
+            "count total": 45
+        },
+        "java": {
+            "count files": 194,
+            "count total": 3742
+        },
+        "apache": {
+            "count files": 223,
+            "count total": 2173
+        },
+        "jakarta": {
+            "count files": 5,
+            "count total": 10
+        },
+        "commons": {
+            "count files": 185,
+            "count total": 1875
+        },
+        "codec": {
+            "count files": 182,
+            "count total": 1963
+        },
+        "src": {
+            "count files": 154,
+            "count total": 1743
+        },
+        "org": {
+            "count files": 221,
+            "count total": 1971
+        },
+        "binary": {
+            "count files": 48,
+            "count total": 596
+        },
+        "line": {
+            "count files": 165,
+            "count total": 268
+        },
+        "july": {
+            "count files": 4,
+            "count total": 9
+        },
+        "author": {
+            "count files": 119,
+            "count total": 215
+        },
+        "tag": {
+            "count files": 160,
+            "count total": 444
+        },
+        "email": {
+            "count files": 19,
+            "count total": 19
+        },
+        "address": {
+            "count files": 24,
+            "count total": 29
+        },
+        "typo": {
+            "count files": 92,
+            "count total": 178
+        },
+        "acknowlegement": {
+            "count files": 14,
+            "count total": 14
+        },
+        "acknowledgement": {
+            "count files": 30,
+            "count total": 44
+        },
+        "spot": {
+            "count files": 14,
+            "count total": 14
+        },
+        "gary": {
+            "count files": 25,
+            "count total": 31
+        },
+        "number": {
+            "count files": 37,
+            "count total": 44
+        },
+        "break": {
+            "count files": 39,
+            "count total": 44
+        },
+        "license": {
+            "count files": 56,
+            "count total": 268
+        },
+        "issue": {
+            "count files": 180,
+            "count total": 356
+        },
+        "include": {
+            "count files": 40,
+            "count total": 40
+        },
+        "verbatim": {
+            "count files": 30,
+            "count total": 30
+        },
+        "spelling": {
+            "count files": 66,
+            "count total": 75
+        },
+        "another": {
+            "count files": 42,
+            "count total": 57
+        },
+        "section": {
+            "count files": 30,
+            "count total": 32
+        },
+        "five": {
+            "count files": 30,
+            "count total": 30
+        },
+        "plural": {
+            "count files": 30,
+            "count total": 30
+        },
+        "names": {
+            "count files": 114,
+            "count total": 228
+        },
+        "singular": {
+            "count files": 31,
+            "count total": 31
+        },
+        "name": {
+            "count files": 89,
+            "count total": 188
+        },
+        "improve": {
+            "count files": 30,
+            "count total": 42
+        },
+        "coverage": {
+            "count files": 30,
+            "count total": 55
+        },
+        "see": {
+            "count files": 21,
+            "count total": 27
+        },
+        "clover": {
+            "count files": 9,
+            "count total": 9
+        },
+        "report": {
+            "count files": 19,
+            "count total": 21
+        },
+        "minor": {
+            "count files": 79,
+            "count total": 139
+        },
+        "clean": {
+            "count files": 19,
+            "count total": 30
+        },
+        "product": {
+            "count files": 30,
+            "count total": 30
+        },
+        "derive": {
+            "count files": 30,
+            "count total": 30
+        },
+        "software": {
+            "count files": 30,
+            "count total": 31
+        },
+        "may": {
+            "count files": 32,
+            "count total": 67
+        },
+        "appear": {
+            "count files": 30,
+            "count total": 30
+        },
+        "double": {
+            "count files": 33,
+            "count total": 35
+        },
+        "word": {
+            "count files": 30,
+            "count total": 32
+        },
+        "file": {
+            "count files": 74,
+            "count total": 95
+        },
+        "main": {
+            "count files": 116,
+            "count total": 967
+        },
+        "jakata": {
+            "count files": 30,
+            "count total": 30
+        },
+        "page": {
+            "count files": 33,
+            "count total": 35
+        },
+        "apply": {
+            "count files": 89,
+            "count total": 179
+        },
+        "version": {
+            "count files": 143,
+            "count total": 225
+        },
+        "fyi": {
+            "count files": 32,
+            "count total": 32
+        },
+        "instructions": {
+            "count files": 32,
+            "count total": 32
+        },
+        "http": {
+            "count files": 118,
+            "count total": 224
+        },
+        "www": {
+            "count files": 33,
+            "count total": 33
+        },
+        "dev": {
+            "count files": 65,
+            "count total": 66
+        },
+        "apply-license": {
+            "count files": 32,
+            "count total": 32
+        },
+        "html": {
+            "count files": 85,
+            "count total": 128
+        },
+        "following": {
+            "count files": 33,
+            "count total": 33
+        },
+        "board": {
+            "count files": 31,
+            "count total": 31
+        },
+        "recommendation": {
+            "count files": 31,
+            "count total": 31
+        },
+        "bugzilla": {
+            "count files": 20,
+            "count total": 43
+        },
+        "chunk": {
+            "count files": 7,
+            "count total": 16
+        },
+        "encoding": {
+            "count files": 50,
+            "count total": 128
+        },
+        "compliant": {
+            "count files": 2,
+            "count total": 2
+        },
+        "crlf": {
+            "count files": 4,
+            "count total": 5
+        },
+        "use": {
+            "count files": 196,
+            "count total": 683
+        },
+        "cv": {
+            "count files": 6,
+            "count total": 6
+        },
+        "id": {
+            "count files": 128,
+            "count total": 165
+        },
+        "instead": {
+            "count files": 93,
+            "count total": 152
+        },
+        "revision": {
+            "count files": 13,
+            "count total": 13
+        },
+        "asf": {
+            "count files": 7,
+            "count total": 7
+        },
+        "circumstances": {
+            "count files": 2,
+            "count total": 2
+        },
+        "isarraybytebase64": {
+            "count files": 2,
+            "count total": 10
+        },
+        "throw": {
+            "count files": 53,
+            "count total": 69
+        },
+        "arrayindexoutofboundsexception": {
+            "count files": 8,
+            "count total": 11
+        },
+        "show_bug": {
+            "count files": 12,
+            "count total": 19
+        },
+        "cgi": {
+            "count files": 12,
+            "count total": 19
+        },
+        "svn": {
+            "count files": 107,
+            "count total": 120
+        },
+        "keywords": {
+            "count files": 54,
+            "count total": 54
+        },
+        "correction": {
+            "count files": 35,
+            "count total": 35
+        },
+        "copyright": {
+            "count files": 41,
+            "count total": 164
+        },
+        "statement": {
+            "count files": 56,
+            "count total": 58
+        },
+        "normalize": {
+            "count files": 56,
+            "count total": 60
+        },
+        "order": {
+            "count files": 28,
+            "count total": 33
+        },
+        "add": {
+            "count files": 142,
+            "count total": 474
+        },
+        "miss": {
+            "count files": 76,
+            "count total": 121
+        },
+        "2001-2005": {
+            "count files": 41,
+            "count total": 41
+        },
+        "2001-2006": {
+            "count files": 41,
+            "count total": 41
+        },
+        "header": {
+            "count files": 70,
+            "count total": 115
+        },
+        "chris": {
+            "count files": 2,
+            "count total": 2
+        },
+        "black": {
+            "count files": 2,
+            "count total": 2
+        },
+        "patch": {
+            "count files": 87,
+            "count total": 225
+        },
+        "codec-40": {
+            "count files": 2,
+            "count total": 3
+        },
+        "biginteger": {
+            "count files": 2,
+            "count total": 2
+        },
+        "support": {
+            "count files": 24,
+            "count total": 34
+        },
+        "still": {
+            "count files": 4,
+            "count total": 5
+        },
+        "need": {
+            "count files": 90,
+            "count total": 128
+        },
+        "edge": {
+            "count files": 6,
+            "count total": 6
+        },
+        "case": {
+            "count files": 33,
+            "count total": 46
+        },
+        "fixing": {
+            "count files": 38,
+            "count total": 43
+        },
+        "trailing": {
+            "count files": 149,
+            "count total": 242
+        },
+        "space": {
+            "count files": 147,
+            "count total": 233
+        },
+        "last": {
+            "count files": 59,
+            "count total": 75
+        },
+        "checkstyle": {
+            "count files": 178,
+            "count total": 371
+        },
+        "warning": {
+            "count files": 92,
+            "count total": 111
+        },
+        "say": {
+            "count files": 40,
+            "count total": 41
+        },
+        "codec-68": {
+            "count files": 1,
+            "count total": 1
+        },
+        "pass": {
+            "count files": 9,
+            "count total": 11
+        },
+        "tab": {
+            "count files": 30,
+            "count total": 39
+        },
+        "tidy": {
+            "count files": 10,
+            "count total": 10
+        },
+        "constructor": {
+            "count files": 52,
+            "count total": 77
+        },
+        "fail": {
+            "count files": 10,
+            "count total": 12
+        },
+        "currently": {
+            "count files": 6,
+            "count total": 7
+        },
+        "lineseparator": {
+            "count files": 4,
+            "count total": 4
+        },
+        "truncate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "padding": {
+            "count files": 7,
+            "count total": 9
+        },
+        "null": {
+            "count files": 12,
+            "count total": 20
+        },
+        "codec-75": {
+            "count files": 2,
+            "count total": 3
+        },
+        "make": {
+            "count files": 64,
+            "count total": 110
+        },
+        "url-safe": {
+            "count files": 10,
+            "count total": 13
+        },
+        "jira": {
+            "count files": 63,
+            "count total": 123
+        },
+        "secure": {
+            "count files": 26,
+            "count total": 56
+        },
+        "attachment": {
+            "count files": 26,
+            "count total": 56
+        },
+        "codec75": {
+            "count files": 2,
+            "count total": 2
+        },
+        "up": {
+            "count files": 14,
+            "count total": 21
+        },
+        "codec-77": {
+            "count files": 4,
+            "count total": 8
+        },
+        "empty": {
+            "count files": 16,
+            "count total": 21
+        },
+        "input": {
+            "count files": 22,
+            "count total": 47
+        },
+        "codec-78": {
+            "count files": 7,
+            "count total": 12
+        },
+        "code": {
+            "count files": 114,
+            "count total": 354
+        },
+        "class": {
+            "count files": 103,
+            "count total": 222
+        },
+        "move": {
+            "count files": 22,
+            "count total": 23
+        },
+        "package": {
+            "count files": 33,
+            "count total": 65
+        },
+        "private": {
+            "count files": 46,
+            "count total": 69
+        },
+        "charsetencodingnames": {
+            "count files": 14,
+            "count total": 14
+        },
+        "requiredcharsetnames": {
+            "count files": 15,
+            "count total": 24
+        },
+        "charset": {
+            "count files": 43,
+            "count total": 113
+        },
+        "jre": {
+            "count files": 22,
+            "count total": 22
+        },
+        "string": {
+            "count files": 56,
+            "count total": 168
+        },
+        "literal": {
+            "count files": 39,
+            "count total": 40
+        },
+        "require": {
+            "count files": 33,
+            "count total": 78
+        },
+        "utf-8": {
+            "count files": 21,
+            "count total": 25
+        },
+        "us-ascii": {
+            "count files": 14,
+            "count total": 15
+        },
+        "etc": {
+            "count files": 16,
+            "count total": 16
+        },
+        "reference": {
+            "count files": 39,
+            "count total": 49
+        },
+        "static": {
+            "count files": 96,
+            "count total": 108
+        },
+        "constant": {
+            "count files": 47,
+            "count total": 75
+        },
+        "also": {
+            "count files": 32,
+            "count total": 36
+        },
+        "create": {
+            "count files": 41,
+            "count total": 70
+        },
+        "stringbytesutils": {
+            "count files": 17,
+            "count total": 24
+        },
+        "better": {
+            "count files": 80,
+            "count total": 109
+        },
+        "wrap": {
+            "count files": 14,
+            "count total": 14
+        },
+        "getbytes": {
+            "count files": 18,
+            "count total": 21
+        },
+        "site": {
+            "count files": 17,
+            "count total": 20
+        },
+        "catch": {
+            "count files": 19,
+            "count total": 24
+        },
+        "re-throw": {
+            "count files": 16,
+            "count total": 20
+        },
+        "unsupportedencodingexception": {
+            "count files": 14,
+            "count total": 14
+        },
+        "since": {
+            "count files": 73,
+            "count total": 91
+        },
+        "charsets": {
+            "count files": 41,
+            "count total": 113
+        },
+        "present": {
+            "count files": 25,
+            "count total": 28
+        },
+        "codec-80": {
+            "count files": 5,
+            "count total": 5
+        },
+        "regression": {
+            "count files": 5,
+            "count total": 5
+        },
+        "true": {
+            "count files": 16,
+            "count total": 27
+        },
+        "length": {
+            "count files": 20,
+            "count total": 33
+        },
+        "multiple": {
+            "count files": 10,
+            "count total": 12
+        },
+        "comment": {
+            "count files": 123,
+            "count total": 171
+        },
+        "get": {
+            "count files": 6,
+            "count total": 6
+        },
+        "branch": {
+            "count files": 11,
+            "count total": 14
+        },
+        "codec-81": {
+            "count files": 10,
+            "count total": 20
+        },
+        "production": {
+            "count files": 10,
+            "count total": 10
+        },
+        "pretty": {
+            "count files": 10,
+            "count total": 10
+        },
+        "much": {
+            "count files": 19,
+            "count total": 19
+        },
+        "unchanged": {
+            "count files": 10,
+            "count total": 10
+        },
+        "split": {
+            "count files": 12,
+            "count total": 14
+        },
+        "one": {
+            "count files": 30,
+            "count total": 48
+        },
+        "method": {
+            "count files": 129,
+            "count total": 420
+        },
+        "two": {
+            "count files": 22,
+            "count total": 24
+        },
+        "normal": {
+            "count files": 10,
+            "count total": 10
+        },
+        "processing": {
+            "count files": 16,
+            "count total": 17
+        },
+        "rename": {
+            "count files": 48,
+            "count total": 70
+        },
+        "stringutils": {
+            "count files": 15,
+            "count total": 43
+        },
+        "return": {
+            "count files": 28,
+            "count total": 43
+        },
+        "codec-59": {
+            "count files": 3,
+            "count total": 3
+        },
+        "work": {
+            "count files": 10,
+            "count total": 10
+        },
+        "keep": {
+            "count files": 21,
+            "count total": 22
+        },
+        "codec78-evenmorecoverage": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-73": {
+            "count files": 7,
+            "count total": 9
+        },
+        "hex": {
+            "count files": 16,
+            "count total": 73
+        },
+        "string2byte": {
+            "count files": 7,
+            "count total": 8
+        },
+        "conversion": {
+            "count files": 13,
+            "count total": 14
+        },
+        "indepedent": {
+            "count files": 7,
+            "count total": 8
+        },
+        "platform": {
+            "count files": 7,
+            "count total": 8
+        },
+        "default": {
+            "count files": 35,
+            "count total": 56
+        },
+        "refactor": {
+            "count files": 58,
+            "count total": 84
+        },
+        "digestutils": {
+            "count files": 13,
+            "count total": 80
+        },
+        "codec-97": {
+            "count files": 2,
+            "count total": 3
+        },
+        "behaviour": {
+            "count files": 5,
+            "count total": 6
+        },
+        "enable": {
+            "count files": 5,
+            "count total": 6
+        },
+        "chunking": {
+            "count files": 5,
+            "count total": 6
+        },
+        "oops": {
+            "count files": 7,
+            "count total": 7
+        },
+        "wrong": {
+            "count files": 10,
+            "count total": 10
+        },
+        "mime": {
+            "count files": 4,
+            "count total": 4
+        },
+        "pem": {
+            "count files": 4,
+            "count total": 4
+        },
+        "size": {
+            "count files": 13,
+            "count total": 15
+        },
+        "magic": {
+            "count files": 18,
+            "count total": 22
+        },
+        "numbers": {
+            "count files": 34,
+            "count total": 35
+        },
+        "testrfc4648": {
+            "count files": 1,
+            "count total": 1
+        },
+        "base": {
+            "count files": 14,
+            "count total": 14
+        },
+        "show": {
+            "count files": 11,
+            "count total": 12
+        },
+        "inconsistent": {
+            "count files": 2,
+            "count total": 2
+        },
+        "handling": {
+            "count files": 1,
+            "count total": 1
+        },
+        "cr": {
+            "count files": 2,
+            "count total": 2
+        },
+        "lf": {
+            "count files": 1,
+            "count total": 1
+        },
+        "end": {
+            "count files": 41,
+            "count total": 43
+        },
+        "data": {
+            "count files": 20,
+            "count total": 27
+        },
+        "failing": {
+            "count files": 4,
+            "count total": 6
+        },
+        "assertion": {
+            "count files": 26,
+            "count total": 42
+        },
+        "successful": {
+            "count files": 1,
+            "count total": 1
+        },
+        "javadoc": {
+            "count files": 185,
+            "count total": 874
+        },
+        "roundtrip": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-99-test-fixes": {
+            "count files": 1,
+            "count total": 1
+        },
+        "rely": {
+            "count files": 5,
+            "count total": 5
+        },
+        "current": {
+            "count files": 19,
+            "count total": 21
+        },
+        "portability": {
+            "count files": 5,
+            "count total": 5
+        },
+        "codec-99": {
+            "count files": 2,
+            "count total": 3
+        },
+        "encodebase64string": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-110": {
+            "count files": 2,
+            "count total": 6
+        },
+        "browse": {
+            "count files": 43,
+            "count total": 56
+        },
+        "deprecate": {
+            "count files": 67,
+            "count total": 105
+        },
+        "replacement": {
+            "count files": 2,
+            "count total": 2
+        },
+        "isbase64": {
+            "count files": 3,
+            "count total": 5
+        },
+        "delegate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "anyway": {
+            "count files": 1,
+            "count total": 1
+        },
+        "eclipse": {
+            "count files": 5,
+            "count total": 5
+        },
+        "longer": {
+            "count files": 42,
+            "count total": 57
+        },
+        "codec-112": {
+            "count files": 2,
+            "count total": 2
+        },
+        "encodebase64": {
+            "count files": 2,
+            "count total": 3
+        },
+        "binarydata": {
+            "count files": 2,
+            "count total": 2
+        },
+        "boolean": {
+            "count files": 21,
+            "count total": 23
+        },
+        "ischunked": {
+            "count files": 2,
+            "count total": 4
+        },
+        "urlsafe": {
+            "count files": 3,
+            "count total": 3
+        },
+        "int": {
+            "count files": 15,
+            "count total": 43
+        },
+        "maxresultsize": {
+            "count files": 2,
+            "count total": 4
+        },
+        "iae": {
+            "count files": 4,
+            "count total": 4
+        },
+        "valid": {
+            "count files": 10,
+            "count total": 20
+        },
+        "false": {
+            "count files": 12,
+            "count total": 22
+        },
+        "super-class": {
+            "count files": 3,
+            "count total": 3
+        },
+        "minimal": {
+            "count files": 4,
+            "count total": 4
+        },
+        "allow": {
+            "count files": 21,
+            "count total": 22
+        },
+        "base64outputstream": {
+            "count files": 4,
+            "count total": 13
+        },
+        "compile": {
+            "count files": 5,
+            "count total": 5
+        },
+        "follow": {
+            "count files": 6,
+            "count total": 7
+        },
+        "migrate": {
+            "count files": 106,
+            "count total": 111
+        },
+        "junit": {
+            "count files": 106,
+            "count total": 168
+        },
+        "codec-120": {
+            "count files": 38,
+            "count total": 38
+        },
+        "fields": {
+            "count files": 18,
+            "count total": 19
+        },
+        "final": {
+            "count files": 140,
+            "count total": 299
+        },
+        "possible": {
+            "count files": 97,
+            "count total": 135
+        },
+        "findbugs": {
+            "count files": 23,
+            "count total": 25
+        },
+        "mangle": {
+            "count files": 3,
+            "count total": 4
+        },
+        "char": {
+            "count files": 10,
+            "count total": 19
+        },
+        "e-acute": {
+            "count files": 1,
+            "count total": 1
+        },
+        "r799815": {
+            "count files": 1,
+            "count total": 1
+        },
+        "block": {
+            "count files": 14,
+            "count total": 17
+        },
+        "refer": {
+            "count files": 15,
+            "count total": 15
+        },
+        "define": {
+            "count files": 7,
+            "count total": 7
+        },
+        "basencodec": {
+            "count files": 30,
+            "count total": 107
+        },
+        "base32": {
+            "count files": 21,
+            "count total": 82
+        },
+        "subclass": {
+            "count files": 8,
+            "count total": 8
+        },
+        "liner": {
+            "count files": 1,
+            "count total": 2
+        },
+        "form": {
+            "count files": 3,
+            "count total": 3
+        },
+        "complete": {
+            "count files": 6,
+            "count total": 6
+        },
+        "sentence": {
+            "count files": 2,
+            "count total": 2
+        },
+        "ending": {
+            "count files": 3,
+            "count total": 3
+        },
+        "first": {
+            "count files": 82,
+            "count total": 83
+        },
+        "initial": {
+            "count files": 2,
+            "count total": 3
+        },
+        "period": {
+            "count files": 1,
+            "count total": 1
+        },
+        "problem": {
+            "count files": 6,
+            "count total": 6
+        },
+        "around": {
+            "count files": 8,
+            "count total": 10
+        },
+        "consistent": {
+            "count files": 30,
+            "count total": 32
+        },
+        "violation": {
+            "count files": 20,
+            "count total": 32
+        },
+        "language": {
+            "count files": 47,
+            "count total": 446
+        },
+        "encoders": {
+            "count files": 8,
+            "count total": 15
+        },
+        "dealing": {
+            "count files": 5,
+            "count total": 7
+        },
+        "placement": {
+            "count files": 5,
+            "count total": 5
+        },
+        "operator": {
+            "count files": 5,
+            "count total": 5
+        },
+        "newline": {
+            "count files": 8,
+            "count total": 8
+        },
+        "previous": {
+            "count files": 55,
+            "count total": 57
+        },
+        "ing": {
+            "count files": 2,
+            "count total": 2
+        },
+        "nit": {
+            "count files": 15,
+            "count total": 19
+        },
+        "extraneous": {
+            "count files": 6,
+            "count total": 6
+        },
+        "less": {
+            "count files": 8,
+            "count total": 14
+        },
+        "twisty": {
+            "count files": 5,
+            "count total": 9
+        },
+        "privatise": {
+            "count files": 1,
+            "count total": 1
+        },
+        "bunch": {
+            "count files": 3,
+            "count total": 3
+        },
+        "anywhere": {
+            "count files": 1,
+            "count total": 1
+        },
+        "else": {
+            "count files": 24,
+            "count total": 32
+        },
+        "codec-61": {
+            "count files": 1,
+            "count total": 1
+        },
+        "negativearraysizeexception": {
+            "count files": 1,
+            "count total": 1
+        },
+        "large": {
+            "count files": 1,
+            "count total": 1
+        },
+        "illegalargumentexception": {
+            "count files": 9,
+            "count total": 11
+        },
+        "output": {
+            "count files": 14,
+            "count total": 15
+        },
+        "bigger": {
+            "count files": 5,
+            "count total": 6
+        },
+        "integer": {
+            "count files": 6,
+            "count total": 10
+        },
+        "max_value": {
+            "count files": 5,
+            "count total": 5
+        },
+        "pr": {
+            "count files": 13,
+            "count total": 17
+        },
+        "coded-69": {
+            "count files": 1,
+            "count total": 1
+        },
+        "submitted-by": {
+            "count files": 1,
+            "count total": 1
+        },
+        "julius": {
+            "count files": 1,
+            "count total": 1
+        },
+        "davy": {
+            "count files": 1,
+            "count total": 1
+        },
+        "juliusdavies": {
+            "count files": 1,
+            "count total": 1
+        },
+        "gmail": {
+            "count files": 1,
+            "count total": 1
+        },
+        "com": {
+            "count files": 33,
+            "count total": 63
+        },
+        "base64inputstream": {
+            "count files": 8,
+            "count total": 16
+        },
+        "codec-69": {
+            "count files": 1,
+            "count total": 1
+        },
+        "part": {
+            "count files": 10,
+            "count total": 19
+        },
+        "public": {
+            "count files": 18,
+            "count total": 28
+        },
+        "clarify": {
+            "count files": 3,
+            "count total": 5
+        },
+        "linelength": {
+            "count files": 1,
+            "count total": 1
+        },
+        "check": {
+            "count files": 25,
+            "count total": 38
+        },
+        "octect": {
+            "count files": 1,
+            "count total": 1
+        },
+        "octet": {
+            "count files": 1,
+            "count total": 1
+        },
+        "might": {
+            "count files": 1,
+            "count total": 1
+        },
+        "well": {
+            "count files": 18,
+            "count total": 18
+        },
+        "useful": {
+            "count files": 4,
+            "count total": 4
+        },
+        "start": {
+            "count files": 6,
+            "count total": 8
+        },
+        "module": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mask": {
+            "count files": 5,
+            "count total": 9
+        },
+        "sebb": {
+            "count files": 7,
+            "count total": 10
+        },
+        "codec-71": {
+            "count files": 1,
+            "count total": 1
+        },
+        "memory": {
+            "count files": 6,
+            "count total": 8
+        },
+        "consumption": {
+            "count files": 2,
+            "count total": 2
+        },
+        "discardwhitespace": {
+            "count files": 1,
+            "count total": 2
+        },
+        "nothing": {
+            "count files": 1,
+            "count total": 1
+        },
+        "simplify": {
+            "count files": 35,
+            "count total": 48
+        },
+        "avoid": {
+            "count files": 39,
+            "count total": 71
+        },
+        "drop": {
+            "count files": 76,
+            "count total": 81
+        },
+        "thru": {
+            "count files": 1,
+            "count total": 1
+        },
+        "copy": {
+            "count files": 6,
+            "count total": 7
+        },
+        "prevent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "subsequent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "external": {
+            "count files": 5,
+            "count total": 5
+        },
+        "developer": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-58": {
+            "count files": 3,
+            "count total": 3
+        },
+        "set": {
+            "count files": 42,
+            "count total": 48
+        },
+        "document": {
+            "count files": 15,
+            "count total": 25
+        },
+        "javadocs": {
+            "count files": 20,
+            "count total": 23
+        },
+        "field": {
+            "count files": 8,
+            "count total": 12
+        },
+        "buf": {
+            "count files": 3,
+            "count total": 3
+        },
+        "buffer": {
+            "count files": 10,
+            "count total": 27
+        },
+        "resizebuf": {
+            "count files": 3,
+            "count total": 3
+        },
+        "resizebuffer": {
+            "count files": 3,
+            "count total": 3
+        },
+        "indicate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "chunk_separtor": {
+            "count files": 1,
+            "count total": 1
+        },
+        "future": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-89": {
+            "count files": 3,
+            "count total": 3
+        },
+        "append": {
+            "count files": 4,
+            "count total": 4
+        },
+        "result": {
+            "count files": 17,
+            "count total": 17
+        },
+        "extra": {
+            "count files": 75,
+            "count total": 83
+        },
+        "contain": {
+            "count files": 8,
+            "count total": 9
+        },
+        "text": {
+            "count files": 9,
+            "count total": 10
+        },
+        "codec-98": {
+            "count files": 4,
+            "count total": 8
+        },
+        "cause": {
+            "count files": 6,
+            "count total": 8
+        },
+        "nullpointerexception": {
+            "count files": 8,
+            "count total": 8
+        },
+        "codec-105": {
+            "count files": 3,
+            "count total": 6
+        },
+        "read": {
+            "count files": 7,
+            "count total": 12
+        },
+        "b64inputstream": {
+            "count files": 3,
+            "count total": 3
+        },
+        "forget": {
+            "count files": 3,
+            "count total": 3
+        },
+        "thanks": {
+            "count files": 15,
+            "count total": 18
+        },
+        "point": {
+            "count files": 11,
+            "count total": 12
+        },
+        "favor": {
+            "count files": 9,
+            "count total": 13
+        },
+        "match": {
+            "count files": 34,
+            "count total": 55
+        },
+        "partial": {
+            "count files": 14,
+            "count total": 14
+        },
+        "assign": {
+            "count files": 2,
+            "count total": 2
+        },
+        "modulus": {
+            "count files": 2,
+            "count total": 2
+        },
+        "twice": {
+            "count files": 2,
+            "count total": 2
+        },
+        "thread-safe": {
+            "count files": 34,
+            "count total": 59
+        },
+        "thread": {
+            "count files": 9,
+            "count total": 9
+        },
+        "instance": {
+            "count files": 33,
+            "count total": 36
+        },
+        "codec-116": {
+            "count files": 1,
+            "count total": 1
+        },
+        "annotate": {
+            "count files": 24,
+            "count total": 24
+        },
+        "override": {
+            "count files": 47,
+            "count total": 47
+        },
+        "codec-124": {
+            "count files": 8,
+            "count total": 8
+        },
+        "url": {
+            "count files": 38,
+            "count total": 40
+        },
+        "links": {
+            "count files": 16,
+            "count total": 18
+        },
+        "swicthed": {
+            "count files": 2,
+            "count total": 2
+        },
+        "release": {
+            "count files": 6,
+            "count total": 9
+        },
+        "prepare": {
+            "count files": 1,
+            "count total": 1
+        },
+        "releas": {
+            "count files": 1,
+            "count total": 1
+        },
+        "maint": {
+            "count files": 1,
+            "count total": 1
+        },
+        "rel": {
+            "count files": 1,
+            "count total": 1
+        },
+        "documentation": {
+            "count files": 63,
+            "count total": 69
+        },
+        "cleanup": {
+            "count files": 18,
+            "count total": 22
+        },
+        "implement": {
+            "count files": 16,
+            "count total": 37
+        },
+        "difference": {
+            "count files": 5,
+            "count total": 11
+        },
+        "api": {
+            "count files": 25,
+            "count total": 45
+        },
+        "soundex": {
+            "count files": 7,
+            "count total": 44
+        },
+        "refinedsoundex": {
+            "count files": 7,
+            "count total": 25
+        },
+        "nagoya": {
+            "count files": 6,
+            "count total": 10
+        },
+        "functioni": {
+            "count files": 1,
+            "count total": 1
+        },
+        "us": {
+            "count files": 8,
+            "count total": 10
+        },
+        "write": {
+            "count files": 1,
+            "count total": 1
+        },
+        "particular": {
+            "count files": 3,
+            "count total": 3
+        },
+        "soundexmapping": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ever": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-56": {
+            "count files": 2,
+            "count total": 2
+        },
+        "along": {
+            "count files": 4,
+            "count total": 4
+        },
+        "codec-72": {
+            "count files": 4,
+            "count total": 4
+        },
+        "externally": {
+            "count files": 7,
+            "count total": 7
+        },
+        "replace": {
+            "count files": 92,
+            "count total": 158
+        },
+        "strings": {
+            "count files": 20,
+            "count total": 25
+        },
+        "copying": {
+            "count files": 4,
+            "count total": 4
+        },
+        "inputted": {
+            "count files": 4,
+            "count total": 4
+        },
+        "clirr": {
+            "count files": 8,
+            "count total": 11
+        },
+        "detect": {
+            "count files": 4,
+            "count total": 4
+        },
+        "revert": {
+            "count files": 15,
+            "count total": 15
+        },
+        "preparation": {
+            "count files": 2,
+            "count total": 2
+        },
+        "prefix": {
+            "count files": 19,
+            "count total": 19
+        },
+        "lang": {
+            "count files": 19,
+            "count total": 30
+        },
+        "special": {
+            "count files": 8,
+            "count total": 8
+        },
+        "rule": {
+            "count files": 12,
+            "count total": 39
+        },
+        "codec-113": {
+            "count files": 1,
+            "count total": 2
+        },
+        "us_english_mapping": {
+            "count files": 2,
+            "count total": 4
+        },
+        "protect": {
+            "count files": 6,
+            "count total": 8
+        },
+        "codec-128": {
+            "count files": 8,
+            "count total": 8
+        },
+        "codec-spelling": {
+            "count files": 8,
+            "count total": 8
+        },
+        "setmaxlength": {
+            "count files": 2,
+            "count total": 2
+        },
+        "redo": {
+            "count files": 5,
+            "count total": 5
+        },
+        "implementation": {
+            "count files": 26,
+            "count total": 29
+        },
+        "algorithm": {
+            "count files": 12,
+            "count total": 12
+        },
+        "feature": {
+            "count files": 2,
+            "count total": 2
+        },
+        "request": {
+            "count files": 3,
+            "count total": 3
+        },
+        "commit": {
+            "count files": 55,
+            "count total": 64
+        },
+        "cover": {
+            "count files": 10,
+            "count total": 11
+        },
+        "ticket": {
+            "count files": 4,
+            "count total": 4
+        },
+        "slightly": {
+            "count files": 5,
+            "count total": 7
+        },
+        "apis": {
+            "count files": 12,
+            "count total": 35
+        },
+        "format": {
+            "count files": 65,
+            "count total": 74
+        },
+        "exception": {
+            "count files": 49,
+            "count total": 97
+        },
+        "clear": {
+            "count files": 3,
+            "count total": 3
+        },
+        "message": {
+            "count files": 7,
+            "count total": 7
+        },
+        "item": {
+            "count files": 1,
+            "count total": 1
+        },
+        "initialization": {
+            "count files": 2,
+            "count total": 2
+        },
+        "npe": {
+            "count files": 5,
+            "count total": 5
+        },
+        "try": {
+            "count files": 8,
+            "count total": 8
+        },
+        "us_english": {
+            "count files": 2,
+            "count total": 2
+        },
+        "found": {
+            "count files": 5,
+            "count total": 5
+        },
+        "reggie": {
+            "count files": 2,
+            "count total": 2
+        },
+        "riser": {
+            "count files": 2,
+            "count total": 2
+        },
+        "safety": {
+            "count files": 5,
+            "count total": 5
+        },
+        "codec-114": {
+            "count files": 1,
+            "count total": 2
+        },
+        "malicious_code": {
+            "count files": 1,
+            "count total": 2
+        },
+        "improvement": {
+            "count files": 18,
+            "count total": 20
+        },
+        "binarydecoder": {
+            "count files": 4,
+            "count total": 7
+        },
+        "binaryencoder": {
+            "count files": 9,
+            "count total": 12
+        },
+        "submit": {
+            "count files": 9,
+            "count total": 12
+        },
+        "christopher": {
+            "count files": 1,
+            "count total": 1
+        },
+        "brien": {
+            "count files": 1,
+            "count total": 1
+        },
+        "gregory": {
+            "count files": 14,
+            "count total": 17
+        },
+        "classcastexception": {
+            "count files": 2,
+            "count total": 2
+        },
+        "convert": {
+            "count files": 29,
+            "count total": 33
+        },
+        "illegal": {
+            "count files": 2,
+            "count total": 2
+        },
+        "tweak": {
+            "count files": 17,
+            "count total": 20
+        },
+        "misspelling": {
+            "count files": 2,
+            "count total": 2
+        },
+        "hexidecimal": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hexadecimal": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-74": {
+            "count files": 2,
+            "count total": 2
+        },
+        "uppercase": {
+            "count files": 6,
+            "count total": 6
+        },
+        "letters": {
+            "count files": 6,
+            "count total": 6
+        },
+        "encodehex": {
+            "count files": 2,
+            "count total": 2
+        },
+        "save": {
+            "count files": 7,
+            "count total": 14
+        },
+        "original": {
+            "count files": 17,
+            "count total": 24
+        },
+        "rethrow": {
+            "count files": 6,
+            "count total": 7
+        },
+        "codec-55": {
+            "count files": 1,
+            "count total": 1
+        },
+        "business": {
+            "count files": 1,
+            "count total": 1
+        },
+        "safe": {
+            "count files": 3,
+            "count total": 3
+        },
+        "tostring": {
+            "count files": 6,
+            "count total": 11
+        },
+        "charsetname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "eric": {
+            "count files": 1,
+            "count total": 1
+        },
+        "fung": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-103": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dan": {
+            "count files": 1,
+            "count total": 1
+        },
+        "quaroni": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dquaroni": {
+            "count files": 1,
+            "count total": 1
+        },
+        "openratings": {
+            "count files": 1,
+            "count total": 1
+        },
+        "maxcodelen": {
+            "count files": 2,
+            "count total": 4
+        },
+        "tail": {
+            "count files": 1,
+            "count total": 1
+        },
+        "metaphone": {
+            "count files": 8,
+            "count total": 28
+        },
+        "alg": {
+            "count files": 3,
+            "count total": 6
+        },
+        "coverge": {
+            "count files": 4,
+            "count total": 4
+        },
+        "compiler": {
+            "count files": 24,
+            "count total": 24
+        },
+        "wrt": {
+            "count files": 8,
+            "count total": 8
+        },
+        "unqualified": {
+            "count files": 2,
+            "count total": 2
+        },
+        "access": {
+            "count files": 12,
+            "count total": 16
+        },
+        "ending-mb": {
+            "count files": 1,
+            "count total": 1
+        },
+        "refactored": {
+            "count files": 9,
+            "count total": 9
+        },
+        "index": {
+            "count files": 4,
+            "count total": 4
+        },
+        "arithmetic": {
+            "count files": 1,
+            "count total": 1
+        },
+        "content": {
+            "count files": 1,
+            "count total": 1
+        },
+        "readability": {
+            "count files": 2,
+            "count total": 2
+        },
+        "tmps": {
+            "count files": 1,
+            "count total": 1
+        },
+        "never": {
+            "count files": 4,
+            "count total": 4
+        },
+        "parenthesis": {
+            "count files": 6,
+            "count total": 6
+        },
+        "expr": {
+            "count files": 5,
+            "count total": 10
+        },
+        "become": {
+            "count files": 5,
+            "count total": 5
+        },
+        "turn": {
+            "count files": 1,
+            "count total": 1
+        },
+        "effectively": {
+            "count files": 1,
+            "count total": 1
+        },
+        "private-static-finals": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-57": {
+            "count files": 2,
+            "count total": 4
+        },
+        "php": {
+            "count files": 3,
+            "count total": 6
+        },
+        "perl": {
+            "count files": 2,
+            "count total": 2
+        },
+        "variant": {
+            "count files": 6,
+            "count total": 6
+        },
+        "benjamin": {
+            "count files": 6,
+            "count total": 7
+        },
+        "bentmann": {
+            "count files": 6,
+            "count total": 7
+        },
+        "codec-65": {
+            "count files": 5,
+            "count total": 5
+        },
+        "various": {
+            "count files": 50,
+            "count total": 50
+        },
+        "locale": {
+            "count files": 6,
+            "count total": 16
+        },
+        "lowercasing": {
+            "count files": 5,
+            "count total": 5
+        },
+        "assume": {
+            "count files": 8,
+            "count total": 9
+        },
+        "english": {
+            "count files": 20,
+            "count total": 29
+        },
+        "running": {
+            "count files": 5,
+            "count total": 5
+        },
+        "non": {
+            "count files": 5,
+            "count total": 5
+        },
+        "tolowercase": {
+            "count files": 5,
+            "count total": 5
+        },
+        "sometimes": {
+            "count files": 34,
+            "count total": 38
+        },
+        "encoder": {
+            "count files": 17,
+            "count total": 22
+        },
+        "expect": {
+            "count files": 37,
+            "count total": 45
+        },
+        "link": {
+            "count files": 8,
+            "count total": 9
+        },
+        "unexecutable": {
+            "count files": 1,
+            "count total": 1
+        },
+        "breaking": {
+            "count files": 8,
+            "count total": 10
+        },
+        "gump": {
+            "count files": 1,
+            "count total": 1
+        },
+        "build": {
+            "count files": 3,
+            "count total": 3
+        },
+        "unicode": {
+            "count files": 6,
+            "count total": 6
+        },
+        "doublemetaphone": {
+            "count files": 5,
+            "count total": 38
+        },
+        "pm": {
+            "count files": 1,
+            "count total": 3
+        },
+        "ivar": {
+            "count files": 5,
+            "count total": 5
+        },
+        "without": {
+            "count files": 2,
+            "count total": 2
+        },
+        "enclosing": {
+            "count files": 1,
+            "count total": 2
+        },
+        "emulate": {
+            "count files": 1,
+            "count total": 2
+        },
+        "synthetic": {
+            "count files": 1,
+            "count total": 2
+        },
+        "accessor": {
+            "count files": 2,
+            "count total": 4
+        },
+        "increase": {
+            "count files": 7,
+            "count total": 9
+        },
+        "visibility": {
+            "count files": 1,
+            "count total": 2
+        },
+        "performance": {
+            "count files": 15,
+            "count total": 19
+        },
+        "addition": {
+            "count files": 2,
+            "count total": 3
+        },
+        "handle": {
+            "count files": 4,
+            "count total": 4
+        },
+        "cedilla": {
+            "count files": 1,
+            "count total": 1
+        },
+        "tilde": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ene": {
+            "count files": 1,
+            "count total": 1
+        },
+        "qualify": {
+            "count files": 1,
+            "count total": 1
+        },
+        "inst": {
+            "count files": 1,
+            "count total": 1
+        },
+        "var": {
+            "count files": 7,
+            "count total": 7
+        },
+        "codec-84": {
+            "count files": 2,
+            "count total": 2
+        },
+        "alternative": {
+            "count files": 2,
+            "count total": 2
+        },
+        "thank": {
+            "count files": 10,
+            "count total": 10
+        },
+        "niall": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-115": {
+            "count files": 1,
+            "count total": 1
+        },
+        "probably": {
+            "count files": 1,
+            "count total": 1
+        },
+        "pmd": {
+            "count files": 33,
+            "count total": 40
+        },
+        "parameter": {
+            "count files": 33,
+            "count total": 48
+        },
+        "value": {
+            "count files": 10,
+            "count total": 13
+        },
+        "enhance": {
+            "count files": 19,
+            "count total": 19
+        },
+        "loop": {
+            "count files": 29,
+            "count total": 30
+        },
+        "already": {
+            "count files": 1,
+            "count total": 2
+        },
+        "compatible": {
+            "count files": 8,
+            "count total": 9
+        },
+        "argument": {
+            "count files": 15,
+            "count total": 22
+        },
+        "urlcodec": {
+            "count files": 5,
+            "count total": 23
+        },
+        "net": {
+            "count files": 17,
+            "count total": 173
+        },
+        "michael": {
+            "count files": 4,
+            "count total": 4
+        },
+        "becke": {
+            "count files": 2,
+            "count total": 2
+        },
+        "urlencode": {
+            "count files": 1,
+            "count total": 1
+        },
+        "encodeurl": {
+            "count files": 1,
+            "count total": 1
+        },
+        "urldecode": {
+            "count files": 1,
+            "count total": 1
+        },
+        "decodeurl": {
+            "count files": 1,
+            "count total": 1
+        },
+        "verb": {
+            "count files": 11,
+            "count total": 11
+        },
+        "non-static": {
+            "count files": 1,
+            "count total": 2
+        },
+        "alter": {
+            "count files": 1,
+            "count total": 1
+        },
+        "non-final": {
+            "count files": 1,
+            "count total": 1
+        },
+        "end-user": {
+            "count files": 1,
+            "count total": 1
+        },
+        "custom": {
+            "count files": 9,
+            "count total": 19
+        },
+        "getencoding": {
+            "count files": 2,
+            "count total": 3
+        },
+        "encoderexception": {
+            "count files": 8,
+            "count total": 14
+        },
+        "fact": {
+            "count files": 1,
+            "count total": 1
+        },
+        "prep": {
+            "count files": 1,
+            "count total": 1
+        },
+        "2-rc1": {
+            "count files": 1,
+            "count total": 1
+        },
+        "obtain": {
+            "count files": 2,
+            "count total": 3
+        },
+        "olegk": {
+            "count files": 2,
+            "count total": 2
+        },
+        "oleg": {
+            "count files": 4,
+            "count total": 6
+        },
+        "kalnichevski": {
+            "count files": 4,
+            "count total": 6
+        },
+        "review": {
+            "count files": 9,
+            "count total": 11
+        },
+        "organize": {
+            "count files": 89,
+            "count total": 121
+        },
+        "import": {
+            "count files": 103,
+            "count total": 241
+        },
+        "encodning": {
+            "count files": 1,
+            "count total": 1
+        },
+        "reuse": {
+            "count files": 13,
+            "count total": 23
+        },
+        "interface": {
+            "count files": 14,
+            "count total": 16
+        },
+        "stringencodings": {
+            "count files": 5,
+            "count total": 5
+        },
+        "characterencodingnames": {
+            "count files": 5,
+            "count total": 5
+        },
+        "print": {
+            "count files": 10,
+            "count total": 15
+        },
+        "qpdecoderstream": {
+            "count files": 4,
+            "count total": 8
+        },
+        "qcodec": {
+            "count files": 8,
+            "count total": 29
+        },
+        "stream": {
+            "count files": 15,
+            "count total": 24
+        },
+        "yet": {
+            "count files": 10,
+            "count total": 16
+        },
+        "codec-70": {
+            "count files": 1,
+            "count total": 1
+        },
+        "next": {
+            "count files": 1,
+            "count total": 1
+        },
+        "major": {
+            "count files": 2,
+            "count total": 2
+        },
+        "compatibility": {
+            "count files": 8,
+            "count total": 10
+        },
+        "clause": {
+            "count files": 29,
+            "count total": 29
+        },
+        "comoon": {
+            "count files": 2,
+            "count total": 2
+        },
+        "using": {
+            "count files": 46,
+            "count total": 57
+        },
+        "trick": {
+            "count files": 2,
+            "count total": 2
+        },
+        "catching": {
+            "count files": 2,
+            "count total": 2
+        },
+        "bounds": {
+            "count files": 2,
+            "count total": 2
+        },
+        "let": {
+            "count files": 2,
+            "count total": 2
+        },
+        "decoderexception": {
+            "count files": 4,
+            "count total": 10
+        },
+        "common": {
+            "count files": 26,
+            "count total": 32
+        },
+        "logic": {
+            "count files": 2,
+            "count total": 2
+        },
+        "quotedprintablecodec": {
+            "count files": 5,
+            "count total": 25
+        },
+        "charencoding": {
+            "count files": 11,
+            "count total": 20
+        },
+        "values": {
+            "count files": 13,
+            "count total": 13
+        },
+        "exist": {
+            "count files": 7,
+            "count total": 9
+        },
+        "escape_char": {
+            "count files": 2,
+            "count total": 3
+        },
+        "codec-111": {
+            "count files": 1,
+            "count total": 2
+        },
+        "codec-126": {
+            "count files": 1,
+            "count total": 1
+        },
+        "usage": {
+            "count files": 12,
+            "count total": 12
+        },
+        "general": {
+            "count files": 9,
+            "count total": 9
+        },
+        "foundation": {
+            "count files": 1,
+            "count total": 1
+        },
+        "declare": {
+            "count files": 5,
+            "count total": 5
+        },
+        "serial": {
+            "count files": 2,
+            "count total": 2
+        },
+        "uid": {
+            "count files": 2,
+            "count total": 2
+        },
+        "sun": {
+            "count files": 7,
+            "count total": 7
+        },
+        "naming": {
+            "count files": 4,
+            "count total": 4
+        },
+        "oddly": {
+            "count files": 2,
+            "count total": 2
+        },
+        "pmessage": {
+            "count files": 2,
+            "count total": 2
+        },
+        "heritage": {
+            "count files": 2,
+            "count total": 2
+        },
+        "fit": {
+            "count files": 3,
+            "count total": 3
+        },
+        "pattern": {
+            "count files": 4,
+            "count total": 4
+        },
+        "reword": {
+            "count files": 2,
+            "count total": 2
+        },
+        "level": {
+            "count files": 3,
+            "count total": 3
+        },
+        "clarification": {
+            "count files": 4,
+            "count total": 4
+        },
+        "sound": {
+            "count files": 1,
+            "count total": 1
+        },
+        "robotic": {
+            "count files": 1,
+            "count total": 1
+        },
+        "stringencodercomparator": {
+            "count files": 3,
+            "count total": 6
+        },
+        "o1": {
+            "count files": 1,
+            "count total": 1
+        },
+        "o2": {
+            "count files": 1,
+            "count total": 1
+        },
+        "supply": {
+            "count files": 3,
+            "count total": 3
+        },
+        "compare": {
+            "count files": 3,
+            "count total": 4
+        },
+        "actually": {
+            "count files": 9,
+            "count total": 9
+        },
+        "reason": {
+            "count files": 1,
+            "count total": 1
+        },
+        "generic": {
+            "count files": 18,
+            "count total": 20
+        },
+        "comparator": {
+            "count files": 7,
+            "count total": 9
+        },
+        "step": {
+            "count files": 3,
+            "count total": 3
+        },
+        "towards": {
+            "count files": 1,
+            "count total": 1
+        },
+        "condition": {
+            "count files": 1,
+            "count total": 1
+        },
+        "consistently": {
+            "count files": 3,
+            "count total": 3
+        },
+        "stringencoder": {
+            "count files": 2,
+            "count total": 3
+        },
+        "tighten": {
+            "count files": 1,
+            "count total": 1
+        },
+        "lead": {
+            "count files": 1,
+            "count total": 1
+        },
+        "produce": {
+            "count files": 3,
+            "count total": 6
+        },
+        "casting": {
+            "count files": 1,
+            "count total": 1
+        },
+        "qualifier": {
+            "count files": 1,
+            "count total": 1
+        },
+        "in-line": {
+            "count files": 3,
+            "count total": 3
+        },
+        "odd": {
+            "count files": 1,
+            "count total": 1
+        },
+        "different": {
+            "count files": 21,
+            "count total": 22
+        },
+        "jres": {
+            "count files": 1,
+            "count total": 1
+        },
+        "logging": {
+            "count files": 1,
+            "count total": 1
+        },
+        "couple": {
+            "count files": 2,
+            "count total": 2
+        },
+        "sure": {
+            "count files": 4,
+            "count total": 4
+        },
+        "getdefaultchar": {
+            "count files": 1,
+            "count total": 1
+        },
+        "corrupt": {
+            "count files": 2,
+            "count total": 3
+        },
+        "unencoded": {
+            "count files": 1,
+            "count total": 1
+        },
+        "pair": {
+            "count files": 1,
+            "count total": 1
+        },
+        "alltests": {
+            "count files": 4,
+            "count total": 4
+        },
+        "suite": {
+            "count files": 6,
+            "count total": 6
+        },
+        "mail-archives": {
+            "count files": 5,
+            "count total": 5
+        },
+        "mod_mbox": {
+            "count files": 5,
+            "count total": 5
+        },
+        "commons-dev": {
+            "count files": 7,
+            "count total": 8
+        },
+        "mbox": {
+            "count files": 5,
+            "count total": 5
+        },
+        "3c94c476c03bff5e42ac3518fdac9643c4e2e27acd9b": {
+            "count files": 4,
+            "count total": 4
+        },
+        "hqmail": {
+            "count files": 4,
+            "count total": 4
+        },
+        "rocketsoftware": {
+            "count files": 4,
+            "count total": 4
+        },
+        "3e": {
+            "count files": 5,
+            "count total": 5
+        },
+        "ms": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sql": {
+            "count files": 1,
+            "count total": 2
+        },
+        "server": {
+            "count files": 1,
+            "count total": 2
+        },
+        "example": {
+            "count files": 9,
+            "count total": 15
+        },
+        "inpired": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mention": {
+            "count files": 5,
+            "count total": 5
+        },
+        "assert": {
+            "count files": 13,
+            "count total": 16
+        },
+        "testdifference": {
+            "count files": 1,
+            "count total": 1
+        },
+        "reverse": {
+            "count files": 1,
+            "count total": 1
+        },
+        "equivalent": {
+            "count files": 2,
+            "count total": 2
+        },
+        "fancy": {
+            "count files": 1,
+            "count total": 1
+        },
+        "consider": {
+            "count files": 3,
+            "count total": 3
+        },
+        "letter": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jvm": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-51": {
+            "count files": 1,
+            "count total": 1
+        },
+        "proper": {
+            "count files": 4,
+            "count total": 4
+        },
+        "codec-127": {
+            "count files": 6,
+            "count total": 8
+        },
+        "ability": {
+            "count files": 2,
+            "count total": 2
+        },
+        "customize": {
+            "count files": 2,
+            "count total": 2
+        },
+        "provider": {
+            "count files": 2,
+            "count total": 6
+        },
+        "md5": {
+            "count files": 2,
+            "count total": 2
+        },
+        "sha": {
+            "count files": 3,
+            "count total": 5
+        },
+        "utils": {
+            "count files": 3,
+            "count total": 7
+        },
+        "search": {
+            "count files": 2,
+            "count total": 2
+        },
+        "list": {
+            "count files": 6,
+            "count total": 7
+        },
+        "available": {
+            "count files": 5,
+            "count total": 5
+        },
+        "want": {
+            "count files": 4,
+            "count total": 6
+        },
+        "calling": {
+            "count files": 15,
+            "count total": 16
+        },
+        "setprovider": {
+            "count files": 2,
+            "count total": 2
+        },
+        "bring": {
+            "count files": 4,
+            "count total": 4
+        },
+        "messagedigest": {
+            "count files": 5,
+            "count total": 12
+        },
+        "sha-256": {
+            "count files": 2,
+            "count total": 2
+        },
+        "sha-384": {
+            "count files": 2,
+            "count total": 2
+        },
+        "sha-512": {
+            "count files": 5,
+            "count total": 8
+        },
+        "codec-52": {
+            "count files": 2,
+            "count total": 2
+        },
+        "niklas": {
+            "count files": 2,
+            "count total": 2
+        },
+        "gustavsson": {
+            "count files": 2,
+            "count total": 2
+        },
+        "enhancement": {
+            "count files": 2,
+            "count total": 2
+        },
+        "inputstream": {
+            "count files": 28,
+            "count total": 29
+        },
+        "digestutil": {
+            "count files": 2,
+            "count total": 2
+        },
+        "digest": {
+            "count files": 39,
+            "count total": 494
+        },
+        "param": {
+            "count files": 8,
+            "count total": 9
+        },
+        "codec-83": {
+            "count files": 1,
+            "count total": 1
+        },
+        "generate": {
+            "count files": 27,
+            "count total": 30
+        },
+        "swoodbridge": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mptest": {
+            "count files": 1,
+            "count total": 1
+        },
+        "php3": {
+            "count files": 1,
+            "count total": 1
+        },
+        "useless": {
+            "count files": 2,
+            "count total": 2
+        },
+        "unless": {
+            "count files": 1,
+            "count total": 1
+        },
+        "wonder": {
+            "count files": 1,
+            "count total": 1
+        },
+        "alteration": {
+            "count files": 2,
+            "count total": 2
+        },
+        "alex": {
+            "count files": 4,
+            "count total": 4
+        },
+        "karasulu": {
+            "count files": 2,
+            "count total": 2
+        },
+        "partially": {
+            "count files": 9,
+            "count total": 9
+        },
+        "bitset": {
+            "count files": 2,
+            "count total": 4
+        },
+        "attach": {
+            "count files": 2,
+            "count total": 2
+        },
+        "bit": {
+            "count files": 10,
+            "count total": 26
+        },
+        "seem": {
+            "count files": 4,
+            "count total": 4
+        },
+        "context": {
+            "count files": 9,
+            "count total": 12
+        },
+        "would": {
+            "count files": 4,
+            "count total": 4
+        },
+        "like": {
+            "count files": 12,
+            "count total": 20
+        },
+        "discus": {
+            "count files": 3,
+            "count total": 3
+        },
+        "today": {
+            "count files": 2,
+            "count total": 2
+        },
+        "maybe": {
+            "count files": 2,
+            "count total": 2
+        },
+        "bitsetutils": {
+            "count files": 2,
+            "count total": 2
+        },
+        "ascii": {
+            "count files": 4,
+            "count total": 8
+        },
+        "mislead": {
+            "count files": 2,
+            "count total": 2
+        },
+        "imo": {
+            "count files": 7,
+            "count total": 7
+        },
+        "especially": {
+            "count files": 3,
+            "count total": 3
+        },
+        "mean": {
+            "count files": 2,
+            "count total": 2
+        },
+        "0": {
+            "count files": 2,
+            "count total": 2
+        },
+        "1": {
+            "count files": 2,
+            "count total": 2
+        },
+        "tobytearray": {
+            "count files": 3,
+            "count total": 3
+        },
+        "overload": {
+            "count files": 2,
+            "count total": 2
+        },
+        "overriden": {
+            "count files": 2,
+            "count total": 2
+        },
+        "confuse": {
+            "count files": 2,
+            "count total": 2
+        },
+        "understand": {
+            "count files": 2,
+            "count total": 2
+        },
+        "imho": {
+            "count files": 2,
+            "count total": 2
+        },
+        "decoder": {
+            "count files": 3,
+            "count total": 5
+        },
+        "stringdecoder": {
+            "count files": 3,
+            "count total": 6
+        },
+        "tricky": {
+            "count files": 2,
+            "count total": 2
+        },
+        "look": {
+            "count files": 3,
+            "count total": 3
+        },
+        "framework": {
+            "count files": 10,
+            "count total": 10
+        },
+        "suppose": {
+            "count files": 2,
+            "count total": 2
+        },
+        "reflection": {
+            "count files": 2,
+            "count total": 2
+        },
+        "truly": {
+            "count files": 2,
+            "count total": 2
+        },
+        "place": {
+            "count files": 4,
+            "count total": 4
+        },
+        "topic": {
+            "count files": 2,
+            "count total": 2
+        },
+        "know": {
+            "count files": 3,
+            "count total": 3
+        },
+        "source": {
+            "count files": 14,
+            "count total": 15
+        },
+        "foo": {
+            "count files": 2,
+            "count total": 4
+        },
+        "bar": {
+            "count files": 2,
+            "count total": 4
+        },
+        "date": {
+            "count files": 3,
+            "count total": 7
+        },
+        "acronym": {
+            "count files": 3,
+            "count total": 3
+        },
+        "american": {
+            "count files": 12,
+            "count total": 12
+        },
+        "standard": {
+            "count files": 29,
+            "count total": 36
+        },
+        "information": {
+            "count files": 2,
+            "count total": 2
+        },
+        "interchange": {
+            "count files": 1,
+            "count total": 1
+        },
+        "stop": {
+            "count files": 2,
+            "count total": 2
+        },
+        "todo": {
+            "count files": 2,
+            "count total": 3
+        },
+        "codecs": {
+            "count files": 4,
+            "count total": 4
+        },
+        "q-codec": {
+            "count files": 2,
+            "count total": 2
+        },
+        "b-codec": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-119": {
+            "count files": 5,
+            "count total": 5
+        },
+        "doencoding": {
+            "count files": 1,
+            "count total": 1
+        },
+        "termnator": {
+            "count files": 2,
+            "count total": 6
+        },
+        "guarantee": {
+            "count files": 2,
+            "count total": 3
+        },
+        "find": {
+            "count files": 2,
+            "count total": 3
+        },
+        "separator": {
+            "count files": 6,
+            "count total": 7
+        },
+        "presence": {
+            "count files": 2,
+            "count total": 3
+        },
+        "begin": {
+            "count files": 1,
+            "count total": 1
+        },
+        "beginning": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-121": {
+            "count files": 3,
+            "count total": 7
+        },
+        "dodecoding": {
+            "count files": 1,
+            "count total": 1
+        },
+        "rfc1522codectest": {
+            "count files": 2,
+            "count total": 13
+        },
+        "inner": {
+            "count files": 2,
+            "count total": 3
+        },
+        "spec": {
+            "count files": 1,
+            "count total": 1
+        },
+        "wikipedia": {
+            "count files": 3,
+            "count total": 6
+        },
+        "codec-64": {
+            "count files": 2,
+            "count total": 2
+        },
+        "eol-style": {
+            "count files": 21,
+            "count total": 21
+        },
+        "native": {
+            "count files": 11,
+            "count total": 11
+        },
+        "executable": {
+            "count files": 2,
+            "count total": 2
+        },
+        "property": {
+            "count files": 18,
+            "count total": 34
+        },
+        "caversham": {
+            "count files": 1,
+            "count total": 1
+        },
+        "otago": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ac": {
+            "count files": 1,
+            "count total": 1
+        },
+        "nz": {
+            "count files": 1,
+            "count total": 1
+        },
+        "working": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ctp150804": {
+            "count files": 1,
+            "count total": 1
+        },
+        "pdf": {
+            "count files": 1,
+            "count total": 1
+        },
+        "disabled": {
+            "count files": 1,
+            "count total": 1
+        },
+        "caverphone": {
+            "count files": 3,
+            "count total": 12
+        },
+        "codec-117": {
+            "count files": 2,
+            "count total": 2
+        },
+        "starting": {
+            "count files": 2,
+            "count total": 2
+        },
+        "mb": {
+            "count files": 2,
+            "count total": 2
+        },
+        "incorrectly": {
+            "count files": 4,
+            "count total": 4
+        },
+        "replaceall": {
+            "count files": 7,
+            "count total": 7
+        },
+        "optimize": {
+            "count files": 4,
+            "count total": 4
+        },
+        "codec-118": {
+            "count files": 1,
+            "count total": 1
+        },
+        "reduce": {
+            "count files": 19,
+            "count total": 22
+        },
+        "chance": {
+            "count files": 1,
+            "count total": 1
+        },
+        "damage": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-101": {
+            "count files": 3,
+            "count total": 4
+        },
+        "io": {
+            "count files": 8,
+            "count total": 11
+        },
+        "inputstreamreader": {
+            "count files": 3,
+            "count total": 4
+        },
+        "hate": {
+            "count files": 3,
+            "count total": 4
+        },
+        "zero": {
+            "count files": 9,
+            "count total": 12
+        },
+        "marking": {
+            "count files": 1,
+            "count total": 1
+        },
+        "maven": {
+            "count files": 2,
+            "count total": 2
+        },
+        "unnecessarily": {
+            "count files": 12,
+            "count total": 12
+        },
+        "nest": {
+            "count files": 22,
+            "count total": 27
+        },
+        "keyword": {
+            "count files": 10,
+            "count total": 11
+        },
+        "substitution": {
+            "count files": 2,
+            "count total": 3
+        },
+        "good": {
+            "count files": 1,
+            "count total": 1
+        },
+        "luck": {
+            "count files": 1,
+            "count total": 1
+        },
+        "auto-props": {
+            "count files": 7,
+            "count total": 7
+        },
+        "could": {
+            "count files": 8,
+            "count total": 9
+        },
+        "jumping": {
+            "count files": 2,
+            "count total": 2
+        },
+        "hoops": {
+            "count files": 2,
+            "count total": 2
+        },
+        "restrict": {
+            "count files": 2,
+            "count total": 2
+        },
+        "instantiation": {
+            "count files": 3,
+            "count total": 3
+        },
+        "right": {
+            "count files": 10,
+            "count total": 10
+        },
+        "small": {
+            "count files": 8,
+            "count total": 10
+        },
+        "kick": {
+            "count files": 1,
+            "count total": 1
+        },
+        "abc": {
+            "count files": 1,
+            "count total": 1
+        },
+        "directly": {
+            "count files": 4,
+            "count total": 4
+        },
+        "extend": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testcase": {
+            "count files": 1,
+            "count total": 1
+        },
+        "must": {
+            "count files": 7,
+            "count total": 8
+        },
+        "href": {
+            "count files": 1,
+            "count total": 1
+        },
+        "windowsitpro": {
+            "count files": 1,
+            "count total": 1
+        },
+        "table_01": {
+            "count files": 1,
+            "count total": 1
+        },
+        "al": {
+            "count files": 2,
+            "count total": 2
+        },
+        "grant": {
+            "count files": 1,
+            "count total": 1
+        },
+        "others": {
+            "count files": 1,
+            "count total": 1
+        },
+        "lot": {
+            "count files": 1,
+            "count total": 1
+        },
+        "left": {
+            "count files": 1,
+            "count total": 1
+        },
+        "superclass": {
+            "count files": 2,
+            "count total": 3
+        },
+        "colognebuffer": {
+            "count files": 1,
+            "count total": 3
+        },
+        "charsequence": {
+            "count files": 3,
+            "count total": 7
+        },
+        "charat": {
+            "count files": 1,
+            "count total": 3
+        },
+        "subsequence": {
+            "count files": 1,
+            "count total": 3
+        },
+        "refactoring": {
+            "count files": 7,
+            "count total": 8
+        },
+        "put": {
+            "count files": 2,
+            "count total": 3
+        },
+        "ok": {
+            "count files": 3,
+            "count total": 3
+        },
+        "key": {
+            "count files": 3,
+            "count total": 4
+        },
+        "map": {
+            "count files": 4,
+            "count total": 6
+        },
+        "preprocess": {
+            "count files": 1,
+            "count total": 2
+        },
+        "sort": {
+            "count files": 92,
+            "count total": 112
+        },
+        "ab": {
+            "count files": 15,
+            "count total": 16
+        },
+        "checktyle": {
+            "count files": 4,
+            "count total": 4
+        },
+        "decl": {
+            "count files": 2,
+            "count total": 2
+        },
+        "aabjoe": {
+            "count files": 2,
+            "count total": 2
+        },
+        "elements": {
+            "count files": 3,
+            "count total": 3
+        },
+        "digit": {
+            "count files": 5,
+            "count total": 10
+        },
+        "eberhard": {
+            "count files": 2,
+            "count total": 2
+        },
+        "identical": {
+            "count files": 5,
+            "count total": 6
+        },
+        "consecutive": {
+            "count files": 2,
+            "count total": 2
+        },
+        "occur": {
+            "count files": 2,
+            "count total": 4
+        },
+        "internal": {
+            "count files": 39,
+            "count total": 44
+        },
+        "iscolognequal": {
+            "count files": 2,
+            "count total": 2
+        },
+        "isencodeequal": {
+            "count files": 2,
+            "count total": 4
+        },
+        "later": {
+            "count files": 2,
+            "count total": 2
+        },
+        "copydata": {
+            "count files": 1,
+            "count total": 1
+        },
+        "consistency": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-123": {
+            "count files": 1,
+            "count total": 1
+        },
+        "colognephonetic": {
+            "count files": 3,
+            "count total": 31
+        },
+        "entity": {
+            "count files": 1,
+            "count total": 1
+        },
+        "non-ascii": {
+            "count files": 1,
+            "count total": 2
+        },
+        "base32hex": {
+            "count files": 2,
+            "count total": 2
+        },
+        "basic": {
+            "count files": 2,
+            "count total": 2
+        },
+        "many": {
+            "count files": 4,
+            "count total": 4
+        },
+        "basedcodec": {
+            "count files": 5,
+            "count total": 5
+        },
+        "bitworkarea": {
+            "count files": 3,
+            "count total": 3
+        },
+        "pad": {
+            "count files": 10,
+            "count total": 11
+        },
+        "base32_": {
+            "count files": 1,
+            "count total": 1
+        },
+        "member": {
+            "count files": 76,
+            "count total": 82
+        },
+        "ant": {
+            "count files": 1,
+            "count total": 1
+        },
+        "impl": {
+            "count files": 2,
+            "count total": 2
+        },
+        "repo": {
+            "count files": 1,
+            "count total": 1
+        },
+        "magdev": {
+            "count files": 1,
+            "count total": 1
+        },
+        "de": {
+            "count files": 2,
+            "count total": 2
+        },
+        "text_colognephonetic-0": {
+            "count files": 1,
+            "count total": 1
+        },
+        "text_colognephonetictest": {
+            "count files": 1,
+            "count total": 1
+        },
+        "variation": {
+            "count files": 1,
+            "count total": 1
+        },
+        "meier": {
+            "count files": 1,
+            "count total": 1
+        },
+        "maier": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mair": {
+            "count files": 1,
+            "count total": 1
+        },
+        "meyer": {
+            "count files": 1,
+            "count total": 1
+        },
+        "meyr": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mejer": {
+            "count files": 1,
+            "count total": 1
+        },
+        "deutsch": {
+            "count files": 1,
+            "count total": 1
+        },
+        "fixture": {
+            "count files": 4,
+            "count total": 6
+        },
+        "leading": {
+            "count files": 9,
+            "count total": 9
+        },
+        "buggy": {
+            "count files": 1,
+            "count total": 1
+        },
+        "debug": {
+            "count files": 10,
+            "count total": 12
+        },
+        "session": {
+            "count files": 1,
+            "count total": 1
+        },
+        "validate": {
+            "count files": 7,
+            "count total": 7
+        },
+        "remain": {
+            "count files": 3,
+            "count total": 5
+        },
+        "german": {
+            "count files": 1,
+            "count total": 1
+        },
+        "speaker": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sourceforge": {
+            "count files": 1,
+            "count total": 1
+        },
+        "project": {
+            "count files": 46,
+            "count total": 46
+        },
+        "familynamephon": {
+            "count files": 1,
+            "count total": 1
+        },
+        "blank": {
+            "count files": 26,
+            "count total": 28
+        },
+        "codec-122": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testaychlmajrforcodec122": {
+            "count files": 1,
+            "count total": 1
+        },
+        "duplicate": {
+            "count files": 6,
+            "count total": 6
+        },
+        "sense": {
+            "count files": 6,
+            "count total": 6
+        },
+        "provide": {
+            "count files": 15,
+            "count total": 18
+        },
+        "disable": {
+            "count files": 1,
+            "count total": 1
+        },
+        "potential": {
+            "count files": 3,
+            "count total": 4
+        },
+        "calculation": {
+            "count files": 3,
+            "count total": 3
+        },
+        "overflow": {
+            "count files": 6,
+            "count total": 9
+        },
+        "languagearg": {
+            "count files": 1,
+            "count total": 1
+        },
+        "languageset": {
+            "count files": 1,
+            "count total": 2
+        },
+        "cap": {
+            "count files": 1,
+            "count total": 1
+        },
+        "gna": {
+            "count files": 3,
+            "count total": 4
+        },
+        "bm": {
+            "count files": 18,
+            "count total": 125
+        },
+        "beidermorseencodertest": {
+            "count files": 4,
+            "count total": 19
+        },
+        "testencodegna": {
+            "count files": 3,
+            "count total": 4
+        },
+        "codec-125": {
+            "count files": 9,
+            "count total": 43
+        },
+        "big": {
+            "count files": 8,
+            "count total": 8
+        },
+        "matthew": {
+            "count files": 15,
+            "count total": 32
+        },
+        "pocock": {
+            "count files": 15,
+            "count total": 15
+        },
+        "looking": {
+            "count files": 9,
+            "count total": 9
+        },
+        "suggestion": {
+            "count files": 2,
+            "count total": 2
+        },
+        "phoneticengine": {
+            "count files": 2,
+            "count total": 15
+        },
+        "rulesapplication": {
+            "count files": 1,
+            "count total": 1
+        },
+        "_static_": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sic_inner_should_be_static": {
+            "count files": 1,
+            "count total": 1
+        },
+        "298-344": {
+            "count files": 1,
+            "count total": 1
+        },
+        "medium": {
+            "count files": 1,
+            "count total": 1
+        },
+        "caller": {
+            "count files": 4,
+            "count total": 5
+        },
+        "acz": {
+            "count files": 8,
+            "count total": 8
+        },
+        "beider-morse": {
+            "count files": 16,
+            "count total": 32
+        },
+        "phonetic": {
+            "count files": 20,
+            "count total": 46
+        },
+        "performanceandbugs": {
+            "count files": 6,
+            "count total": 6
+        },
+        "fixmeinvariant": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hoist": {
+            "count files": 1,
+            "count total": 1
+        },
+        "l-invariant": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ortley": {
+            "count files": 1,
+            "count total": 1
+        },
+        "exercise": {
+            "count files": 3,
+            "count total": 3
+        },
+        "van": {
+            "count files": 1,
+            "count total": 1
+        },
+        "helsing": {
+            "count files": 1,
+            "count total": 1
+        },
+        "exercising": {
+            "count files": 1,
+            "count total": 1
+        },
+        "alternate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mp": {
+            "count files": 1,
+            "count total": 1
+        },
+        "fightingmemorychurn": {
+            "count files": 7,
+            "count total": 7
+        },
+        "focusedcommentid": {
+            "count files": 1,
+            "count total": 3
+        },
+        "atlassian": {
+            "count files": 1,
+            "count total": 3
+        },
+        "plugin": {
+            "count files": 1,
+            "count total": 3
+        },
+        "system": {
+            "count files": 2,
+            "count total": 4
+        },
+        "issuetabpanels": {
+            "count files": 1,
+            "count total": 3
+        },
+        "comment-tabpanel": {
+            "count files": 1,
+            "count total": 3
+        },
+        "comment-13071566": {
+            "count files": 1,
+            "count total": 1
+        },
+        "refine": {
+            "count files": 2,
+            "count total": 2
+        },
+        "temp": {
+            "count files": 4,
+            "count total": 4
+        },
+        "testlongestenglishsurname": {
+            "count files": 1,
+            "count total": 1
+        },
+        "take": {
+            "count files": 1,
+            "count total": 1
+        },
+        "long": {
+            "count files": 7,
+            "count total": 10
+        },
+        "testencodeatz": {
+            "count files": 1,
+            "count total": 1
+        },
+        "comment-13072496": {
+            "count files": 1,
+            "count total": 1
+        },
+        "comment-13073380": {
+            "count files": 1,
+            "count total": 1
+        },
+        "handleh": {
+            "count files": 2,
+            "count total": 2
+        },
+        "speed": {
+            "count files": 3,
+            "count total": 3
+        },
+        "boundary": {
+            "count files": 5,
+            "count total": 5
+        },
+        "dead": {
+            "count files": 4,
+            "count total": 4
+        },
+        "bullet-proofing": {
+            "count files": 1,
+            "count total": 1
+        },
+        "blow": {
+            "count files": 2,
+            "count total": 2
+        },
+        "run": {
+            "count files": 3,
+            "count total": 3
+        },
+        "second": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testspeedcheck": {
+            "count files": 1,
+            "count total": 2
+        },
+        "testspeedcheckrandom": {
+            "count files": 1,
+            "count total": 1
+        },
+        "deterministic": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testspeedcheckaz": {
+            "count files": 1,
+            "count total": 1
+        },
+        "except": {
+            "count files": 2,
+            "count total": 2
+        },
+        "overwrite": {
+            "count files": 1,
+            "count total": 1
+        },
+        "implicitly": {
+            "count files": 1,
+            "count total": 1
+        },
+        "active": {
+            "count files": 6,
+            "count total": 6
+        },
+        "voice": {
+            "count files": 6,
+            "count total": 6
+        },
+        "factor": {
+            "count files": 1,
+            "count total": 3
+        },
+        "answer": {
+            "count files": 1,
+            "count total": 3
+        },
+        "singleton": {
+            "count files": 1,
+            "count total": 3
+        },
+        "lots": {
+            "count files": 1,
+            "count total": 3
+        },
+        "startup": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hiding": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-130": {
+            "count files": 3,
+            "count total": 10
+        },
+        "skip": {
+            "count files": 7,
+            "count total": 21
+        },
+        "underlie": {
+            "count files": 5,
+            "count total": 6
+        },
+        "per": {
+            "count files": 58,
+            "count total": 62
+        },
+        "guideline": {
+            "count files": 34,
+            "count total": 34
+        },
+        "base32inputstream": {
+            "count files": 3,
+            "count total": 10
+        },
+        "basencodecinputstream": {
+            "count files": 3,
+            "count total": 21
+        },
+        "really": {
+            "count files": 1,
+            "count total": 1
+        },
+        "larger": {
+            "count files": 1,
+            "count total": 1
+        },
+        "warn": {
+            "count files": 4,
+            "count total": 4
+        },
+        "close": {
+            "count files": 50,
+            "count total": 60
+        },
+        "try-with-resources": {
+            "count files": 19,
+            "count total": 29
+        },
+        "subversion": {
+            "count files": 89,
+            "count total": 89
+        },
+        "base64inputstreamtest": {
+            "count files": 1,
+            "count total": 23
+        },
+        "error": {
+            "count files": 34,
+            "count total": 42
+        },
+        "codec-289": {
+            "count files": 8,
+            "count total": 8
+        },
+        "strict": {
+            "count files": 20,
+            "count total": 63
+        },
+        "decoding": {
+            "count files": 20,
+            "count total": 67
+        },
+        "basencodecinput": {
+            "count files": 8,
+            "count total": 8
+        },
+        "outputstream": {
+            "count files": 10,
+            "count total": 10
+        },
+        "reimplement": {
+            "count files": 17,
+            "count total": 17
+        },
+        "new-in-1": {
+            "count files": 17,
+            "count total": 17
+        },
+        "friend": {
+            "count files": 17,
+            "count total": 17
+        },
+        "v": {
+            "count files": 17,
+            "count total": 17
+        },
+        "lenient": {
+            "count files": 18,
+            "count total": 32
+        },
+        "enum": {
+            "count files": 28,
+            "count total": 40
+        },
+        "introduce": {
+            "count files": 18,
+            "count total": 18
+        },
+        "amount": {
+            "count files": 17,
+            "count total": 17
+        },
+        "abstract": {
+            "count files": 41,
+            "count total": 43
+        },
+        "basentestdata": {
+            "count files": 13,
+            "count total": 16
+        },
+        "imporve": {
+            "count files": 4,
+            "count total": 4
+        },
+        "equality": {
+            "count files": 4,
+            "count total": 4
+        },
+        "describe": {
+            "count files": 11,
+            "count total": 19
+        },
+        "regex": {
+            "count files": 6,
+            "count total": 6
+        },
+        "codec-301": {
+            "count files": 3,
+            "count total": 3
+        },
+        "allocation": {
+            "count files": 7,
+            "count total": 10
+        },
+        "280mb": {
+            "count files": 3,
+            "count total": 3
+        },
+        "4mb": {
+            "count files": 3,
+            "count total": 3
+        },
+        "reading": {
+            "count files": 3,
+            "count total": 3
+        },
+        "133mb": {
+            "count files": 3,
+            "count total": 3
+        },
+        "messured": {
+            "count files": 3,
+            "count total": 3
+        },
+        "jfr": {
+            "count files": 3,
+            "count total": 3
+        },
+        "inital": {
+            "count files": 3,
+            "count total": 3
+        },
+        "basen": {
+            "count files": 3,
+            "count total": 3
+        },
+        "attempt": {
+            "count files": 5,
+            "count total": 5
+        },
+        "fill": {
+            "count files": 5,
+            "count total": 9
+        },
+        "user-provided": {
+            "count files": 3,
+            "count total": 3
+        },
+        "previously": {
+            "count files": 3,
+            "count total": 3
+        },
+        "maximum": {
+            "count files": 6,
+            "count total": 8
+        },
+        "8kb": {
+            "count files": 3,
+            "count total": 3
+        },
+        "encoding-overhead": {
+            "count files": 3,
+            "count total": 3
+        },
+        "6kb": {
+            "count files": 3,
+            "count total": 3
+        },
+        "even": {
+            "count files": 3,
+            "count total": 3
+        },
+        "hasdata": {
+            "count files": 3,
+            "count total": 3
+        },
+        "po": {
+            "count files": 3,
+            "count total": 3
+        },
+        "readpos": {
+            "count files": 3,
+            "count total": 3
+        },
+        "marker": {
+            "count files": 8,
+            "count total": 10
+        },
+        "simple": {
+            "count files": 24,
+            "count total": 24
+        },
+        "port": {
+            "count files": 23,
+            "count total": 23
+        },
+        "codec-285": {
+            "count files": 33,
+            "count total": 46
+        },
+        "v4": {
+            "count files": 25,
+            "count total": 25
+        },
+        "assertthrows": {
+            "count files": 25,
+            "count total": 25
+        },
+        "unit-vintage-engine": {
+            "count files": 68,
+            "count total": 68
+        },
+        "pom": {
+            "count files": 68,
+            "count total": 68
+        },
+        "xml": {
+            "count files": 81,
+            "count total": 84
+        },
+        "chore": {
+            "count files": 45,
+            "count total": 45
+        },
+        "attribute": {
+            "count files": 45,
+            "count total": 52
+        },
+        "parens": {
+            "count files": 29,
+            "count total": 30
+        },
+        "declutter": {
+            "count files": 23,
+            "count total": 23
+        },
+        "base32inputstreamtest": {
+            "count files": 1,
+            "count total": 15
+        },
+        "codec-132": {
+            "count files": 4,
+            "count total": 5
+        },
+        "beidermorseencoder": {
+            "count files": 4,
+            "count total": 12
+        },
+        "oom": {
+            "count files": 4,
+            "count total": 4
+        },
+        "undo": {
+            "count files": 48,
+            "count total": 48
+        },
+        "merge": {
+            "count files": 54,
+            "count total": 58
+        },
+        "-r": {
+            "count files": 48,
+            "count total": 48
+        },
+        "engine": {
+            "count files": 8,
+            "count total": 14
+        },
+        "action": {
+            "count files": 13,
+            "count total": 24
+        },
+        "ggregory": {
+            "count files": 11,
+            "count total": 11
+        },
+        "codec-187": {
+            "count files": 7,
+            "count total": 14
+        },
+        "due-to": {
+            "count files": 11,
+            "count total": 11
+        },
+        "tobias": {
+            "count files": 2,
+            "count total": 2
+        },
+        "thomas": {
+            "count files": 6,
+            "count total": 9
+        },
+        "neidhart": {
+            "count files": 2,
+            "count total": 2
+        },
+        "beider": {
+            "count files": 3,
+            "count total": 6
+        },
+        "morse": {
+            "count files": 3,
+            "count total": 6
+        },
+        "incorrect": {
+            "count files": 4,
+            "count total": 7
+        },
+        "token": {
+            "count files": 2,
+            "count total": 5
+        },
+        "beidermorse": {
+            "count files": 7,
+            "count total": 7
+        },
+        "v3": {
+            "count files": 7,
+            "count total": 9
+        },
+        "doc": {
+            "count files": 13,
+            "count total": 18
+        },
+        "notation": {
+            "count files": 38,
+            "count total": 38
+        },
+        "semantic": {
+            "count files": 9,
+            "count total": 9
+        },
+        "strong": {
+            "count files": 9,
+            "count total": 9
+        },
+        "style": {
+            "count files": 23,
+            "count total": 23
+        },
+        "resolve": {
+            "count files": 2,
+            "count total": 2
+        },
+        "fixme": {
+            "count files": 2,
+            "count total": 3
+        },
+        "parse": {
+            "count files": 5,
+            "count total": 5
+        },
+        "scanner": {
+            "count files": 2,
+            "count total": 2
+        },
+        "always": {
+            "count files": 9,
+            "count total": 10
+        },
+        "codec-244": {
+            "count files": 14,
+            "count total": 14
+        },
+        "redundant": {
+            "count files": 38,
+            "count total": 42
+        },
+        "isempty": {
+            "count files": 14,
+            "count total": 15
+        },
+        "combine": {
+            "count files": 6,
+            "count total": 6
+        },
+        "foreach": {
+            "count files": 7,
+            "count total": 8
+        },
+        "conventional": {
+            "count files": 22,
+            "count total": 22
+        },
+        "underscore": {
+            "count files": 22,
+            "count total": 22
+        },
+        "short": {
+            "count files": 22,
+            "count total": 22
+        },
+        "thread-safety": {
+            "count files": 33,
+            "count total": 33
+        },
+        "immutable": {
+            "count files": 23,
+            "count total": 47
+        },
+        "konstantin": {
+            "count files": 23,
+            "count total": 23
+        },
+        "kolinko": {
+            "count files": 23,
+            "count total": 23
+        },
+        "ml": {
+            "count files": 24,
+            "count total": 24
+        },
+        "codec-174": {
+            "count files": 5,
+            "count total": 20
+        },
+        "gain": {
+            "count files": 4,
+            "count total": 5
+        },
+        "codec-174-refactor-restrictto-method-in-somelanguages": {
+            "count files": 2,
+            "count total": 2
+        },
+        "recently": {
+            "count files": 1,
+            "count total": 1
+        },
+        "collection": {
+            "count files": 3,
+            "count total": 3
+        },
+        "nametype": {
+            "count files": 1,
+            "count total": 3
+        },
+        "phoneme": {
+            "count files": 1,
+            "count total": 1
+        },
+        "linkedhashset": {
+            "count files": 1,
+            "count total": 1
+        },
+        "lucene": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ambiguous": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-174-change-rules-storage-to-map": {
+            "count files": 3,
+            "count total": 3
+        },
+        "champagne": {
+            "count files": 4,
+            "count total": 7
+        },
+        "codec-174-reuse-set-in-phonemebuilder": {
+            "count files": 4,
+            "count total": 4
+        },
+        "police": {
+            "count files": 8,
+            "count total": 8
+        },
+        "codec-174-delete-subsequence-cache-and-use-string": {
+            "count files": 1,
+            "count total": 1
+        },
+        "nice": {
+            "count files": 1,
+            "count total": 1
+        },
+        "aspect": {
+            "count files": 1,
+            "count total": 1
+        },
+        "4-5": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-174-refactor-join-method-in-phoneme": {
+            "count files": 2,
+            "count total": 2
+        },
+        "getinstance": {
+            "count files": 3,
+            "count total": 5
+        },
+        "getinstancemap": {
+            "count files": 2,
+            "count total": 4
+        },
+        "re-introduce": {
+            "count files": 2,
+            "count total": 2
+        },
+        "signature": {
+            "count files": 6,
+            "count total": 6
+        },
+        "join": {
+            "count files": 3,
+            "count total": 3
+        },
+        "phonemebuilder": {
+            "count files": 1,
+            "count total": 3
+        },
+        "updating": {
+            "count files": 5,
+            "count total": 5
+        },
+        "requirenonnull": {
+            "count files": 6,
+            "count total": 6
+        },
+        "formatting": {
+            "count files": 24,
+            "count total": 27
+        },
+        "substring": {
+            "count files": 2,
+            "count total": 3
+        },
+        "guard": {
+            "count files": 1,
+            "count total": 1
+        },
+        "joiner": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-315": {
+            "count files": 2,
+            "count total": 2
+        },
+        "indexoutofboundexception": {
+            "count files": 2,
+            "count total": 2
+        },
+        "signed-off-by": {
+            "count files": 8,
+            "count total": 20
+        },
+        "arthur": {
+            "count files": 8,
+            "count total": 40
+        },
+        "chan": {
+            "count files": 8,
+            "count total": 40
+        },
+        "adalogics": {
+            "count files": 8,
+            "count total": 20
+        },
+        "phonemeexpr": {
+            "count files": 3,
+            "count total": 3
+        },
+        "suggest": {
+            "count files": 5,
+            "count total": 5
+        },
+        "modifier": {
+            "count files": 22,
+            "count total": 34
+        },
+        "imply": {
+            "count files": 1,
+            "count total": 1
+        },
+        "within": {
+            "count files": 9,
+            "count total": 9
+        },
+        "codec-225": {
+            "count files": 2,
+            "count total": 2
+        },
+        "leak": {
+            "count files": 2,
+            "count total": 2
+        },
+        "github": {
+            "count files": 11,
+            "count total": 13
+        },
+        "codec-295": {
+            "count files": 15,
+            "count total": 15
+        },
+        "anonymous": {
+            "count files": 2,
+            "count total": 2
+        },
+        "lambda": {
+            "count files": 2,
+            "count total": 3
+        },
+        "suppresswarnings": {
+            "count files": 4,
+            "count total": 4
+        },
+        "whitespaceafter": {
+            "count files": 25,
+            "count total": 25
+        },
+        "ruletype": {
+            "count files": 1,
+            "count total": 2
+        },
+        "back": {
+            "count files": 4,
+            "count total": 4
+        },
+        "ctor": {
+            "count files": 1,
+            "count total": 1
+        },
+        "annotation": {
+            "count files": 7,
+            "count total": 7
+        },
+        "reverting": {
+            "count files": 2,
+            "count total": 2
+        },
+        "suppress": {
+            "count files": 4,
+            "count total": 4
+        },
+        "rawtypes": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unchecked": {
+            "count files": 2,
+            "count total": 2
+        },
+        "best": {
+            "count files": 1,
+            "count total": 1
+        },
+        "console": {
+            "count files": 1,
+            "count total": 1
+        },
+        "debox": {
+            "count files": 1,
+            "count total": 1
+        },
+        "phoneticenginetest": {
+            "count files": 1,
+            "count total": 7
+        },
+        "codec-96": {
+            "count files": 7,
+            "count total": 9
+        },
+        "client": {
+            "count files": 7,
+            "count total": 9
+        },
+        "share": {
+            "count files": 7,
+            "count total": 9
+        },
+        "ensurebuffersize": {
+            "count files": 2,
+            "count total": 3
+        },
+        "deferencing": {
+            "count files": 2,
+            "count total": 3
+        },
+        "lvars": {
+            "count files": 2,
+            "count total": 3
+        },
+        "intent": {
+            "count files": 2,
+            "count total": 3
+        },
+        "cannot": {
+            "count files": 8,
+            "count total": 17
+        },
+        "happen": {
+            "count files": 2,
+            "count total": 2
+        },
+        "illegalstateexception": {
+            "count files": 3,
+            "count total": 3
+        },
+        "trap": {
+            "count files": 2,
+            "count total": 2
+        },
+        "invalid": {
+            "count files": 6,
+            "count total": 6
+        },
+        "uneditted": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-160": {
+            "count files": 1,
+            "count total": 1
+        },
+        "encodebase64urlsafestring": {
+            "count files": 1,
+            "count total": 2
+        },
+        "codec-166": {
+            "count files": 1,
+            "count total": 1
+        },
+        "fast": {
+            "count files": 1,
+            "count total": 1
+        },
+        "r1447443": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-180": {
+            "count files": 16,
+            "count total": 16
+        },
+        "ville": {
+            "count files": 16,
+            "count total": 16
+        },
+        "skytt\u00e4": {
+            "count files": 16,
+            "count total": 16
+        },
+        "codec-181": {
+            "count files": 5,
+            "count total": 5
+        },
+        "ivan": {
+            "count files": 5,
+            "count total": 5
+        },
+        "martinez-ortiz": {
+            "count files": 5,
+            "count total": 5
+        },
+        "codec-185": {
+            "count files": 1,
+            "count total": 1
+        },
+        "concern": {
+            "count files": 2,
+            "count total": 2
+        },
+        "rearrange": {
+            "count files": 1,
+            "count total": 1
+        },
+        "entry": {
+            "count files": 1,
+            "count total": 1
+        },
+        "row": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-145": {
+            "count files": 1,
+            "count total": 1
+        },
+        "newstringusascii": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ditto": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-134": {
+            "count files": 7,
+            "count total": 56
+        },
+        "commons-codec": {
+            "count files": 10,
+            "count total": 11
+        },
+        "reject": {
+            "count files": 7,
+            "count total": 14
+        },
+        "impossible": {
+            "count files": 7,
+            "count total": 13
+        },
+        "squash": {
+            "count files": 9,
+            "count total": 9
+        },
+        "given": {
+            "count files": 7,
+            "count total": 7
+        },
+        "shift": {
+            "count files": 7,
+            "count total": 7
+        },
+        "indirectly": {
+            "count files": 7,
+            "count total": 7
+        },
+        "accomplish": {
+            "count files": 7,
+            "count total": 7
+        },
+        "via": {
+            "count files": 8,
+            "count total": 8
+        },
+        "versus": {
+            "count files": 7,
+            "count total": 7
+        },
+        "bcodec": {
+            "count files": 11,
+            "count total": 38
+        },
+        "white": {
+            "count files": 14,
+            "count total": 18
+        },
+        "codec-270": {
+            "count files": 5,
+            "count total": 7
+        },
+        "codec-280": {
+            "count files": 7,
+            "count total": 28
+        },
+        "interpret": {
+            "count files": 7,
+            "count total": 14
+        },
+        "combination": {
+            "count files": 9,
+            "count total": 10
+        },
+        "raise": {
+            "count files": 8,
+            "count total": 8
+        },
+        "mode": {
+            "count files": 7,
+            "count total": 14
+        },
+        "re-encoding": {
+            "count files": 7,
+            "count total": 14
+        },
+        "appropriate": {
+            "count files": 7,
+            "count total": 7
+        },
+        "bcodectest": {
+            "count files": 7,
+            "count total": 25
+        },
+        "standardize": {
+            "count files": 12,
+            "count total": 14
+        },
+        "behavior": {
+            "count files": 16,
+            "count total": 19
+        },
+        "for-each": {
+            "count files": 1,
+            "count total": 1
+        },
+        "cloning": {
+            "count files": 4,
+            "count total": 4
+        },
+        "iswhitespace": {
+            "count files": 4,
+            "count total": 8
+        },
+        "correct": {
+            "count files": 10,
+            "count total": 11
+        },
+        "whitespacearound": {
+            "count files": 8,
+            "count total": 8
+        },
+        "table": {
+            "count files": 12,
+            "count total": 12
+        },
+        "---------": {
+            "count files": 8,
+            "count total": 9
+        },
+        "co-authored-by": {
+            "count files": 10,
+            "count total": 11
+        },
+        "garydgregory": {
+            "count files": 8,
+            "count total": 9
+        },
+        "user": {
+            "count files": 6,
+            "count total": 9
+        },
+        "noreply": {
+            "count files": 6,
+            "count total": 7
+        },
+        "act": {
+            "count files": 2,
+            "count total": 2
+        },
+        "builder": {
+            "count files": 11,
+            "count total": 19
+        },
+        "pull-up": {
+            "count files": 3,
+            "count total": 7
+        },
+        "defensive": {
+            "count files": 2,
+            "count total": 3
+        },
+        "grammar": {
+            "count files": 6,
+            "count total": 6
+        },
+        "pstring": {
+            "count files": 9,
+            "count total": 9
+        },
+        "str": {
+            "count files": 9,
+            "count total": 9
+        },
+        "pobject": {
+            "count files": 9,
+            "count total": 9
+        },
+        "obj": {
+            "count files": 9,
+            "count total": 9
+        },
+        "javdoc": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-199": {
+            "count files": 2,
+            "count total": 4
+        },
+        "hw": {
+            "count files": 2,
+            "count total": 4
+        },
+        "2nd": {
+            "count files": 1,
+            "count total": 1
+        },
+        "entail": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-233": {
+            "count files": 2,
+            "count total": 2
+        },
+        "non-visible": {
+            "count files": 5,
+            "count total": 5
+        },
+        "c-style": {
+            "count files": 4,
+            "count total": 4
+        },
+        "declaration": {
+            "count files": 11,
+            "count total": 11
+        },
+        "deprecation": {
+            "count files": 17,
+            "count total": 17
+        },
+        "removal": {
+            "count files": 7,
+            "count total": 7
+        },
+        "paragraph": {
+            "count files": 18,
+            "count total": 25
+        },
+        "harmonise": {
+            "count files": 12,
+            "count total": 12
+        },
+        "syntax": {
+            "count files": 2,
+            "count total": 2
+        },
+        "unneeded": {
+            "count files": 11,
+            "count total": 11
+        },
+        "harmonize": {
+            "count files": 12,
+            "count total": 12
+        },
+        "docn": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-230": {
+            "count files": 1,
+            "count total": 1
+        },
+        "www_form_url": {
+            "count files": 1,
+            "count total": 1
+        },
+        "centralise": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-232": {
+            "count files": 1,
+            "count total": 1
+        },
+        "neither": {
+            "count files": 1,
+            "count total": 1
+        },
+        "threadsafe": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hide": {
+            "count files": 6,
+            "count total": 7
+        },
+        "super": {
+            "count files": 8,
+            "count total": 8
+        },
+        "resourceconstants": {
+            "count files": 1,
+            "count total": 2
+        },
+        "igore": {
+            "count files": 1,
+            "count total": 1
+        },
+        "default_buffer_size": {
+            "count files": 1,
+            "count total": 1
+        },
+        "3c4f3c85d7": {
+            "count files": 1,
+            "count total": 1
+        },
+        "snafu": {
+            "count files": 1,
+            "count total": 1
+        },
+        "asserttrue": {
+            "count files": 2,
+            "count total": 2
+        },
+        "comparing": {
+            "count files": 2,
+            "count total": 2
+        },
+        "equal": {
+            "count files": 8,
+            "count total": 9
+        },
+        "stringbuffer": {
+            "count files": 12,
+            "count total": 12
+        },
+        "non-synch": {
+            "count files": 7,
+            "count total": 7
+        },
+        "re-enable": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-167": {
+            "count files": 1,
+            "count total": 1
+        },
+        "middle": {
+            "count files": 1,
+            "count total": 1
+        },
+        "_random": {
+            "count files": 1,
+            "count total": 1
+        },
+        "random": {
+            "count files": 11,
+            "count total": 14
+        },
+        "noise": {
+            "count files": 14,
+            "count total": 16
+        },
+        "codec-202": {
+            "count files": 3,
+            "count total": 3
+        },
+        "offset": {
+            "count files": 7,
+            "count total": 12
+        },
+        "codec-203": {
+            "count files": 3,
+            "count total": 4
+        },
+        "convenience": {
+            "count files": 3,
+            "count total": 6
+        },
+        "decodehex": {
+            "count files": 3,
+            "count total": 4
+        },
+        "gitbox": {
+            "count files": 4,
+            "count total": 4
+        },
+        "codec-265": {
+            "count files": 3,
+            "count total": 5
+        },
+        "expand": {
+            "count files": 4,
+            "count total": 4
+        },
+        "conscious": {
+            "count files": 3,
+            "count total": 6
+        },
+        "gigabyte": {
+            "count files": 3,
+            "count total": 3
+        },
+        "expansion": {
+            "count files": 3,
+            "count total": 3
+        },
+        "util": {
+            "count files": 3,
+            "count total": 6
+        },
+        "arraylist": {
+            "count files": 3,
+            "count total": 6
+        },
+        "jdk": {
+            "count files": 3,
+            "count total": 3
+        },
+        "compareunsigned": {
+            "count files": 3,
+            "count total": 4
+        },
+        "unlike": {
+            "count files": 3,
+            "count total": 3
+        },
+        "mincapcity": {
+            "count files": 3,
+            "count total": 6
+        },
+        "exceed": {
+            "count files": 3,
+            "count total": 3
+        },
+        "head": {
+            "count files": 3,
+            "count total": 3
+        },
+        "room": {
+            "count files": 3,
+            "count total": 3
+        },
+        "capacity": {
+            "count files": 3,
+            "count total": 3
+        },
+        "reinstate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hugelineseparator": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-277": {
+            "count files": 23,
+            "count total": 24
+        },
+        "reload": {
+            "count files": 23,
+            "count total": 24
+        },
+        "nio": {
+            "count files": 28,
+            "count total": 49
+        },
+        "standardcharsets": {
+            "count files": 25,
+            "count total": 35
+        },
+        "policy": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-300": {
+            "count files": 15,
+            "count total": 15
+        },
+        "parenpad": {
+            "count files": 9,
+            "count total": 9
+        },
+        "codec-263": {
+            "count files": 1,
+            "count total": 1
+        },
+        "soft": {
+            "count files": 2,
+            "count total": 4
+        },
+        "quoted-printable": {
+            "count files": 2,
+            "count total": 4
+        },
+        "modification": {
+            "count files": 2,
+            "count total": 2
+        },
+        "corrections": {
+            "count files": 2,
+            "count total": 2
+        },
+        "tn": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-278": {
+            "count files": 5,
+            "count total": 5
+        },
+        "codec-313": {
+            "count files": 2,
+            "count total": 6
+        },
+        "encodequotedprintable": {
+            "count files": 2,
+            "count total": 2
+        },
+        "valueof": {
+            "count files": 6,
+            "count total": 6
+        },
+        "quotedprintablecodectest": {
+            "count files": 1,
+            "count total": 12
+        },
+        "raw": {
+            "count files": 1,
+            "count total": 1
+        },
+        "enforce": {
+            "count files": 9,
+            "count total": 9
+        },
+        "codec-131": {
+            "count files": 1,
+            "count total": 1
+        },
+        "material": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-143": {
+            "count files": 5,
+            "count total": 5
+        },
+        "stringbuilder": {
+            "count files": 6,
+            "count total": 6
+        },
+        "us-english": {
+            "count files": 1,
+            "count total": 1
+        },
+        "arg": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-184": {
+            "count files": 3,
+            "count total": 3
+        },
+        "cyrille": {
+            "count files": 3,
+            "count total": 3
+        },
+        "artho": {
+            "count files": 3,
+            "count total": 3
+        },
+        "isdoublemetaphoneequal": {
+            "count files": 3,
+            "count total": 3
+        },
+        "plain": {
+            "count files": 1,
+            "count total": 1
+        },
+        "suffice": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-299": {
+            "count files": 3,
+            "count total": 3
+        },
+        "control": {
+            "count files": 3,
+            "count total": 3
+        },
+        "flow": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-63": {
+            "count files": 2,
+            "count total": 4
+        },
+        "nysiis": {
+            "count files": 2,
+            "count total": 15
+        },
+        "directory": {
+            "count files": 2,
+            "count total": 3
+        },
+        "fully": {
+            "count files": 4,
+            "count total": 4
+        },
+        "bake": {
+            "count files": 2,
+            "count total": 2
+        },
+        "easy": {
+            "count files": 2,
+            "count total": 2
+        },
+        "explanation": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dropby": {
+            "count files": 1,
+            "count total": 1
+        },
+        "cc": {
+            "count files": 1,
+            "count total": 1
+        },
+        "nysiistest": {
+            "count files": 1,
+            "count total": 12
+        },
+        "construction": {
+            "count files": 3,
+            "count total": 5
+        },
+        "outline": {
+            "count files": 2,
+            "count total": 2
+        },
+        "cache": {
+            "count files": 2,
+            "count total": 2
+        },
+        "truelength": {
+            "count files": 1,
+            "count total": 1
+        },
+        "complain": {
+            "count files": 4,
+            "count total": 4
+        },
+        "rest": {
+            "count files": 1,
+            "count total": 1
+        },
+        "switch": {
+            "count files": 2,
+            "count total": 3
+        },
+        "cascade": {
+            "count files": 2,
+            "count total": 2
+        },
+        "if-else": {
+            "count files": 2,
+            "count total": 2
+        },
+        "binaryencoderabstracttest": {
+            "count files": 1,
+            "count total": 7
+        },
+        "testencodenull": {
+            "count files": 2,
+            "count total": 3
+        },
+        "charencodingtest": {
+            "count files": 1,
+            "count total": 5
+        },
+        "decoderexceptiontest": {
+            "count files": 1,
+            "count total": 4
+        },
+        "encoderexceptiontest": {
+            "count files": 1,
+            "count total": 4
+        },
+        "stringencoderabstracttest": {
+            "count files": 1,
+            "count total": 8
+        },
+        "codec-284": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hamcrest": {
+            "count files": 1,
+            "count total": 1
+        },
+        "v2": {
+            "count files": 1,
+            "count total": 1
+        },
+        "v5": {
+            "count files": 1,
+            "count total": 2
+        },
+        "junit-bom": {
+            "count files": 1,
+            "count total": 1
+        },
+        "easily": {
+            "count files": 1,
+            "count total": 1
+        },
+        "worth": {
+            "count files": 1,
+            "count total": 1
+        },
+        "effort": {
+            "count files": 1,
+            "count total": 1
+        },
+        "stringencodercomparatortest": {
+            "count files": 1,
+            "count total": 11
+        },
+        "inline": {
+            "count files": 5,
+            "count total": 5
+        },
+        "base32testdata": {
+            "count files": 1,
+            "count total": 4
+        },
+        "base64codec13test": {
+            "count files": 1,
+            "count total": 7
+        },
+        "weird": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-176": {
+            "count files": 1,
+            "count total": 1
+        },
+        "base64outputstreamtest": {
+            "count files": 1,
+            "count total": 17
+        },
+        "printstacktrace": {
+            "count files": 1,
+            "count total": 1
+        },
+        "base64testdata": {
+            "count files": 1,
+            "count total": 8
+        },
+        "binarycodectest": {
+            "count files": 1,
+            "count total": 9
+        },
+        "initialize": {
+            "count files": 4,
+            "count total": 4
+        },
+        "decorative": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec105errorinputstream": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hextest": {
+            "count files": 1,
+            "count total": 33
+        },
+        "refix": {
+            "count files": 1,
+            "count total": 1
+        },
+        "r1304137": {
+            "count files": 1,
+            "count total": 1
+        },
+        "accidentally": {
+            "count files": 1,
+            "count total": 1
+        },
+        "assertfalse": {
+            "count files": 1,
+            "count total": 1
+        },
+        "assertequals": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-136": {
+            "count files": 8,
+            "count total": 9
+        },
+        "codec-194": {
+            "count files": 3,
+            "count total": 3
+        },
+        "bytebuffer": {
+            "count files": 7,
+            "count total": 21
+        },
+        "direct": {
+            "count files": 5,
+            "count total": 7
+        },
+        "codec-224": {
+            "count files": 2,
+            "count total": 2
+        },
+        "encodehexstring": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-236": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-259": {
+            "count files": 3,
+            "count total": 6
+        },
+        "consume": {
+            "count files": 2,
+            "count total": 2
+        },
+        "getbytebufferutf8": {
+            "count files": 2,
+            "count total": 2
+        },
+        "allocate": {
+            "count files": 1,
+            "count total": 2
+        },
+        "allocatedirecthextest": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-261": {
+            "count files": 1,
+            "count total": 1
+        },
+        "read-only": {
+            "count files": 1,
+            "count total": 1
+        },
+        "base16": {
+            "count files": 4,
+            "count total": 22
+        },
+        "separate": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-291": {
+            "count files": 2,
+            "count total": 2
+        },
+        "878d96cec17ce487775306d40171922383d1210a": {
+            "count files": 2,
+            "count total": 2
+        },
+        "adam": {
+            "count files": 2,
+            "count total": 12
+        },
+        "retter": {
+            "count files": 2,
+            "count total": 12
+        },
+        "googlemail": {
+            "count files": 2,
+            "count total": 6
+        },
+        "fri": {
+            "count files": 2,
+            "count total": 2
+        },
+        "jul": {
+            "count files": 2,
+            "count total": 2
+        },
+        "c1bcf38f3cbf03979bc3de09916a53194156da8c": {
+            "count files": 2,
+            "count total": 2
+        },
+        "tue": {
+            "count files": 2,
+            "count total": 2
+        },
+        "jun": {
+            "count files": 2,
+            "count total": 4
+        },
+        "45533a1876f3a68f5040e6645d3db2f6c6f6e875": {
+            "count files": 2,
+            "count total": 2
+        },
+        "mon": {
+            "count files": 2,
+            "count total": 2
+        },
+        "additional": {
+            "count files": 15,
+            "count total": 15
+        },
+        "writing": {
+            "count files": 3,
+            "count total": 4
+        },
+        "threadlocalrandom": {
+            "count files": 6,
+            "count total": 6
+        },
+        "collapse": {
+            "count files": 2,
+            "count total": 2
+        },
+        "body": {
+            "count files": 1,
+            "count total": 1
+        },
+        "usually": {
+            "count files": 1,
+            "count total": 1
+        },
+        "earlier": {
+            "count files": 1,
+            "count total": 1
+        },
+        "parameterize": {
+            "count files": 4,
+            "count total": 4
+        },
+        "getbytesunchecked": {
+            "count files": 1,
+            "count total": 1
+        },
+        "newstring": {
+            "count files": 1,
+            "count total": 1
+        },
+        "undefined": {
+            "count files": 1,
+            "count total": 1
+        },
+        "failure": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ibm": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-229": {
+            "count files": 2,
+            "count total": 2
+        },
+        "newstringxxx": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-231": {
+            "count files": 2,
+            "count total": 2
+        },
+        "cs1": {
+            "count files": 2,
+            "count total": 2
+        },
+        "cs2": {
+            "count files": 2,
+            "count total": 2
+        },
+        "obe": {
+            "count files": 2,
+            "count total": 2
+        },
+        "stringutilstest": {
+            "count files": 1,
+            "count total": 15
+        },
+        "ensure": {
+            "count files": 4,
+            "count total": 4
+        },
+        "codec-139": {
+            "count files": 2,
+            "count total": 2
+        },
+        "updatedigest": {
+            "count files": 3,
+            "count total": 15
+        },
+        "application": {
+            "count files": 13,
+            "count total": 13
+        },
+        "codec-148": {
+            "count files": 13,
+            "count total": 13
+        },
+        "things": {
+            "count files": 13,
+            "count total": 13
+        },
+        "codec-156": {
+            "count files": 2,
+            "count total": 5
+        },
+        "sha-1": {
+            "count files": 2,
+            "count total": 8
+        },
+        "codec-157": {
+            "count files": 2,
+            "count total": 2
+        },
+        "md2": {
+            "count files": 2,
+            "count total": 2
+        },
+        "camel-case": {
+            "count files": 1,
+            "count total": 2
+        },
+        "codec-155": {
+            "count files": 3,
+            "count total": 3
+        },
+        "getdigest": {
+            "count files": 3,
+            "count total": 4
+        },
+        "runtimeexception": {
+            "count files": 5,
+            "count total": 6
+        },
+        "alphabetically": {
+            "count files": 1,
+            "count total": 1
+        },
+        "testsha1hex": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sha1hex": {
+            "count files": 1,
+            "count total": 1
+        },
+        "exerecise": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-193": {
+            "count files": 2,
+            "count total": 3
+        },
+        "codec-195": {
+            "count files": 3,
+            "count total": 5
+        },
+        "sha-224": {
+            "count files": 3,
+            "count total": 5
+        },
+        "codec-206": {
+            "count files": 2,
+            "count total": 3
+        },
+        "codec-211": {
+            "count files": 7,
+            "count total": 17
+        },
+        "messagedigestalgorithm": {
+            "count files": 8,
+            "count total": 23
+        },
+        "messagedigestalgorithms": {
+            "count files": 8,
+            "count total": 30
+        },
+        "anymore": {
+            "count files": 2,
+            "count total": 2
+        },
+        "oops-": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-220": {
+            "count files": 2,
+            "count total": 2
+        },
+        "fluent": {
+            "count files": 5,
+            "count total": 5
+        },
+        "utility": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-246": {
+            "count files": 3,
+            "count total": 5
+        },
+        "sha-3": {
+            "count files": 4,
+            "count total": 4
+        },
+        "digestutilstest": {
+            "count files": 1,
+            "count total": 20
+        },
+        "codec-272": {
+            "count files": 3,
+            "count total": 4
+        },
+        "randomaccessfile": {
+            "count files": 3,
+            "count total": 12
+        },
+        "pull": {
+            "count files": 5,
+            "count total": 6
+        },
+        "filechannel": {
+            "count files": 3,
+            "count total": 4
+        },
+        "candidate": {
+            "count files": 3,
+            "count total": 4
+        },
+        "seek": {
+            "count files": 3,
+            "count total": 4
+        },
+        "stand": {
+            "count files": 3,
+            "count total": 4
+        },
+        "alphabetical": {
+            "count files": 3,
+            "count total": 4
+        },
+        "codec-273": {
+            "count files": 3,
+            "count total": 3
+        },
+        "path": {
+            "count files": 3,
+            "count total": 3
+        },
+        "similar": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-274": {
+            "count files": 3,
+            "count total": 3
+        },
+        "component": {
+            "count files": 2,
+            "count total": 2
+        },
+        "specific": {
+            "count files": 5,
+            "count total": 5
+        },
+        "resue": {
+            "count files": 1,
+            "count total": 1
+        },
+        "randomaccessfilemode": {
+            "count files": 1,
+            "count total": 1
+        },
+        "read_write": {
+            "count files": 1,
+            "count total": 1
+        },
+        "abbreviate": {
+            "count files": 5,
+            "count total": 5
+        },
+        "package-private": {
+            "count files": 1,
+            "count total": 1
+        },
+        "caverphone1test": {
+            "count files": 1,
+            "count total": 10
+        },
+        "caverphone2test": {
+            "count files": 1,
+            "count total": 10
+        },
+        "colognephonetictest": {
+            "count files": 1,
+            "count total": 19
+        },
+        "testisencodeequals": {
+            "count files": 1,
+            "count total": 3
+        },
+        "sharp": {
+            "count files": 1,
+            "count total": 1
+        },
+        "eszett": {
+            "count files": 1,
+            "count total": 1
+        },
+        "lower-case": {
+            "count files": 1,
+            "count total": 1
+        },
+        "command-line": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-250": {
+            "count files": 2,
+            "count total": 2
+        },
+        "calculate": {
+            "count files": 2,
+            "count total": 2
+        },
+        "cologne": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-257": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-254": {
+            "count files": 2,
+            "count total": 2
+        },
+        "treat": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-255": {
+            "count files": 2,
+            "count total": 2
+        },
+        "eliminate": {
+            "count files": 2,
+            "count total": 2
+        },
+        "slight": {
+            "count files": 1,
+            "count total": 1
+        },
+        "rearrangement": {
+            "count files": 1,
+            "count total": 1
+        },
+        "attribution": {
+            "count files": 1,
+            "count total": 1
+        },
+        "doublemetaphonetest": {
+            "count files": 1,
+            "count total": 13
+        },
+        "metaphonetest": {
+            "count files": 1,
+            "count total": 8
+        },
+        "refinedsoundextest": {
+            "count files": 1,
+            "count total": 10
+        },
+        "codec-311": {
+            "count files": 2,
+            "count total": 6
+        },
+        "arrayindexoutofboundexception": {
+            "count files": 2,
+            "count total": 4
+        },
+        "getmappingcode": {
+            "count files": 2,
+            "count total": 2
+        },
+        "ashcroft": {
+            "count files": 1,
+            "count total": 1
+        },
+        "a261": {
+            "count files": 1,
+            "count total": 1
+        },
+        "soundextest": {
+            "count files": 1,
+            "count total": 13
+        },
+        "languageguessingtest": {
+            "count files": 1,
+            "count total": 6
+        },
+        "explicit": {
+            "count files": 2,
+            "count total": 2
+        },
+        "boxing": {
+            "count files": 4,
+            "count total": 4
+        },
+        "ruletest": {
+            "count files": 1,
+            "count total": 4
+        },
+        "qcodectest": {
+            "count files": 1,
+            "count total": 11
+        },
+        "japicmp": {
+            "count files": 3,
+            "count total": 3
+        },
+        "urlcodectest": {
+            "count files": 1,
+            "count total": 13
+        },
+        "codec-298": {
+            "count files": 4,
+            "count total": 4
+        },
+        "utilstest": {
+            "count files": 1,
+            "count total": 5
+        },
+        "repeat": {
+            "count files": 4,
+            "count total": 6
+        },
+        "eof": {
+            "count files": 3,
+            "count total": 7
+        },
+        "verbose": {
+            "count files": 1,
+            "count total": 1
+        },
+        "single": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-138": {
+            "count files": 1,
+            "count total": 1
+        },
+        "filterinputstream": {
+            "count files": 1,
+            "count total": 1
+        },
+        "indent": {
+            "count files": 1,
+            "count total": 1
+        },
+        "jaavdoc": {
+            "count files": 1,
+            "count total": 1
+        },
+        "together": {
+            "count files": 1,
+            "count total": 1
+        },
+        "presumably": {
+            "count files": 2,
+            "count total": 2
+        },
+        "feel": {
+            "count files": 2,
+            "count total": 2
+        },
+        "side-effect": {
+            "count files": 2,
+            "count total": 2
+        },
+        "programming": {
+            "count files": 2,
+            "count total": 2
+        },
+        "ends-up": {
+            "count files": 2,
+            "count total": 2
+        },
+        "reducing": {
+            "count files": 2,
+            "count total": 2
+        },
+        "complexity": {
+            "count files": 2,
+            "count total": 2
+        },
+        "checksyle": {
+            "count files": 2,
+            "count total": 3
+        },
+        "happy": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-144": {
+            "count files": 1,
+            "count total": 1
+        },
+        "encodetostring": {
+            "count files": 1,
+            "count total": 1
+        },
+        "encodeasstring": {
+            "count files": 1,
+            "count total": 1
+        },
+        "bugfix": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hold": {
+            "count files": 1,
+            "count total": 1
+        },
+        "least": {
+            "count files": 1,
+            "count total": 1
+        },
+        "minimum": {
+            "count files": 2,
+            "count total": 2
+        },
+        "manually": {
+            "count files": 2,
+            "count total": 2
+        },
+        "math": {
+            "count files": 3,
+            "count total": 5
+        },
+        "max": {
+            "count files": 2,
+            "count total": 2
+        },
+        "min": {
+            "count files": 2,
+            "count total": 2
+        },
+        "copyof": {
+            "count files": 3,
+            "count total": 3
+        },
+        "copyofrange": {
+            "count files": 3,
+            "count total": 3
+        },
+        "codec-183": {
+            "count files": 1,
+            "count total": 2
+        },
+        "basencodecoutputstream": {
+            "count files": 1,
+            "count total": 18
+        },
+        "ioexception": {
+            "count files": 1,
+            "count total": 1
+        },
+        "download": {
+            "count files": 5,
+            "count total": 10
+        },
+        "oracle": {
+            "count files": 5,
+            "count total": 10
+        },
+        "javase": {
+            "count files": 5,
+            "count total": 10
+        },
+        "ternary": {
+            "count files": 1,
+            "count total": 1
+        },
+        "0-argument": {
+            "count files": 6,
+            "count total": 7
+        },
+        "demote": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unsupportedcharsetexception": {
+            "count files": 4,
+            "count total": 4
+        },
+        "rfc1522codec": {
+            "count files": 1,
+            "count total": 13
+        },
+        "binarycodec": {
+            "count files": 1,
+            "count total": 9
+        },
+        "codec-170": {
+            "count files": 2,
+            "count total": 2
+        },
+        "spurious": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-200": {
+            "count files": 2,
+            "count total": 2
+        },
+        "hex_decode_table": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-234": {
+            "count files": 2,
+            "count total": 2
+        },
+        "lowercase": {
+            "count files": 2,
+            "count total": 2
+        },
+        "isinalphabet": {
+            "count files": 2,
+            "count total": 2
+        },
+        "fails-fast": {
+            "count files": 1,
+            "count total": 1
+        },
+        "abstractcaverphone": {
+            "count files": 1,
+            "count total": 6
+        },
+        "lvar": {
+            "count files": 2,
+            "count total": 3
+        },
+        "caverphone1": {
+            "count files": 1,
+            "count total": 6
+        },
+        "rubbaboy": {
+            "count files": 1,
+            "count total": 1
+        },
+        "caverphone2": {
+            "count files": 1,
+            "count total": 7
+        },
+        "codec-163": {
+            "count files": 1,
+            "count total": 1
+        },
+        "leo141": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unneccessarily": {
+            "count files": 1,
+            "count total": 1
+        },
+        "every": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dynamic": {
+            "count files": 1,
+            "count total": 1
+        },
+        "accidental": {
+            "count files": 2,
+            "count total": 2
+        },
+        "compliance": {
+            "count files": 1,
+            "count total": 1
+        },
+        "alphabetize": {
+            "count files": 1,
+            "count total": 1
+        },
+        "comparison": {
+            "count files": 1,
+            "count total": 1
+        },
+        "publish": {
+            "count files": 1,
+            "count total": 1
+        },
+        "obsolete": {
+            "count files": 3,
+            "count total": 3
+        },
+        "em": {
+            "count files": 1,
+            "count total": 1
+        },
+        "eol": {
+            "count files": 7,
+            "count total": 7
+        },
+        "setting": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-178": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-207": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-219": {
+            "count files": 1,
+            "count total": 1
+        },
+        "charsetstest": {
+            "count files": 1,
+            "count total": 12
+        },
+        "base32test": {
+            "count files": 1,
+            "count total": 31
+        },
+        "assertionerror": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-191": {
+            "count files": 2,
+            "count total": 2
+        },
+        "mandatory": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-152": {
+            "count files": 1,
+            "count total": 1
+        },
+        "loos": {
+            "count files": 1,
+            "count total": 1
+        },
+        "orginal": {
+            "count files": 1,
+            "count total": 1
+        },
+        "redirect": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-168": {
+            "count files": 1,
+            "count total": 1
+        },
+        "daniel": {
+            "count files": 1,
+            "count total": 1
+        },
+        "cassidy": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-208": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-209": {
+            "count files": 1,
+            "count total": 1
+        },
+        "restriction": {
+            "count files": 1,
+            "count total": 1
+        },
+        "getalgorithm": {
+            "count files": 5,
+            "count total": 5
+        },
+        "getname": {
+            "count files": 5,
+            "count total": 5
+        },
+        "former": {
+            "count files": 5,
+            "count total": 5
+        },
+        "sha224": {
+            "count files": 1,
+            "count total": 1
+        },
+        "standardise": {
+            "count files": 1,
+            "count total": 1
+        },
+        "3rd": {
+            "count files": 1,
+            "count total": 1
+        },
+        "person": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sample": {
+            "count files": 1,
+            "count total": 1
+        },
+        "algo-specific": {
+            "count files": 1,
+            "count total": 2
+        },
+        "favour": {
+            "count files": 1,
+            "count total": 2
+        },
+        "restore": {
+            "count files": 4,
+            "count total": 4
+        },
+        "bc": {
+            "count files": 2,
+            "count total": 2
+        },
+        "indentation": {
+            "count files": 2,
+            "count total": 2
+        },
+        "older": {
+            "count files": 1,
+            "count total": 1
+        },
+        "narrow": {
+            "count files": 1,
+            "count total": 1
+        },
+        "soundexutils": {
+            "count files": 1,
+            "count total": 6
+        },
+        "radix": {
+            "count files": 1,
+            "count total": 1
+        },
+        "basencodectest": {
+            "count files": 1,
+            "count total": 15
+        },
+        "info": {
+            "count files": 1,
+            "count total": 1
+        },
+        "crypt": {
+            "count files": 10,
+            "count total": 26
+        },
+        "salt": {
+            "count files": 5,
+            "count total": 5
+        },
+        "internally": {
+            "count files": 3,
+            "count total": 3
+        },
+        "securerandom": {
+            "count files": 4,
+            "count total": 10
+        },
+        "codec-252": {
+            "count files": 7,
+            "count total": 8
+        },
+        "extension": {
+            "count files": 9,
+            "count total": 24
+        },
+        "accommodate": {
+            "count files": 7,
+            "count total": 7
+        },
+        "md5crypt": {
+            "count files": 2,
+            "count total": 21
+        },
+        "getinstancestrong": {
+            "count files": 3,
+            "count total": 3
+        },
+        "travis": {
+            "count files": 1,
+            "count total": 1
+        },
+        "yakov": {
+            "count files": 4,
+            "count total": 4
+        },
+        "shafranovich": {
+            "count files": 4,
+            "count total": 4
+        },
+        "yakovsh": {
+            "count files": 4,
+            "count total": 4
+        },
+        "amazon": {
+            "count files": 4,
+            "count total": 4
+        },
+        "preallocate": {
+            "count files": 1,
+            "count total": 1
+        },
+        "b64": {
+            "count files": 2,
+            "count total": 15
+        },
+        "generator": {
+            "count files": 1,
+            "count total": 1
+        },
+        "threadlocal": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-253": {
+            "count files": 1,
+            "count total": 1
+        },
+        "lookup": {
+            "count files": 10,
+            "count total": 10
+        },
+        "java-level": {
+            "count files": 3,
+            "count total": 3
+        },
+        "protection": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ci": {
+            "count files": 3,
+            "count total": 5
+        },
+        "causing": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unbox": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sha2crypt": {
+            "count files": 1,
+            "count total": 16
+        },
+        "unix": {
+            "count files": 2,
+            "count total": 4
+        },
+        "trademark": {
+            "count files": 2,
+            "count total": 2
+        },
+        "unixcrypt": {
+            "count files": 1,
+            "count total": 24
+        },
+        "rv_absolute_value_of_random_int": {
+            "count files": 1,
+            "count total": 1
+        },
+        "vacuous": {
+            "count files": 1,
+            "count total": 1
+        },
+        "ops": {
+            "count files": 1,
+            "count total": 1
+        },
+        "0xffffffff": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-151": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-150": {
+            "count files": 1,
+            "count total": 1
+        },
+        "abs": {
+            "count files": 1,
+            "count total": 1
+        },
+        "whole": {
+            "count files": 1,
+            "count total": 1
+        },
+        "op": {
+            "count files": 1,
+            "count total": 1
+        },
+        "precompile": {
+            "count files": 1,
+            "count total": 1
+        },
+        "regular": {
+            "count files": 1,
+            "count total": 1
+        },
+        "assignment": {
+            "count files": 3,
+            "count total": 3
+        },
+        "getrandomsalt": {
+            "count files": 1,
+            "count total": 1
+        },
+        "base32outputstream": {
+            "count files": 1,
+            "count total": 9
+        },
+        "base32outputstreamtest": {
+            "count files": 1,
+            "count total": 14
+        },
+        "doublemetaphone2test": {
+            "count files": 1,
+            "count total": 7
+        },
+        "apr1crypttest": {
+            "count files": 1,
+            "count total": 9
+        },
+        "crypttest": {
+            "count files": 1,
+            "count total": 9
+        },
+        "md5crypttest": {
+            "count files": 1,
+            "count total": 13
+        },
+        "superfluous": {
+            "count files": 1,
+            "count total": 1
+        },
+        "occasional": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hang": {
+            "count files": 1,
+            "count total": 1
+        },
+        "sha256crypttest": {
+            "count files": 1,
+            "count total": 13
+        },
+        "sha512crypttest": {
+            "count files": 1,
+            "count total": 11
+        },
+        "unixcrypttest": {
+            "count files": 1,
+            "count total": 7
+        },
+        "sha_224": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-213": {
+            "count files": 2,
+            "count total": 3
+        },
+        "jep": {
+            "count files": 2,
+            "count total": 2
+        },
+        "hash": {
+            "count files": 5,
+            "count total": 16
+        },
+        "sha3_224": {
+            "count files": 1,
+            "count total": 1
+        },
+        "anew": {
+            "count files": 1,
+            "count total": 1
+        },
+        "lts": {
+            "count files": 2,
+            "count total": 3
+        },
+        "b64test": {
+            "count files": 1,
+            "count total": 4
+        },
+        "codec-187_ashkenazi_approx_any": {
+            "count files": 1,
+            "count total": 1
+        },
+        "r1603573": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-187_ashkenazi_approx_any_v2": {
+            "count files": 1,
+            "count total": 1
+        },
+        "phoneticengineregressiontest": {
+            "count files": 1,
+            "count total": 8
+        },
+        "sha2crypttest": {
+            "count files": 1,
+            "count total": 2
+        },
+        "codec-161": {
+            "count files": 1,
+            "count total": 2
+        },
+        "nomenclature": {
+            "count files": 1,
+            "count total": 1
+        },
+        "rating": {
+            "count files": 1,
+            "count total": 1
+        },
+        "approach": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mra": {
+            "count files": 1,
+            "count total": 1
+        },
+        "matchratingapproachencodertest": {
+            "count files": 1,
+            "count total": 12
+        },
+        "codec-312": {
+            "count files": 2,
+            "count total": 6
+        },
+        "stringindexoutofboundexception": {
+            "count files": 2,
+            "count total": 4
+        },
+        "matchratingapproachencoder": {
+            "count files": 2,
+            "count total": 16
+        },
+        "unmaintained": {
+            "count files": 2,
+            "count total": 2
+        },
+        "specify": {
+            "count files": 2,
+            "count total": 2
+        },
+        "hardcoded": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-174-delete-subsequence-cache": {
+            "count files": 1,
+            "count total": 1
+        },
+        "phoneticengineperformancetest": {
+            "count files": 1,
+            "count total": 3
+        },
+        "asl": {
+            "count files": 1,
+            "count total": 1
+        },
+        "charsequenceutils": {
+            "count files": 1,
+            "count total": 7
+        },
+        "charsequenceutilstest": {
+            "count files": 2,
+            "count total": 7
+        },
+        "old": {
+            "count files": 3,
+            "count total": 3
+        },
+        "bad": {
+            "count files": 2,
+            "count total": 3
+        },
+        "codec-217": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hmacalgorithms": {
+            "count files": 3,
+            "count total": 15
+        },
+        "hmac_sha_224": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-218": {
+            "count files": 3,
+            "count total": 6
+        },
+        "hmacutils": {
+            "count files": 3,
+            "count total": 19
+        },
+        "getinitializedmac": {
+            "count files": 2,
+            "count total": 2
+        },
+        "aplenty": {
+            "count files": 1,
+            "count total": 1
+        },
+        "r1744385": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-222": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-221": {
+            "count files": 1,
+            "count total": 1
+        },
+        "updatehmac": {
+            "count files": 1,
+            "count total": 1
+        },
+        "reset": {
+            "count files": 1,
+            "count total": 1
+        },
+        "dofinal": {
+            "count files": 1,
+            "count total": 1
+        },
+        "rather": {
+            "count files": 2,
+            "count total": 2
+        },
+        "depend": {
+            "count files": 1,
+            "count total": 1
+        },
+        "recursive": {
+            "count files": 1,
+            "count total": 1
+        },
+        "availability": {
+            "count files": 1,
+            "count total": 1
+        },
+        "bogus": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-292": {
+            "count files": 1,
+            "count total": 1
+        },
+        "daitchmokotoffsoundextest": {
+            "count files": 1,
+            "count total": 10
+        },
+        "re-ordering": {
+            "count files": 1,
+            "count total": 1
+        },
+        "re-order": {
+            "count files": 1,
+            "count total": 1
+        },
+        "specification": {
+            "count files": 1,
+            "count total": 1
+        },
+        "daitchmokotoffsoundex": {
+            "count files": 1,
+            "count total": 26
+        },
+        "normalise": {
+            "count files": 5,
+            "count total": 5
+        },
+        "java7": {
+            "count files": 1,
+            "count total": 1
+        },
+        "rewrite": {
+            "count files": 2,
+            "count total": 2
+        },
+        "purejavacrc32test": {
+            "count files": 1,
+            "count total": 16
+        },
+        "scale": {
+            "count files": 2,
+            "count total": 2
+        },
+        "runtimeexceptiom": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-212": {
+            "count files": 1,
+            "count total": 1
+        },
+        "command": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-215": {
+            "count files": 1,
+            "count total": 1
+        },
+        "overrideable": {
+            "count files": 1,
+            "count total": 1
+        },
+        "git": {
+            "count files": 1,
+            "count total": 1
+        },
+        "purejavacrc32": {
+            "count files": 1,
+            "count total": 12
+        },
+        "git-wip-us": {
+            "count files": 3,
+            "count total": 3
+        },
+        "deliberately": {
+            "count files": 1,
+            "count total": 1
+        },
+        "localise": {
+            "count files": 1,
+            "count total": 1
+        },
+        "suppresswarning": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hmacutilstest": {
+            "count files": 1,
+            "count total": 8
+        },
+        "hmacalgorithmstest": {
+            "count files": 1,
+            "count total": 11
+        },
+        "messagedigestalgorithmstest": {
+            "count files": 1,
+            "count total": 16
+        },
+        "cobertura": {
+            "count files": 1,
+            "count total": 3
+        },
+        "instrumentation": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mvn": {
+            "count files": 3,
+            "count total": 6
+        },
+        "listing": {
+            "count files": 1,
+            "count total": 1
+        },
+        "non-file": {
+            "count files": 1,
+            "count total": 1
+        },
+        "help": {
+            "count files": 1,
+            "count total": 1
+        },
+        "filename": {
+            "count files": 1,
+            "count total": 1
+        },
+        "cli": {
+            "count files": 2,
+            "count total": 17
+        },
+        "purejavacrc32c": {
+            "count files": 1,
+            "count total": 10
+        },
+        "formatter": {
+            "count files": 1,
+            "count total": 1
+        },
+        "purejavacrc32ctest": {
+            "count files": 1,
+            "count total": 6
+        },
+        "incremental": {
+            "count files": 3,
+            "count total": 5
+        },
+        "xxhash32": {
+            "count files": 2,
+            "count total": 16
+        },
+        "xxhash32test": {
+            "count files": 1,
+            "count total": 11
+        },
+        "hit": {
+            "count files": 1,
+            "count total": 1
+        },
+        "leftover": {
+            "count files": 1,
+            "count total": 1
+        },
+        "unknown": {
+            "count files": 2,
+            "count total": 2
+        },
+        "position": {
+            "count files": 1,
+            "count total": 1
+        },
+        "counter": {
+            "count files": 1,
+            "count total": 1
+        },
+        "little-endian": {
+            "count files": 1,
+            "count total": 1
+        },
+        "suffix": {
+            "count files": 2,
+            "count total": 2
+        },
+        "setter": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-240": {
+            "count files": 2,
+            "count total": 9
+        },
+        "percent-encoding": {
+            "count files": 2,
+            "count total": 9
+        },
+        "rfc3986": {
+            "count files": 2,
+            "count total": 9
+        },
+        "rfc7578": {
+            "count files": 2,
+            "count total": 9
+        },
+        "percentcodec": {
+            "count files": 1,
+            "count total": 10
+        },
+        "bump": {
+            "count files": 2,
+            "count total": 2
+        },
+        "setup-java": {
+            "count files": 2,
+            "count total": 2
+        },
+        "testbasicspace": {
+            "count files": 1,
+            "count total": 1
+        },
+        "percentcodectest": {
+            "count files": 1,
+            "count total": 8
+        },
+        "murmurhash2": {
+            "count files": 3,
+            "count total": 30
+        },
+        "murmurhash3": {
+            "count files": 3,
+            "count total": 68
+        },
+        "functionality": {
+            "count files": 3,
+            "count total": 3
+        },
+        "clean-up": {
+            "count files": 1,
+            "count total": 1
+        },
+        "32-bit": {
+            "count files": 1,
+            "count total": 1
+        },
+        "64-bit": {
+            "count files": 1,
+            "count total": 1
+        },
+        "homepage": {
+            "count files": 2,
+            "count total": 2
+        },
+        "home": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-276": {
+            "count files": 3,
+            "count total": 10
+        },
+        "reliance": {
+            "count files": 3,
+            "count total": 10
+        },
+        "herbert": {
+            "count files": 2,
+            "count total": 2
+        },
+        "getbytesutf8": {
+            "count files": 3,
+            "count total": 4
+        },
+        "highly": {
+            "count files": 1,
+            "count total": 1
+        },
+        "goal": {
+            "count files": 1,
+            "count total": 1
+        },
+        "verify": {
+            "count files": 1,
+            "count total": 1
+        },
+        "apache-rat": {
+            "count files": 1,
+            "count total": 1
+        },
+        "incrementalhash32": {
+            "count files": 2,
+            "count total": 6
+        },
+        "across": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hash32": {
+            "count files": 2,
+            "count total": 6
+        },
+        "similarity": {
+            "count files": 1,
+            "count total": 1
+        },
+        "obvious": {
+            "count files": 1,
+            "count total": 1
+        },
+        "joavadoc": {
+            "count files": 1,
+            "count total": 1
+        },
+        "params": {
+            "count files": 1,
+            "count total": 1
+        },
+        "primitive": {
+            "count files": 2,
+            "count total": 3
+        },
+        "sign": {
+            "count files": 2,
+            "count total": 17
+        },
+        "hash128": {
+            "count files": 2,
+            "count total": 8
+        },
+        "hash64": {
+            "count files": 1,
+            "count total": 4
+        },
+        "little": {
+            "count files": 1,
+            "count total": 1
+        },
+        "endian": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-269": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-267": {
+            "count files": 2,
+            "count total": 2
+        },
+        "hash32x86": {
+            "count files": 2,
+            "count total": 10
+        },
+        "preserve": {
+            "count files": 2,
+            "count total": 4
+        },
+        "behavioural": {
+            "count files": 2,
+            "count total": 4
+        },
+        "seed": {
+            "count files": 2,
+            "count total": 16
+        },
+        "incrementalhash32x64": {
+            "count files": 2,
+            "count total": 4
+        },
+        "parent": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-264": {
+            "count files": 2,
+            "count total": 4
+        },
+        "hash128x64": {
+            "count files": 2,
+            "count total": 7
+        },
+        "pre": {
+            "count files": 1,
+            "count total": 1
+        },
+        "codec-268": {
+            "count files": 1,
+            "count total": 3
+        },
+        "murmurhash4": {
+            "count files": 1,
+            "count total": 1
+        },
+        "hive": {
+            "count files": 1,
+            "count total": 1
+        },
+        "collision": {
+            "count files": 1,
+            "count total": 1
+        },
+        "either": {
+            "count files": 1,
+            "count total": 1
+        },
+        "128-bit": {
+            "count files": 1,
+            "count total": 1
+        },
+        "null_hashcode": {
+            "count files": 1,
+            "count total": 1
+        },
+        "helper": {
+            "count files": 2,
+            "count total": 2
+        },
+        "relevant": {
+            "count files": 2,
+            "count total": 2
+        },
+        "negative": {
+            "count files": 2,
+            "count total": 2
+        },
+        "huge": {
+            "count files": 2,
+            "count total": 2
+        },
+        "unprocessed": {
+            "count files": 2,
+            "count total": 2
+        },
+        "maintain": {
+            "count files": 2,
+            "count total": 2
+        },
+        "hash128x86": {
+            "count files": 2,
+            "count total": 4
+        },
+        "thus": {
+            "count files": 2,
+            "count total": 2
+        },
+        "clash": {
+            "count files": 2,
+            "count total": 2
+        },
+        "implicit": {
+            "count files": 2,
+            "count total": 2
+        },
+        "murmurhash3test": {
+            "count files": 1,
+            "count total": 29
+        },
+        "sparsely": {
+            "count files": 1,
+            "count total": 1
+        },
+        "0-15": {
+            "count files": 1,
+            "count total": 1
+        },
+        "perform": {
+            "count files": 1,
+            "count total": 1
+        },
+        "achieve": {
+            "count files": 1,
+            "count total": 1
+        },
+        "python": {
+            "count files": 1,
+            "count total": 1
+        },
+        "mmh3": {
+            "count files": 1,
+            "count total": 1
+        },
+        "library": {
+            "count files": 1,
+            "count total": 1
+        },
+        "demonstrate": {
+            "count files": 1,
+            "count total": 2
+        },
+        "murmurhash2test": {
+            "count files": 1,
+            "count total": 9
+        },
+        "murmurhashtest2": {
+            "count files": 1,
+            "count total": 1
+        },
+        "conditional": {
+            "count files": 1,
+            "count total": 1
+        },
+        "xxhash32overflowtest": {
+            "count files": 1,
+            "count total": 5
+        },
+        "codecpolicy": {
+            "count files": 1,
+            "count total": 2
+        },
+        "aherbert": {
+            "count files": 2,
+            "count total": 6
+        },
+        "code-review": {
+            "count files": 2,
+            "count total": 2
+        },
+        "out-of-bounds": {
+            "count files": 2,
+            "count total": 2
+        },
+        "wrap-around": {
+            "count files": 2,
+            "count total": 2
+        },
+        "codec-305": {
+            "count files": 2,
+            "count total": 2
+        },
+        "byte-skipping": {
+            "count files": 2,
+            "count total": 2
+        },
+        "bullet-proof": {
+            "count files": 1,
+            "count total": 1
+        },
+        "internals": {
+            "count files": 1,
+            "count total": 1
+        },
+        "base16test": {
+            "count files": 1,
+            "count total": 28
+        },
+        "base16inputstream": {
+            "count files": 1,
+            "count total": 4
+        },
+        "base16outputstream": {
+            "count files": 1,
+            "count total": 4
+        },
+        "base16inputstreamtest": {
+            "count files": 1,
+            "count total": 12
+        },
+        "base16outputstreamtest": {
+            "count files": 1,
+            "count total": 11
+        },
+        "base16testdata": {
+            "count files": 1,
+            "count total": 3
+        },
+        "cachesubsequenceperformancetest": {
+            "count files": 1,
+            "count total": 3
+        },
+        "blake3": {
+            "count files": 1,
+            "count total": 18
+        },
+        "args": {
+            "count files": 1,
+            "count total": 1
+        },
+        "blake3testvectorstest": {
+            "count files": 1,
+            "count total": 8
+        },
+        "blake3test": {
+            "count files": 1,
+            "count total": 7
+        },
+        "digesttest": {
+            "count files": 1,
+            "count total": 7
+        },
+        "customrfc1522codec": {
+            "count files": 1,
+            "count total": 4
+        },
+        "abstractstringencodertest": {
+            "count files": 1,
+            "count total": 1
+        },
+        "package-info": {
+            "count files": 1,
+            "count total": 1
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "CLI_1_0": {
+        "hash": "062ee682595d9cd42a93a7476956a119d4f2ab2e",
+        "filtered name": "1.0"
+    },
+    "CLI_1_0_BETA_1": {
+        "hash": "062ee682595d9cd42a93a7476956a119d4f2ab2e",
+        "filtered name": "1.0."
+    },
+    "cli-1.1": {
+        "hash": "062ee682595d9cd42a93a7476956a119d4f2ab2e",
+        "filtered name": "1.1"
+    },
+    "cli-1.2": {
+        "hash": "4381ba54c845402f18760fb04ff1f6db1922f6b2",
+        "filtered name": "1.2"
+    },
+    "cli-1.3": {
+        "hash": "085a1538fa20d8e48faad49eaffd697f024bf1af",
+        "filtered name": "1.3"
+    },
+    "cli-1.3.1": {
+        "hash": "58139aefcacfa7954de1552c2ec5640ddbaf3713",
+        "filtered name": "1.3.1"
+    },
+    "cli-1.4": {
+        "hash": "73d649ba3fff756dda3f98a9a987725d0b9e3499",
+        "filtered name": "1.4"
+    },
+    "commons-cli-1.5.0": {
+        "hash": "1af9b95aa30c8383588e169bf2fe749c3e9c7c64",
+        "filtered name": "1.5.0"
+    },
+    "rel/commons-cli-1.6.0": {
+        "hash": "fb92585d967e53e87886e0652755ad921b645c32",
+        "filtered name": "1.6.0"
+    },
+    "rel/commons-cli-1.7.0": {
+        "hash": "c63265ba42aea420d476f9c410a3e651416d89f8",
+        "filtered name": "1.7.0"
+    },
+    "rel/commons-cli-1.8.0": {
+        "hash": "cacbafe2f60bcbbc3b00fbeb9801c473c17f5797",
+        "filtered name": "1.8.0"
+    },
+    "rel/commons-cli-1.9.0": {
+        "hash": "cc3d5be66bbe3dffbc2b1f00cefda35c05698e22",
+        "filtered name": "1.9.0"
+    }
+}

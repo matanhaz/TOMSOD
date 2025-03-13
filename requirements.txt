@@ -1,0 +1,17 @@
+gensim
+GitPython
+javalang
+jira
+matplotlib
+nltk
+numpy
+pandas
+PyDriller
+scikit_learn
+scipy
+setuptools
+spacy
+tqdm
+pipreqs
+pyarrow
+fastparquet
